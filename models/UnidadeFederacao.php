@@ -44,7 +44,7 @@ class UnidadeFederacao extends \yii\db\ActiveRecord
     {
         return [
             'IdUnidadeFederacao' => 'Código do IBGE',
-            'Nome' => 'Nome',
+            'Nome' => 'Unidade da Federação',
             'Sigla' => 'Sigla',
         ];
     }

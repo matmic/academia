@@ -30,7 +30,7 @@ class Aparelho extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdAparelho', 'IdGrupo', 'Nome'], 'required'],
+            [['IdGrupo', 'Nome'], 'required'],
             [['IdAparelho', 'IdGrupo'], 'integer'],
             [['Nome'], 'string', 'max' => 45],
             [['IdAparelho'], 'unique'],
@@ -44,9 +44,9 @@ class Aparelho extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdAparelho' => 'Id Aparelho',
-            'IdGrupo' => 'Id Grupo',
-            'Nome' => 'Nome',
+            'IdAparelho' => '#',
+            'IdGrupo' => 'Grupo',
+            'Nome' => 'Aparelho',
         ];
     }
 
@@ -65,4 +65,21 @@ class Aparelho extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Exercicio::className(), ['IdAparelho' => 'IdAparelho']);
     }
+	
+	public function beforeSave($insert)
+	{
+		if (!parent::beforeSave($insert)) {
+			return false;
+		}
+		
+		if ($this->isNewRecord) {
+			$connection = Yii::$app->getDb();
+			$command = $connection->createCommand("SELECT IFNULL(MAX(IdAparelho), 0)+1 AS IdAparelho FROM aparelho");
+			$result = $command->queryOne();
+			
+			$this->IdAparelho = $result['IdAparelho'];
+		}
+		
+		return parent::beforeSave($insert);
+	}
 }

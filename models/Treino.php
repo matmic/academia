@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $IdTreino
  * @property int $IdAluno
+ * @property string $Nome
  * @property int $IdProfessor
  * @property string $DataInclusao
  * @property string $IndicadorAtivo
@@ -33,9 +34,10 @@ class Treino extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdTreino', 'IdAluno', 'IdProfessor', 'DataInclusao', 'IndicadorAtivo'], 'required'],
+            [['IdTreino', 'IdAluno', 'Nome', 'IdProfessor', 'DataInclusao', 'IndicadorAtivo'], 'required'],
             [['IdTreino', 'IdAluno', 'IdProfessor'], 'integer'],
             [['DataInclusao'], 'safe'],
+            [['Nome'], 'string', 'max' => 45],
             [['IndicadorAtivo'], 'string', 'max' => 1],
             [['IdTreino'], 'unique'],
             [['IdAluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['IdAluno' => 'IdAluno']],
@@ -51,6 +53,7 @@ class Treino extends \yii\db\ActiveRecord
         return [
             'IdTreino' => 'Id Treino',
             'IdAluno' => 'Id Aluno',
+            'Nome' => 'Nome',
             'IdProfessor' => 'Id Professor',
             'DataInclusao' => 'Data Inclusao',
             'IndicadorAtivo' => 'Indicador Ativo',

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "grupo".
@@ -42,7 +43,7 @@ class Grupo extends \yii\db\ActiveRecord
     {
         return [
             'IdGrupo' => '#',
-            'Nome' => 'Nome',
+            'Nome' => 'Grupo',
         ];
     }
 
@@ -69,5 +70,11 @@ class Grupo extends \yii\db\ActiveRecord
 		}
 		
 		return parent::beforeSave($insert);
+	}
+	
+	public static function getGrupos()
+	{
+		$grupos = Grupo::find()->orderBy('Nome ASC')->all();
+		return ArrayHelper::map($grupos, 'IdGrupo', 'Nome');
 	}
 }

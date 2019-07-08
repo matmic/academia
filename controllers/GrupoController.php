@@ -73,7 +73,6 @@ class GrupoController extends Controller
 					Yii::$app->session->setFlash('success', 'Grupo salvo com sucesso!');
 					return $this->redirect('listar');
 				} else {
-					VarDumper::dump($grupo->getErrors(), 10, true); die;
 					Yii::$app->session->setFlash('error', 'Não foi possível salvar o grupo!');
 					return $this->redirect('listar');
 				}
