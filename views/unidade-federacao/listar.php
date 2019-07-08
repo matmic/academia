@@ -3,6 +3,9 @@
 	use yii\helpers\Html;
 	use yii\helpers\Url;
 	
+	echo Html::tag('h1', 'Unidades da Federação');
+	echo Html::a('Nova', ['unidade-federacao/editar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
+	
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [

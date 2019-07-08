@@ -29,7 +29,7 @@ class UnidadeFederacao extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdUnidadeFederacao', 'Nome', 'Sigla'], 'required'],
+            [['Nome', 'Sigla'], 'required'],
             [['IdUnidadeFederacao'], 'integer'],
             [['Nome'], 'string', 'max' => 30],
             [['Sigla'], 'string', 'max' => 2],
@@ -56,4 +56,21 @@ class UnidadeFederacao extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Endereco::className(), ['IdUnidadeFederacao' => 'IdUnidadeFederacao']);
     }
+	
+	public function beforeSave($insert)
+	{
+		if (!parent::beforeSave($insert)) {
+			return false;
+		}
+		
+		if ($this->isNewRecord) {
+			$connection = Yii::$app->getDb();
+			$command = $connection->createCommand("SELECT IFNULL(MAX(IdUnidadeFederacao), 0)+1 AS IdUnidadeFederacao FROM unidade_federacao");
+			$result = $command->queryOne();
+			
+			$this->IdUnidadeFederacao = $result['IdUnidadeFederacao'];
+		}
+		
+		return parent::beforeSave($insert);
+	}
 }

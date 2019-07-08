@@ -3,6 +3,7 @@
 	use yii\helpers\Html;
 	use yii\helpers\Url;
 	
+	echo Html::tag('h1', 'Unidade da Federação');
 	echo Html::a('Voltar', ['unidade-federacao/listar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
 	echo DetailView::widget([

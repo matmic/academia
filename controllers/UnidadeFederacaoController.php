@@ -26,8 +26,8 @@ class UnidadeFederacaoController extends Controller
 	
 	public function actionVisualizar($IdUnidadeFederacao) {
 		$unidadeFederacao = UnidadeFederacao::findOne($IdUnidadeFederacao);
-		//VarDumper::dump($unidadeFederacao, 10, true);
-		if ($unidadeFederacao != null) {
+		
+		if (!empty($unidadeFederacao)) {
 			return $this->render('visualizar', ['unidadeFederacao' => $unidadeFederacao]);
 		} else {
 			Yii::$app->session->setFlash('error', 'Unidade da Federação inválida!');
@@ -36,7 +36,6 @@ class UnidadeFederacaoController extends Controller
 	}
 	
 	public function actionEditar() {
-		VarDumper::dump($_POST, 10, true);
 		if (isset($_GET['IdUnidadeFederacao'])) {
 			$IdUnidadeFederacao = $_GET['IdUnidadeFederacao'];
 			$unidadeFederacao = UnidadeFederacao::findOne($IdUnidadeFederacao);
@@ -51,9 +50,17 @@ class UnidadeFederacaoController extends Controller
 			if (!empty($_POST['UnidadeFederacao']['IdUnidadeFederacao'])) {
 				$IdUnidadeFederacao = $_POST['UnidadeFederacao']['IdUnidadeFederacao'];
 				$unidadeFederacao = UnidadeFederacao::findOne($IdUnidadeFederacao);
-				// TODO TERMINAR
+				
 				if (!empty($unidadeFederacao)) {
-					return $this->render('editar', ['unidadeFederacao' => $unidadeFederacao]);
+					$unidadeFederacao->attributes = $_POST['UnidadeFederacao'];
+					
+					if ($unidadeFederacao->save()) {
+						Yii::$app->session->setFlash('success', 'Unidade da Federação salva com sucesso!');
+						return $this->redirect('listar');
+					} else {
+						Yii::$app->session->setFlash('error', 'Não foi possível salvar a Unidade da Federação!');
+						return $this->redirect('listar');
+					}
 				} else {
 					Yii::$app->session->setFlash('error', 'Unidade da Federação inválida!');
 					return $this->redirect('listar');
@@ -66,6 +73,7 @@ class UnidadeFederacaoController extends Controller
 					Yii::$app->session->setFlash('success', 'Unidade da Federação salva com sucesso!');
 					return $this->redirect('listar');
 				} else {
+					VarDumper::dump($unidadeFederacao->getErrors(), 10, true); die;
 					Yii::$app->session->setFlash('error', 'Não foi possível salvar a Unidade da Federação!');
 					return $this->redirect('listar');
 				}

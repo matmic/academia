@@ -28,7 +28,7 @@ class Grupo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdGrupo', 'Nome'], 'required'],
+            [['Nome'], 'required'],
             [['IdGrupo'], 'integer'],
             [['Nome'], 'string', 'max' => 20],
             [['IdGrupo'], 'unique'],
@@ -41,7 +41,7 @@ class Grupo extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdGrupo' => 'Id Grupo',
+            'IdGrupo' => '#',
             'Nome' => 'Nome',
         ];
     }
@@ -53,4 +53,21 @@ class Grupo extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Aparelho::className(), ['IdGrupo' => 'IdGrupo']);
     }
+	
+	public function beforeSave($insert)
+	{
+		if (!parent::beforeSave($insert)) {
+			return false;
+		}
+		
+		if ($this->isNewRecord) {
+			$connection = Yii::$app->getDb();
+			$command = $connection->createCommand("SELECT IFNULL(MAX(IdGrupo), 0)+1 AS IdGrupo FROM grupo");
+			$result = $command->queryOne();
+			
+			$this->IdGrupo = $result['IdGrupo'];
+		}
+		
+		return parent::beforeSave($insert);
+	}
 }
