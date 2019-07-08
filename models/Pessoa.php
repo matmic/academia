@@ -38,9 +38,11 @@ class Pessoa extends \yii\db\ActiveRecord
     {
         return [
             [['IdPessoa', 'IdEndereco', 'Nome', 'CPF', 'DataNascimento', 'Email', 'Senha', 'DataInclusao', 'IndicadorAtivo'], 'required'],
-            [['IdPessoa', 'IdEndereco', 'CPF'], 'integer'],
+            [['IdPessoa', 'IdEndereco'], 'integer'],
             [['DataNascimento', 'DataInclusao'], 'safe'],
             [['Nome'], 'string', 'max' => 100],
+			[['CPF'], 'string', 'max' => 14],
+			[['DataNascimento'], 'string', 'max' => 10],
             [['Email'], 'string', 'max' => 45],
             [['Senha'], 'string', 'max' => 255],
             [['IndicadorAtivo'], 'string', 'max' => 1],
@@ -55,24 +57,24 @@ class Pessoa extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdPessoa' => 'Id Pessoa',
-            'IdEndereco' => 'Id Endereco',
+            'IdPessoa' => '#',
+            'IdEndereco' => 'Endereço',
             'Nome' => 'Nome',
-            'CPF' => 'Cpf',
-            'DataNascimento' => 'Data Nascimento',
+            'CPF' => 'CPF',
+            'DataNascimento' => 'Data de Nascimento',
             'Email' => 'Email',
             'Senha' => 'Senha',
-            'DataInclusao' => 'Data Inclusao',
-            'IndicadorAtivo' => 'Indicador Ativo',
+            'DataInclusao' => 'Data de Inclusão',
+            'IndicadorAtivo' => 'Ativo',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getAlunos()
+    public function getAluno()
     {
-        return $this->hasMany(Aluno::className(), ['IdPessoa' => 'IdPessoa']);
+        return $this->hasOne(Aluno::className(), ['IdPessoa' => 'IdPessoa']);
     }
 
     /**

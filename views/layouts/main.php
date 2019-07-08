@@ -38,6 +38,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
+			['label'=>'Pessoa', 'url' => ['pessoa/listar']],
 			['label'=>'Aparelho', 'url' => ['aparelho/listar']],
 			['label'=>'Grupo', 'url' => ['grupo/listar']],
 			['label' => 'UF', 'url' => ['unidade-federacao/listar']],
