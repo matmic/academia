@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "aluno".
  *
  * @property int $IdAluno
- * @property int $IdPessoa
  * @property string $IndicadorDorPeitoAtividadesFisicas
  * @property string $IndicadorDorPeitoUltimoMes
  * @property string $IndicadorPerdaConscienciaTontura
@@ -22,7 +21,7 @@ use Yii;
  * @property string $TreinoEspecifico
  * @property string $IndicadorAtivo
  *
- * @property Pessoa $pessoa
+ * @property Pessoa[] $pessoas
  * @property Treino[] $treinos
  */
 class Aluno extends \yii\db\ActiveRecord
@@ -41,12 +40,11 @@ class Aluno extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdAluno', 'IdPessoa', 'IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'Lesoes', 'Observacoes', 'Objetivos', 'TreinoEspecifico', 'IndicadorAtivo'], 'required'],
-            [['IdAluno', 'IdPessoa'], 'integer'],
+            [['IdAluno', 'IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'Lesoes', 'Observacoes', 'Objetivos', 'TreinoEspecifico', 'IndicadorAtivo'], 'required'],
+            [['IdAluno'], 'integer'],
             [['IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo'], 'string', 'max' => 1],
             [['Lesoes', 'Observacoes', 'Objetivos', 'TreinoEspecifico'], 'string', 'max' => 200],
             [['IdAluno'], 'unique'],
-            [['IdPessoa'], 'exist', 'skipOnError' => true, 'targetClass' => Pessoa::className(), 'targetAttribute' => ['IdPessoa' => 'IdPessoa']],
         ];
     }
 
@@ -57,7 +55,6 @@ class Aluno extends \yii\db\ActiveRecord
     {
         return [
             'IdAluno' => 'Id Aluno',
-            'IdPessoa' => 'Id Pessoa',
             'IndicadorDorPeitoAtividadesFisicas' => 'Indicador Dor Peito Atividades Fisicas',
             'IndicadorDorPeitoUltimoMes' => 'Indicador Dor Peito Ultimo Mes',
             'IndicadorPerdaConscienciaTontura' => 'Indicador Perda Consciencia Tontura',
@@ -76,9 +73,9 @@ class Aluno extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getPessoa()
+    public function getPessoas()
     {
-        return $this->hasOne(Pessoa::className(), ['IdPessoa' => 'IdPessoa']);
+        return $this->hasMany(Pessoa::className(), ['IdAluno' => 'IdAluno']);
     }
 
     /**

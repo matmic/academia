@@ -3,6 +3,7 @@
 	use yii\helpers\Url;
 	use yii\widgets\ActiveForm;
 	use yii\widgets\MaskedInput;
+	use app\models\UnidadeFederacao;
 	
 	echo Html::tag('h1', 'Formulário de Pessoa');
 	
@@ -19,6 +20,13 @@
 	//echo $form->field($pessoa, 'DataNascimento')->widget(\yii\jui\DatePickerDatePicker::class, ['language' => 'pt-BR', 'dateFormat' => 'dd/mm/YYYY']);
 	echo $form->field($pessoa, 'DataNascimento')->textInput(['type' => 'date', 'max' => '2999-12-31']);
 	echo $form->field($pessoa, 'Email')->textInput(['type' => 'email']);
+	
+	echo $form->field($endereco, 'Logradouro');
+	echo $form->field($endereco, 'Numero');
+	echo $form->field($endereco, 'Complemento');
+	echo $form->field($endereco, 'Bairro');
+	echo $form->field($endereco, 'Cidade');
+	echo $form->field($endereco, 'IdUnidadeFederacao')->dropDownList(UnidadeFederacao::getUnidadesFederacao(), ['prompt'=>'']);
 	
 	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
 	echo Html::button('Voltar', ['onclick'=>'window.location.href = "' . Url::to(['pessoa/listar'], true) . '"', 'class'=>'btn btn-secondary']);

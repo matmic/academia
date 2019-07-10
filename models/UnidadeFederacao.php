@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "unidade_federacao".
@@ -72,5 +73,11 @@ class UnidadeFederacao extends \yii\db\ActiveRecord
 		}
 		
 		return parent::beforeSave($insert);
+	}
+	
+	public static function getUnidadesFederacao()
+	{
+		$unidadesFederacao = UnidadeFederacao::find()->orderBy('Nome ASC')->all();
+		return ArrayHelper::map($unidadesFederacao, 'IdUnidadeFederacao', 'Nome');
 	}
 }
