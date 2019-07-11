@@ -45,7 +45,7 @@ class PessoaController extends Controller
 	public function actionEditar() {
 		if (isset($_GET['IdPessoa'])) {
 			$IdPessoa = $_GET['IdPessoa'];
-			$pessoa = Pessoa::findOne($IdPessoa);
+			$pessoa = Pessoa::find($IdPessoa)->with('endereco')->one();
 
 			if (!empty($pessoa)) {
 				return $this->render('editar', ['pessoa' => $pessoa]);
@@ -86,7 +86,8 @@ class PessoaController extends Controller
 			}
 		} else {
 			$pessoa = new Pessoa();
-			return $this->render('editar', ['pessoa' => $pessoa]);
+			$endereco = new Endereco();
+			return $this->render('editar', ['pessoa' => $pessoa, 'endereco' => $endereco]);
 		}
 	}
 }

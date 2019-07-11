@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $IdPessoa
  * @property int $IdEndereco
+ * @property int $IdAluno
  * @property string $Nome
  * @property int $CPF
  * @property string $DataNascimento
@@ -17,7 +18,7 @@ use Yii;
  * @property string $DataInclusao
  * @property string $IndicadorAtivo
  *
- * @property Aluno[] $alunos
+ * @property Aluno $aluno
  * @property Endereco $endereco
  * @property Treino[] $treinos
  */
@@ -38,15 +39,14 @@ class Pessoa extends \yii\db\ActiveRecord
     {
         return [
             [['IdPessoa', 'IdEndereco', 'Nome', 'CPF', 'DataNascimento', 'Email', 'Senha', 'DataInclusao', 'IndicadorAtivo'], 'required'],
-            [['IdPessoa', 'IdEndereco'], 'integer'],
+            [['IdPessoa', 'IdEndereco', 'IdAluno', 'CPF'], 'integer'],
             [['DataNascimento', 'DataInclusao'], 'safe'],
             [['Nome'], 'string', 'max' => 100],
-			[['CPF'], 'string', 'max' => 14],
-			[['DataNascimento'], 'string', 'max' => 10],
             [['Email'], 'string', 'max' => 45],
             [['Senha'], 'string', 'max' => 255],
             [['IndicadorAtivo'], 'string', 'max' => 1],
             [['IdPessoa'], 'unique'],
+            [['IdAluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['IdAluno' => 'IdAluno']],
             [['IdEndereco'], 'exist', 'skipOnError' => true, 'targetClass' => Endereco::className(), 'targetAttribute' => ['IdEndereco' => 'IdEndereco']],
         ];
     }
@@ -57,15 +57,16 @@ class Pessoa extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdPessoa' => '#',
-            'IdEndereco' => 'Endereço',
+            'IdPessoa' => 'Id Pessoa',
+            'IdEndereco' => 'Id Endereco',
+            'IdAluno' => 'Id Aluno',
             'Nome' => 'Nome',
             'CPF' => 'CPF',
-            'DataNascimento' => 'Data de Nascimento',
+            'DataNascimento' => 'Data Nascimento',
             'Email' => 'Email',
             'Senha' => 'Senha',
-            'DataInclusao' => 'Data de Inclusão',
-            'IndicadorAtivo' => 'Ativo',
+            'DataInclusao' => 'Data Inclusao',
+            'IndicadorAtivo' => 'Indicador Ativo',
         ];
     }
 
@@ -74,7 +75,7 @@ class Pessoa extends \yii\db\ActiveRecord
      */
     public function getAluno()
     {
-        return $this->hasOne(Aluno::className(), ['IdPessoa' => 'IdPessoa']);
+        return $this->hasOne(Aluno::className(), ['IdAluno' => 'IdAluno']);
     }
 
     /**

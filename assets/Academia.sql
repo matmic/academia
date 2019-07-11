@@ -27,7 +27,7 @@ CREATE TABLE `Endereco`
  `IdUnidadeFederacao` int NOT NULL ,
  `Logradouro`         varchar(45) NOT NULL ,
  `Numero`             varchar(10) NOT NULL ,
- `Complemento`        varchar(10) NOT NULL ,
+ `Complemento`        varchar(10) NULL ,
  `Bairro`             varchar(20) NOT NULL ,
  `Cidade`             varchar(45) NOT NULL ,
 
@@ -49,33 +49,11 @@ KEY `fkIdx_105` (`IdGrupo`),
 CONSTRAINT `FK_105` FOREIGN KEY `fkIdx_105` (`IdGrupo`) REFERENCES `Grupo` (`IdGrupo`)
 );
 
--- ************************************** `Pessoa`
-
-CREATE TABLE `Pessoa`
-(
- `IdPessoa`       int NOT NULL ,
- `IdEndereco`     int NOT NULL ,
- `Nome`           varchar(100) NOT NULL ,
- `CPF`            int(11) NOT NULL ,
- `DataNascimento` date NOT NULL ,
- `Email`          varchar(45) NOT NULL ,
- `Senha`          varchar(255) NOT NULL ,
- `DataInclusao`   date NOT NULL ,
- `IndicadorAtivo` varchar(1) NOT NULL ,
-
-PRIMARY KEY (`IdPessoa`),
-KEY `fkIdx_39` (`IdEndereco`),
-CONSTRAINT `FK_39` FOREIGN KEY `fkIdx_39` (`IdEndereco`) REFERENCES `Endereco` (`IdEndereco`)
-);
-
-
-
 -- ************************************** `Aluno`
 
 CREATE TABLE `Aluno`
 (
  `IdAluno`                            int NOT NULL ,
- `IdPessoa`                           int NOT NULL ,
  `IndicadorDorPeitoAtividadesFisicas` varchar(1) NOT NULL ,
  `IndicadorDorPeitoUltimoMes`         varchar(1) NOT NULL ,
  `IndicadorPerdaConscienciaTontura`   varchar(1) NOT NULL ,
@@ -89,9 +67,29 @@ CREATE TABLE `Aluno`
  `TreinoEspecifico`                   varchar(200) NOT NULL ,
  `IndicadorAtivo`                     varchar(1) NOT NULL ,
 
-PRIMARY KEY (`IdAluno`),
-KEY `fkIdx_83` (`IdPessoa`),
-CONSTRAINT `FK_83` FOREIGN KEY `fkIdx_83` (`IdPessoa`) REFERENCES `Pessoa` (`IdPessoa`)
+PRIMARY KEY (`IdAluno`)
+);
+
+-- ************************************** `Pessoa`
+
+CREATE TABLE `Pessoa`
+(
+ `IdPessoa`       int NOT NULL ,
+ `IdEndereco`     int NOT NULL ,
+ `IdAluno`        int NULL ,
+ `Nome`           varchar(100) NOT NULL ,
+ `CPF`            int(11) NOT NULL ,
+ `DataNascimento` date NOT NULL ,
+ `Email`          varchar(45) NOT NULL ,
+ `Senha`          varchar(255) NOT NULL ,
+ `DataInclusao`   date NOT NULL ,
+ `IndicadorAtivo` varchar(1) NOT NULL ,
+
+PRIMARY KEY (`IdPessoa`),
+KEY `fkIdx_109` (`IdAluno`),
+CONSTRAINT `FK_109` FOREIGN KEY `fkIdx_109` (`IdAluno`) REFERENCES `Aluno` (`IdAluno`),
+KEY `fkIdx_39` (`IdEndereco`),
+CONSTRAINT `FK_39` FOREIGN KEY `fkIdx_39` (`IdEndereco`) REFERENCES `Endereco` (`IdEndereco`)
 );
 
 -- ************************************** `Treino`

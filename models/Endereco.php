@@ -34,7 +34,7 @@ class Endereco extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdEndereco', 'IdUnidadeFederacao', 'Logradouro', 'Numero', 'Complemento', 'Bairro', 'Cidade'], 'required'],
+            [['IdEndereco', 'IdUnidadeFederacao', 'Logradouro', 'Numero', 'Bairro', 'Cidade'], 'required'],
             [['IdEndereco', 'IdUnidadeFederacao'], 'integer'],
             [['Logradouro', 'Cidade'], 'string', 'max' => 45],
             [['Numero', 'Complemento'], 'string', 'max' => 10],
@@ -50,10 +50,10 @@ class Endereco extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdEndereco' => 'Id Endereco',
-            'IdUnidadeFederacao' => 'Id Unidade Federacao',
+            'IdEndereco' => '#',
+            'IdUnidadeFederacao' => 'Unidade da Federação',
             'Logradouro' => 'Logradouro',
-            'Numero' => 'Numero',
+            'Numero' => 'Número',
             'Complemento' => 'Complemento',
             'Bairro' => 'Bairro',
             'Cidade' => 'Cidade',
