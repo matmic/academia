@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "pessoa".
@@ -38,8 +39,8 @@ class Pessoa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdPessoa', 'IdEndereco', 'Nome', 'CPF', 'DataNascimento', 'Email', 'Senha', 'DataInclusao', 'IndicadorAtivo'], 'required'],
-            [['IdPessoa', 'IdEndereco', 'IdAluno', 'CPF'], 'integer'],
+            [['IdEndereco', 'Nome', 'CPF', 'DataNascimento', 'Email', 'Senha'], 'required'],
+            [['IdPessoa', 'IdEndereco', 'IdAluno'], 'integer'],
             [['DataNascimento', 'DataInclusao'], 'safe'],
             [['Nome'], 'string', 'max' => 100],
             [['Email'], 'string', 'max' => 45],
@@ -57,12 +58,12 @@ class Pessoa extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdPessoa' => 'Id Pessoa',
+            'IdPessoa' => '#',
             'IdEndereco' => 'Id Endereco',
-            'IdAluno' => 'Id Aluno',
+            'IdAluno' => 'É aluno?',
             'Nome' => 'Nome',
             'CPF' => 'CPF',
-            'DataNascimento' => 'Data Nascimento',
+            'DataNascimento' => 'Data de Nascimento',
             'Email' => 'Email',
             'Senha' => 'Senha',
             'DataInclusao' => 'Data Inclusao',
@@ -93,4 +94,23 @@ class Pessoa extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Treino::className(), ['IdProfessor' => 'IdPessoa']);
     }
+	
+	public function beforeSave($insert)
+	{
+		if (!parent::beforeSave($insert)) {
+			return false;
+		}
+		
+		if ($this->isNewRecord) {
+			$connection = Yii::$app->getDb();
+			$command = $connection->createCommand("SELECT IFNULL(MAX(IdPessoa), 0)+1 AS IdPessoa FROM pessoa");
+			$result = $command->queryOne();
+			
+			$this->IdPessoa = $result['IdPessoa'];
+			$this->DataInclusao = new Expression('NOW()');
+			$this->IndicadorAtivo = 'S';
+		}
+		
+		return parent::beforeSave($insert);
+	}
 }

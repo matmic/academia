@@ -25,6 +25,7 @@ class ComposerStaticInit69bc007cc1fdda79262e8d2c88973d07
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\jui\\' => 8,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
             'yii\\debug\\' => 10,
@@ -65,6 +66,7 @@ class ComposerStaticInit69bc007cc1fdda79262e8d2c88973d07
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
         ),
         'G' => 
@@ -96,6 +98,10 @@ class ComposerStaticInit69bc007cc1fdda79262e8d2c88973d07
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src',
+        ),
+        'yii\\jui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-jui',
         ),
         'yii\\gii\\' => 
         array (
@@ -198,6 +204,10 @@ class ComposerStaticInit69bc007cc1fdda79262e8d2c88973d07
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
         ),
         'Prophecy\\' => 
         array (

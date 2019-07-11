@@ -34,7 +34,7 @@ class Endereco extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdEndereco', 'IdUnidadeFederacao', 'Logradouro', 'Numero', 'Bairro', 'Cidade'], 'required'],
+            [['IdUnidadeFederacao', 'Logradouro', 'Numero', 'Bairro', 'Cidade'], 'required'],
             [['IdEndereco', 'IdUnidadeFederacao'], 'integer'],
             [['Logradouro', 'Cidade'], 'string', 'max' => 45],
             [['Numero', 'Complemento'], 'string', 'max' => 10],
@@ -75,4 +75,21 @@ class Endereco extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Pessoa::className(), ['IdEndereco' => 'IdEndereco']);
     }
+	
+	public function beforeSave($insert)
+	{
+		if (!parent::beforeSave($insert)) {
+			return false;
+		}
+		
+		if ($this->isNewRecord) {
+			$connection = Yii::$app->getDb();
+			$command = $connection->createCommand("SELECT IFNULL(MAX(IdEndereco), 0)+1 AS IdEndereco FROM endereco");
+			$result = $command->queryOne();
+			
+			$this->IdEndereco = $result['IdEndereco'];
+		}
+		
+		return parent::beforeSave($insert);
+	}
 }

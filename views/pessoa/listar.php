@@ -17,10 +17,10 @@
 				'template' => '{view} {update}',
 				'buttons' => [
 					'view' => function($url, $model, $key) {
-						return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',  Url::to(['pessoa/visualizar', 'IdAparelho'=>$key], true));
+						return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',  Url::to(['pessoa/visualizar', 'IdPessoa'=>$key], true));
 					},
 					'update' => function($url, $model, $key) {
-						return Html::a('<span class="glyphicon glyphicon-pencil"></span>',  Url::to(['pessoa/editar', 'IdAparelho'=>$key], true));
+						return Html::a('<span class="glyphicon glyphicon-pencil"></span>',  Url::to(['pessoa/editar', 'IdPessoa'=>$key], true));
 					},
 				],
 			],
