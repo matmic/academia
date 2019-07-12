@@ -8,15 +8,16 @@ use Yii;
  * This is the model class for table "treino".
  *
  * @property int $IdTreino
+ * @property int $IdProfessor
  * @property int $IdAluno
  * @property string $Nome
- * @property int $IdProfessor
+ * @property string $Objetivos
  * @property string $DataInclusao
  * @property string $IndicadorAtivo
  *
  * @property Exercicio[] $exercicios
  * @property Aluno $aluno
- * @property Pessoa $professor
+ * @property Professor $professor
  */
 class Treino extends \yii\db\ActiveRecord
 {
@@ -34,14 +35,15 @@ class Treino extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdTreino', 'IdAluno', 'Nome', 'IdProfessor', 'DataInclusao', 'IndicadorAtivo'], 'required'],
-            [['IdTreino', 'IdAluno', 'IdProfessor'], 'integer'],
+            [['IdTreino', 'IdProfessor', 'IdAluno', 'DataInclusao', 'IndicadorAtivo'], 'required'],
+            [['IdTreino', 'IdProfessor', 'IdAluno'], 'integer'],
             [['DataInclusao'], 'safe'],
             [['Nome'], 'string', 'max' => 45],
+            [['Objetivos'], 'string', 'max' => 200],
             [['IndicadorAtivo'], 'string', 'max' => 1],
             [['IdTreino'], 'unique'],
             [['IdAluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['IdAluno' => 'IdAluno']],
-            [['IdProfessor'], 'exist', 'skipOnError' => true, 'targetClass' => Pessoa::className(), 'targetAttribute' => ['IdProfessor' => 'IdPessoa']],
+            [['IdProfessor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['IdProfessor' => 'IdProfessor']],
         ];
     }
 
@@ -52,9 +54,10 @@ class Treino extends \yii\db\ActiveRecord
     {
         return [
             'IdTreino' => 'Id Treino',
+            'IdProfessor' => 'Id Professor',
             'IdAluno' => 'Id Aluno',
             'Nome' => 'Nome',
-            'IdProfessor' => 'Id Professor',
+            'Objetivos' => 'Objetivos',
             'DataInclusao' => 'Data Inclusao',
             'IndicadorAtivo' => 'Indicador Ativo',
         ];
@@ -81,6 +84,6 @@ class Treino extends \yii\db\ActiveRecord
      */
     public function getProfessor()
     {
-        return $this->hasOne(Pessoa::className(), ['IdPessoa' => 'IdProfessor']);
+        return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdProfessor']);
     }
 }

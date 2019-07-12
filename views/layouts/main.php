@@ -38,20 +38,20 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-			['label'=>'Pessoa', 'url' => ['pessoa/listar']],
+			['label'=>'Professor', 'url' => ['professor/listar']],
+			['label'=>'Aluno', 'url' => ['aluno/listar']],
 			['label'=>'Aparelho', 'url' => ['aparelho/listar']],
 			['label'=>'Grupo', 'url' => ['grupo/listar']],
-			['label' => 'UF', 'url' => ['unidade-federacao/listar']],
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Login', 'url' => ['/professor/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    'Logout (' . Yii::$app->user->identity->Nome . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()

@@ -8,6 +8,8 @@ use Yii;
  * This is the model class for table "aluno".
  *
  * @property int $IdAluno
+ * @property string $Nome
+ * @property string $DataNascimento
  * @property string $IndicadorDorPeitoAtividadesFisicas
  * @property string $IndicadorDorPeitoUltimoMes
  * @property string $IndicadorPerdaConscienciaTontura
@@ -17,11 +19,12 @@ use Yii;
  * @property string $IndicadorFamiliarAtaqueCardiaco
  * @property string $Lesoes
  * @property string $Observacoes
- * @property string $Objetivos
  * @property string $TreinoEspecifico
  * @property string $IndicadorAtivo
+ * @property int $IdUsuarioInclusao
+ * @property string $DataInclusao
  *
- * @property Pessoa[] $pessoas
+ * @property Professor $usuarioInclusao
  * @property Treino[] $treinos
  */
 class Aluno extends \yii\db\ActiveRecord
@@ -40,11 +43,14 @@ class Aluno extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'Lesoes', 'Observacoes', 'Objetivos', 'TreinoEspecifico'], 'required'],
-            [['IdAluno'], 'integer'],
+            [['IdAluno', 'Nome', 'DataNascimento', 'IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo', 'IdUsuarioInclusao', 'DataInclusao'], 'required'],
+            [['IdAluno', 'IdUsuarioInclusao'], 'integer'],
+            [['DataNascimento', 'DataInclusao'], 'safe'],
+            [['Nome'], 'string', 'max' => 100],
             [['IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo'], 'string', 'max' => 1],
-            [['Lesoes', 'Observacoes', 'Objetivos', 'TreinoEspecifico'], 'string', 'max' => 200],
+            [['Lesoes', 'Observacoes', 'TreinoEspecifico'], 'string', 'max' => 200],
             [['IdAluno'], 'unique'],
+            [['IdUsuarioInclusao'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['IdUsuarioInclusao' => 'IdProfessor']],
         ];
     }
 
@@ -55,27 +61,30 @@ class Aluno extends \yii\db\ActiveRecord
     {
         return [
             'IdAluno' => '#',
-            'IndicadorDorPeitoAtividadesFisicas' => 'Aluno tem dor no peito provocada por atividades físicas?',
-            'IndicadorDorPeitoUltimoMes' => 'Aluno sentiu dor no peito no último mês?',
-            'IndicadorPerdaConscienciaTontura' => 'Aluno já perdeu a consciência em alguma ocasião ou sofreu alguma queda em virtude de tontura?',
-            'IndicadorProblemaArticular' => 'Aluno tem algum problema ósseo ou articular que poderia agravar-se com a prática de atividades físicas?',
-            'IndicadorTabagista' => 'Aluno é tabagista?',
-            'IndicadorDiabetico' => 'Aluno é diabético',
-            'IndicadorFamiliarAtaqueCardiaco' => 'Aluno possui histórico familiar de ataque cardíaco? (Pai ou irmão de 55 anos ou mãe ou irmã antes dos 65 anos)',
-            'Lesoes' => 'Lesões',
-            'Observacoes' => 'Observações',
-            'Objetivos' => 'Objetivos',
-            'TreinoEspecifico' => 'Treino Específico',
+            'Nome' => 'Nome',
+            'DataNascimento' => 'Data de Nascimento',
+            'IndicadorDorPeitoAtividadesFisicas' => 'Indicador Dor Peito Atividades Fisicas',
+            'IndicadorDorPeitoUltimoMes' => 'Indicador Dor Peito Ultimo Mes',
+            'IndicadorPerdaConscienciaTontura' => 'Indicador Perda Consciencia Tontura',
+            'IndicadorProblemaArticular' => 'Indicador Problema Articular',
+            'IndicadorTabagista' => 'Indicador Tabagista',
+            'IndicadorDiabetico' => 'Indicador Diabetico',
+            'IndicadorFamiliarAtaqueCardiaco' => 'Indicador Familiar Ataque Cardiaco',
+            'Lesoes' => 'Lesoes',
+            'Observacoes' => 'Observacoes',
+            'TreinoEspecifico' => 'Treino Especifico',
             'IndicadorAtivo' => 'Indicador Ativo',
+            'IdUsuarioInclusao' => 'Id Usuario Inclusao',
+            'DataInclusao' => 'Data Inclusao',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getPessoas()
+    public function getUsuarioInclusao()
     {
-        return $this->hasMany(Pessoa::className(), ['IdAluno' => 'IdAluno']);
+        return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdUsuarioInclusao']);
     }
 
     /**
@@ -85,22 +94,4 @@ class Aluno extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Treino::className(), ['IdAluno' => 'IdAluno']);
     }
-	
-	public function beforeSave($insert)
-	{
-		if (!parent::beforeSave($insert)) {
-			return false;
-		}
-		
-		if ($this->isNewRecord) {
-			$connection = Yii::$app->getDb();
-			$command = $connection->createCommand("SELECT IFNULL(MAX(IdAluno), 0)+1 AS IdAluno FROM aluno");
-			$result = $command->queryOne();
-			
-			$this->IdAluno = $result['IdAluno'];
-			$this->IndicadorAtivo = 'S';
-		}
-		
-		return parent::beforeSave($insert);
-	}
 }
