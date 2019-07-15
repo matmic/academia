@@ -21575,3 +21575,2351 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1562962230.702
     'REQUEST_TIME' => 1562962230
 ]
+2019-07-15 15:00:21 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][error][Error] Error: Class 'app\controllers\alunos' not found in C:\xampp\htdocs\yii\academia\controllers\AlunoController.php:17
+Stack trace:
+#0 [internal function]: app\controllers\AlunoController->actionListar()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('listar', Array)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/listar', Array)
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2019-07-15 15:00:19 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '00bbk4rjvig7lhdfl5umvdpesc'
+    '_csrf' => 'eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=00bbk4rjvig7lhdfl5umvdpesc; _csrf=eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '64792'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563195619.641
+    'REQUEST_TIME' => 1563195619
+]
+2019-07-15 15:04:19 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\xampp\htdocs\yii\academia\views\aluno\editar.php in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('editar', Array, Object(app\controllers\AlunoController))
+#2 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(100): yii\base\Controller->render('editar', Array)
+#3 [internal function]: app\controllers\AlunoController->actionEditar()
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2019-07-15 15:04:19 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '00bbk4rjvig7lhdfl5umvdpesc'
+    '_csrf' => 'eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=00bbk4rjvig7lhdfl5umvdpesc; _csrf=eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '64825'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563195859.173
+    'REQUEST_TIME' => 1563195859
+]
+2019-07-15 15:06:26 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Aluno::Email in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('Email')
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\helpers\BaseHtml.php(2227): yii\db\BaseActiveRecord->__get('Email')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\helpers\BaseHtml.php(1353): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Aluno), 'Email')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\helpers\BaseHtml.php(1407): yii\helpers\BaseHtml::activeInput('text', Object(app\models\Aluno), 'Email', Array)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\ActiveField.php(404): yii\helpers\BaseHtml::activeTextInput(Object(app\models\Aluno), 'Email', Array)
+#5 C:\xampp\htdocs\yii\academia\views\aluno\editar.php(17): yii\widgets\ActiveField->textInput(Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('editar', Array, Object(app\controllers\AlunoController))
+#10 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(100): yii\base\Controller->render('editar', Array)
+#11 [internal function]: app\controllers\AlunoController->actionEditar()
+#12 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#15 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#18 {main}
+2019-07-15 15:06:25 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '00bbk4rjvig7lhdfl5umvdpesc'
+    '_csrf' => 'eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=00bbk4rjvig7lhdfl5umvdpesc; _csrf=eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '64830'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563195985.945
+    'REQUEST_TIME' => 1563195985
+]
+2019-07-15 15:07:48 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][error][ParseError] ParseError: syntax error, unexpected '' . Url::to(['' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in C:\xampp\htdocs\yii\academia\views\aluno\editar.php:20
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('editar', Array, Object(app\controllers\AlunoController))
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(100): yii\base\Controller->render('editar', Array)
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 15:07:48 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '00bbk4rjvig7lhdfl5umvdpesc'
+    '_csrf' => 'eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=00bbk4rjvig7lhdfl5umvdpesc; _csrf=eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65063'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563196068.576
+    'REQUEST_TIME' => 1563196068
+]
+2019-07-15 15:36:16 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][error][Error] Error: Class 'app\models\Expression' not found in C:\xampp\htdocs\yii\academia\models\Aluno.php:110
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(72): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 15:36:16 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'QTJffrDJEXsqtb-opj-OyrONQhxhfmTMb-3ykyXCT3wVR2pGwb1QKU-N6_fRWdun9N16ZVMMEvksncHDTvp_Mg=='
+    'Aluno' => [
+        'IdAluno' => ''
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1993-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '1'
+        'IndicadorDorPeitoUltimoMes' => '1'
+        'IndicadorPerdaConscienciaTontura' => '1'
+        'IndicadorProblemaArticular' => '0'
+        'IndicadorTabagista' => '0'
+        'IndicadorDiabetico' => '0'
+        'IndicadorFamiliarAtaqueCardiaco' => '0'
+        'Lesoes' => 'a'
+        'Observacoes' => 'b'
+        'TreinoEspecifico' => 'c'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '00bbk4rjvig7lhdfl5umvdpesc'
+    '_csrf' => 'eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '671'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=00bbk4rjvig7lhdfl5umvdpesc; _csrf=eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65247'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563197776.361
+    'REQUEST_TIME' => 1563197776
+]
+2019-07-15 15:37:21 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\web\Application::getId() in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\models\Aluno.php(112): yii\base\Component->__call('getId', Array)
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#4 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(72): yii\db\BaseActiveRecord->save()
+#5 [internal function]: app\controllers\AlunoController->actionEditar()
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2019-07-15 15:37:20 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'QTJffrDJEXsqtb-opj-OyrONQhxhfmTMb-3ykyXCT3wVR2pGwb1QKU-N6_fRWdun9N16ZVMMEvksncHDTvp_Mg=='
+    'Aluno' => [
+        'IdAluno' => ''
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1993-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '1'
+        'IndicadorDorPeitoUltimoMes' => '1'
+        'IndicadorPerdaConscienciaTontura' => '1'
+        'IndicadorProblemaArticular' => '0'
+        'IndicadorTabagista' => '0'
+        'IndicadorDiabetico' => '0'
+        'IndicadorFamiliarAtaqueCardiaco' => '0'
+        'Lesoes' => 'a'
+        'Observacoes' => 'b'
+        'TreinoEspecifico' => 'c'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '00bbk4rjvig7lhdfl5umvdpesc'
+    '_csrf' => 'eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '671'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=00bbk4rjvig7lhdfl5umvdpesc; _csrf=eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65253'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563197840.887
+    'REQUEST_TIME' => 1563197840
+]
+2019-07-15 15:39:01 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][error][yii\base\InvalidCallException] yii\base\InvalidCallException: Setting read-only property: app\models\Aluno::UsuarioInclusao in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Component.php:206
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(324): yii\base\Component->__set('UsuarioInclusao', NULL)
+#1 C:\xampp\htdocs\yii\academia\models\Aluno.php(112): yii\db\BaseActiveRecord->__set('UsuarioInclusao', NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(72): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\controllers\AlunoController->actionEditar()
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-07-15 15:39:01 [::1][-][00bbk4rjvig7lhdfl5umvdpesc][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'QTJffrDJEXsqtb-opj-OyrONQhxhfmTMb-3ykyXCT3wVR2pGwb1QKU-N6_fRWdun9N16ZVMMEvksncHDTvp_Mg=='
+    'Aluno' => [
+        'IdAluno' => ''
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1993-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '1'
+        'IndicadorDorPeitoUltimoMes' => '1'
+        'IndicadorPerdaConscienciaTontura' => '1'
+        'IndicadorProblemaArticular' => '0'
+        'IndicadorTabagista' => '0'
+        'IndicadorDiabetico' => '0'
+        'IndicadorFamiliarAtaqueCardiaco' => '0'
+        'Lesoes' => 'a'
+        'Observacoes' => 'b'
+        'TreinoEspecifico' => 'c'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '00bbk4rjvig7lhdfl5umvdpesc'
+    '_csrf' => 'eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '671'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=00bbk4rjvig7lhdfl5umvdpesc; _csrf=eb34ec3380321a57909a75f121a857bce3c90c70ab3a9f812ac492a25c8fa5f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Tu58qtARe8T_wfUmGP8y2rv5Cp3Pk80N%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65273'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563197941.486
+    'REQUEST_TIME' => 1563197941
+]
+2019-07-15 15:39:18 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Não foi possível verificar o seu envio de dados. in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Controller.php:166
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#5 {main}
+2019-07-15 15:39:18 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'oIQhuwbnO1dZs0sgRx8PqhPGSVcxYOsCoW8o0P4ntD708RSDd5N6BTyLH38weVrHVJZxLgMSnTfiHxuAlR-EcA=='
+    'Aluno' => [
+        'IdAluno' => ''
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1993-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '1'
+        'IndicadorDorPeitoUltimoMes' => '1'
+        'IndicadorPerdaConscienciaTontura' => '1'
+        'IndicadorProblemaArticular' => '0'
+        'IndicadorTabagista' => '0'
+        'IndicadorDiabetico' => '0'
+        'IndicadorFamiliarAtaqueCardiaco' => '0'
+        'Lesoes' => 'a'
+        'Observacoes' => 'b'
+        'TreinoEspecifico' => 'c'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '671'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65285'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563197958.802
+    'REQUEST_TIME' => 1563197958
+]
+2019-07-15 15:39:40 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\InvalidCallException] yii\base\InvalidCallException: Setting read-only property: app\models\Aluno::UsuarioInclusao in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Component.php:206
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(324): yii\base\Component->__set('UsuarioInclusao', 1)
+#1 C:\xampp\htdocs\yii\academia\models\Aluno.php(112): yii\db\BaseActiveRecord->__set('UsuarioInclusao', 1)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(72): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\controllers\AlunoController->actionEditar()
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-07-15 15:39:39 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '4wbt6VfZ2hgT1YPMrJMpo5UVE-iO0_RPfiRjiFWSb1O5V6-dBuq1Qn6s86Tc_BnlpidJut3hvn4kHCH5EdU7fg=='
+    'Aluno' => [
+        'IdAluno' => ''
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1993-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '1'
+        'IndicadorDorPeitoUltimoMes' => '1'
+        'IndicadorPerdaConscienciaTontura' => '1'
+        'IndicadorProblemaArticular' => '0'
+        'IndicadorTabagista' => '0'
+        'IndicadorDiabetico' => '0'
+        'IndicadorFamiliarAtaqueCardiaco' => '0'
+        'Lesoes' => '1'
+        'Observacoes' => '2'
+        'TreinoEspecifico' => '3'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '671'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65297'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563197979.889
+    'REQUEST_TIME' => 1563197979
+]
+2019-07-15 15:40:56 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\InvalidCallException] yii\base\InvalidCallException: Setting read-only property: app\models\Aluno::UsuarioInclusao in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Component.php:206
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(324): yii\base\Component->__set('UsuarioInclusao', 1)
+#1 C:\xampp\htdocs\yii\academia\models\Aluno.php(112): yii\db\BaseActiveRecord->__set('UsuarioInclusao', 1)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(560): yii\base\Model->validate(NULL)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(72): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\controllers\AlunoController->actionEditar()
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-07-15 15:40:55 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '4wbt6VfZ2hgT1YPMrJMpo5UVE-iO0_RPfiRjiFWSb1O5V6-dBuq1Qn6s86Tc_BnlpidJut3hvn4kHCH5EdU7fg=='
+    'Aluno' => [
+        'IdAluno' => ''
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1993-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '1'
+        'IndicadorDorPeitoUltimoMes' => '1'
+        'IndicadorPerdaConscienciaTontura' => '1'
+        'IndicadorProblemaArticular' => '0'
+        'IndicadorTabagista' => '0'
+        'IndicadorDiabetico' => '0'
+        'IndicadorFamiliarAtaqueCardiaco' => '0'
+        'Lesoes' => '1'
+        'Observacoes' => '2'
+        'TreinoEspecifico' => '3'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '671'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65302'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563198055.492
+    'REQUEST_TIME' => 1563198055
+]
+2019-07-15 15:42:08 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\xampp\htdocs\yii\academia\views\aluno\visualizar.php in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('visualizar', Array, Object(app\controllers\AlunoController))
+#2 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(31): yii\base\Controller->render('visualizar', Array)
+#3 [internal function]: app\controllers\AlunoController->actionVisualizar('1')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('visualizar', Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/visualiza...', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2019-07-15 15:42:08 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = [
+    'IdAluno' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65326'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/visualizar'
+    'REDIRECT_QUERY_STRING' => 'IdAluno=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'IdAluno=1'
+    'REQUEST_URI' => '/yii/academia/web/aluno/visualizar?IdAluno=1'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563198128.218
+    'REQUEST_TIME' => 1563198128
+]
+2019-07-15 15:49:05 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected 'Y' (T_STRING), expecting ']' in C:\xampp\htdocs\yii\academia\views\aluno\listar.php:16
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('listar', Array, Object(app\controllers\AlunoController))
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(24): yii\base\Controller->render('listar', Array)
+#4 [internal function]: app\controllers\AlunoController->actionListar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('listar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/listar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 15:49:05 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65447'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563198545.158
+    'REQUEST_TIME' => 1563198545
+]
+2019-07-15 15:52:44 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Unknown format type: Yii::$app->formatter->asDate("DataNascimento", "d/m/Y"); in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\i18n\Formatter.php:446
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\i18n\Formatter->format('1993-10-08', 'Yii::$app->form...')
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Aluno), 1, 0)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Aluno), 1, 0)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Aluno), 1, 0)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#8 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#12 C:\xampp\htdocs\yii\academia\views\aluno\listar.php(31): yii\base\Widget::widget(Array)
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#15 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('listar', Array, Object(app\controllers\AlunoController))
+#17 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(24): yii\base\Controller->render('listar', Array)
+#18 [internal function]: app\controllers\AlunoController->actionListar()
+#19 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#20 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#21 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('listar', Array)
+#22 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/listar', Array)
+#23 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#25 {main}
+2019-07-15 15:52:43 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65471'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563198763.613
+    'REQUEST_TIME' => 1563198763
+]
+2019-07-15 16:00:38 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Unknown format type: $DataNascimento:date in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\i18n\Formatter.php:446
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\i18n\Formatter->format('1993-10-08', '$DataNascimento...')
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Aluno), 1, 0)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Aluno), 1, 0)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Aluno), 1, 0)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#8 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#12 C:\xampp\htdocs\yii\academia\views\aluno\listar.php(31): yii\base\Widget::widget(Array)
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#15 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('listar', Array, Object(app\controllers\AlunoController))
+#17 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(24): yii\base\Controller->render('listar', Array)
+#18 [internal function]: app\controllers\AlunoController->actionListar()
+#19 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#20 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#21 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('listar', Array)
+#22 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/listar', Array)
+#23 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#25 {main}
+2019-07-15 16:00:38 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65514'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563199238.347
+    'REQUEST_TIME' => 1563199238
+]
+2019-07-15 16:00:43 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Unknown format type: DataNascimento:date in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\i18n\Formatter.php:446
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\i18n\Formatter->format('1993-10-08', 'DataNascimento:...')
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Aluno), 1, 0)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\Aluno), 1, 0)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\Aluno), 1, 0)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#8 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#12 C:\xampp\htdocs\yii\academia\views\aluno\listar.php(31): yii\base\Widget::widget(Array)
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#15 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\AlunoController))
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('listar', Array, Object(app\controllers\AlunoController))
+#17 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(24): yii\base\Controller->render('listar', Array)
+#18 [internal function]: app\controllers\AlunoController->actionListar()
+#19 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#20 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#21 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('listar', Array)
+#22 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/listar', Array)
+#23 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#25 {main}
+2019-07-15 16:00:42 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '65519'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563199242.922
+    'REQUEST_TIME' => 1563199242
+]
+2019-07-15 16:09:53 [::1][1][-][error][yii\web\HeadersAlreadySentException] yii\web\HeadersAlreadySentException: Headers already sent in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\helpers\BaseVarDumper.php on line 38. in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Response.php:366
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Response.php(339): yii\web\Response->sendHeaders()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Response->send()
+#2 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2019-07-15 16:09:52 [::1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '-Gqw4FsITTU9EseyxVCOPWdpFyKw1b15MFqZTboCONWiO_KUCjsib1Brt9q1P757VFtNcOPn90hqYts8_kVs-A=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'error' => -1
+    ]
+    '__id' => 1
+    'error' => 'Não foi possível salvar o aluno!'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49219'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563199792.83
+    'REQUEST_TIME' => 1563199792
+]
+2019-07-15 16:13:00 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][Error] Error: Call to a member function format() on boolean in C:\xampp\htdocs\yii\academia\models\Aluno.php:133
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:12:59 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49249'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563199979.929
+    'REQUEST_TIME' => 1563199979
+]
+2019-07-15 16:14:08 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][Error] Error: Call to a member function format() on boolean in C:\xampp\htdocs\yii\academia\models\Aluno.php:133
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:14:08 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49254'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563200048.472
+    'REQUEST_TIME' => 1563200048
+]
+2019-07-15 16:14:39 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][Error] Error: Class 'app\models\VarDumper' not found in C:\xampp\htdocs\yii\academia\models\Aluno.php:133
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:14:39 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49261'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563200079.508
+    'REQUEST_TIME' => 1563200079
+]
+2019-07-15 16:15:02 [::1][1][-][error][Error] Error: Call to a member function format() on boolean in C:\xampp\htdocs\yii\academia\models\Aluno.php:136
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:15:01 [::1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49266'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563200101.834
+    'REQUEST_TIME' => 1563200101
+]
+2019-07-15 16:15:31 [::1][1][-][error][Error] Error: Call to a member function format() on boolean in C:\xampp\htdocs\yii\academia\models\Aluno.php:136
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:15:31 [::1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49276'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563200131.51
+    'REQUEST_TIME' => 1563200131
+]
+2019-07-15 16:15:49 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][Error] Error: Call to a member function format() on boolean in C:\xampp\htdocs\yii\academia\models\Aluno.php:134
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:15:48 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49280'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563200148.58
+    'REQUEST_TIME' => 1563200148
+]
+2019-07-15 16:16:31 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][Error] Error: Call to a member function format() on boolean in C:\xampp\htdocs\yii\academia\models\Aluno.php:134
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:16:30 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49286'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563200190.859
+    'REQUEST_TIME' => 1563200190
+]
+2019-07-15 16:17:16 [::1][1][-][error][Error] Error: Call to a member function format() on boolean in C:\xampp\htdocs\yii\academia\models\Aluno.php:136
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Model.php(350): app\models\Aluno->beforeValidate()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\ActiveRecord.php(670): yii\base\Model->validate(NULL)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#3 C:\xampp\htdocs\yii\academia\controllers\AlunoController.php(57): yii\db\BaseActiveRecord->save()
+#4 [internal function]: app\controllers\AlunoController->actionEditar()
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('aluno/editar', Array)
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-07-15 16:17:16 [::1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'cjx79b8DdvKXTiSOUZGbJYB9A0Mwjz5oVYVuFJTIc8cobTmB7jAZqPo3VOYh_qtjs09ZEWO9dFkPvSxl0I8n6g=='
+    'Aluno' => [
+        'IdAluno' => '1'
+        'Nome' => 'Matheus'
+        'DataNascimento' => '1994-10-08'
+        'IndicadorDorPeitoAtividadesFisicas' => '0'
+        'IndicadorDorPeitoUltimoMes' => '0'
+        'IndicadorPerdaConscienciaTontura' => '0'
+        'IndicadorProblemaArticular' => '1'
+        'IndicadorTabagista' => '1'
+        'IndicadorDiabetico' => '1'
+        'IndicadorFamiliarAtaqueCardiaco' => '1'
+        'Lesoes' => ''
+        'Observacoes' => ''
+        'TreinoEspecifico' => ''
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '684'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/editar?IdAluno=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '49302'
+    'REDIRECT_URL' => '/yii/academia/web/aluno/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/aluno/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563200236.433
+    'REQUEST_TIME' => 1563200236
+]

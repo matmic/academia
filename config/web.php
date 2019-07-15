@@ -13,6 +13,14 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+		'formatter' => [
+			   'dateFormat' => 'd/m/Y',
+			   'datetimeFormat' => 'd/m/Y H:i:s',
+			   'timeFormat' => 'H:i:s',
+
+			   'locale' => 'pt-BR', //your language locale
+			   'defaultTimeZone' => 'America/Sao_Paulo', // time zone
+		],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'abcde',

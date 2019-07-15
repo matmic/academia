@@ -4,9 +4,8 @@ namespace app\controllers;
 
 use Yii;
 use yii\web\Controller;
-use app\models\Professor;
 use yii\data\ActiveDataProvider;
-use yii\helpers\VarDumper;
+use app\models\Professor;
 
 class ProfessorController extends Controller
 {
@@ -90,7 +89,6 @@ class ProfessorController extends Controller
 					Yii::$app->session->setFlash('success', 'Professor salvo com sucesso!');
 					return $this->redirect('listar');
 				} else {
-					VarDumper::dump($professor->getErrors(), 10, true);die;
 					Yii::$app->session->setFlash('error', 'Não foi possível salvar o professor!');
 					return $this->redirect('listar');
 				}
