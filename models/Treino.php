@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "treino".
@@ -21,7 +22,10 @@ use Yii;
  */
 class Treino extends \yii\db\ActiveRecord
 {
-    /**
+    public $NomeProfessor;
+	public $NomeAluno;
+	
+	/**
      * {@inheritdoc}
      */
     public static function tableName()
@@ -53,13 +57,13 @@ class Treino extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IdTreino' => 'Id Treino',
-            'IdProfessor' => 'Id Professor',
-            'IdAluno' => 'Id Aluno',
-            'Nome' => 'Nome',
+            '#' => 'Id Treino',
+            'IdProfessor' => 'Professor',
+            'IdAluno' => 'Aluno',
+            'Nome' => 'Nome do Treino',
             'Objetivos' => 'Objetivos',
-            'DataInclusao' => 'Data Inclusao',
-            'IndicadorAtivo' => 'Indicador Ativo',
+            'DataInclusao' => 'Data de Inclusão',
+            'IndicadorAtivo' => 'Ativo?',
         ];
     }
 
@@ -86,4 +90,42 @@ class Treino extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdProfessor']);
     }
+	
+	public function beforeValidate() {
+		if (!parent::beforeValidate()) {
+			return false;
+		}
+		
+		if ($this->isNewRecord) {
+			$connection = Yii::$app->getDb();
+			$command = $connection->createCommand("SELECT IFNULL(MAX(IdTreino), 0)+1 AS IdTreino FROM treino");
+			$result = $command->queryOne();
+			
+			$this->IdTreino = $result['IdTreino'];
+			$this->IndicadorAtivo = '1';
+			$this->DataInclusao = new Expression('NOW()');
+		}
+		
+		if (trim($this->Objetivos) == '') {
+			$this->Objetivos = null;
+		}
+		
+		if (trim($this->Nome) == '') {
+			$this->Nome = null;
+		}
+		
+		return parent::beforeValidate();
+	}
+	
+	public function afterFind() {
+		if ($this->IndicadorAtivo == '1') {
+			$this->IndicadorAtivo = 'Sim';
+		} else {
+			$this->IndicadorAtivo = 'Não';
+		}
+		
+		$this->DataInclusao = (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y');
+
+		return parent::afterFind();
+	}
 }

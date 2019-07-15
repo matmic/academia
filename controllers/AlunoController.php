@@ -24,7 +24,7 @@ class AlunoController extends Controller
     }
 	
 	public function actionVisualizar($IdAluno) {
-		$aluno = Aluno::find($IdAluno)->one();
+		$aluno = Aluno::findOne($IdAluno);
 		
 		if (!empty($aluno)) {
 			return $this->render('visualizar', ['aluno' => $aluno]);

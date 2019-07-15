@@ -105,7 +105,7 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
 			$this->IndicadorAtivo = 'Não';
 		}
 		
-		$this->DataInclusao = (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y');
+		//$this->DataInclusao = (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y');
 
 		return parent::afterFind();
 	}

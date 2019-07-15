@@ -4,7 +4,6 @@ namespace app\models;
 
 use Yii;
 use yii\db\Expression;
-use yii\helpers\VarDumper;
 
 /**
  * This is the model class for table "aluno".
@@ -139,6 +138,18 @@ class Aluno extends \yii\db\ActiveRecord
 			$this->IndicadorAtivo = 'Sim';
 		} else {
 			$this->IndicadorAtivo = 'Não';
+		}
+		
+		if ($this->Lesoes == null) {
+			$this->Lesoes = '';
+		}
+		
+		if ($this->Observacoes == null) {
+			$this->Observacoes = '';
+		}
+		
+		if ($this->TreinoEspecifico == null) {
+			$this->TreinoEspecifico = '';
 		}
 		
 		//$this->DataInclusao = (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y');

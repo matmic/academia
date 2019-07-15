@@ -12,7 +12,10 @@
 			'IdProfessor',
 			'Nome',
 			'Email',
-			'DataInclusao',
+			[
+				'attribute' => 'DataInclusao',
+				'format' => ['date', 'php:d/m/Y'],
+			],
 			'IndicadorAtivo',
 			[
 				'header' => 'Operações',

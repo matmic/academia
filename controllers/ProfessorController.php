@@ -24,7 +24,7 @@ class ProfessorController extends Controller
     }
 	
 	public function actionVisualizar($IdProfessor) {
-		$professor = Professor::find($IdProfessor)->one();
+		$professor = Professor::findOne($IdProfessor);
 		
 		if (!empty($professor)) {
 			return $this->render('visualizar', ['professor' => $professor]);
