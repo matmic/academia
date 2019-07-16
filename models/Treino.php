@@ -57,7 +57,7 @@ class Treino extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            '#' => 'Id Treino',
+            'IdTreino' => '#',
             'IdProfessor' => 'Professor',
             'IdAluno' => 'Aluno',
             'Nome' => 'Nome do Treino',
@@ -124,6 +124,8 @@ class Treino extends \yii\db\ActiveRecord
 			$this->IndicadorAtivo = 'Não';
 		}
 		
+		$this->NomeProfessor = $this->professor->Nome;
+		$this->NomeAluno = $this->aluno->Nome;
 		$this->DataInclusao = (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y');
 
 		return parent::afterFind();

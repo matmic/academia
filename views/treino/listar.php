@@ -10,14 +10,17 @@
 		'dataProvider' => $dataProvider,
 		'columns' => [
 			[
-				'attribute' => 'professor.Nome',
+				'attribute' => 'professor',
 				'label' => 'Professor',
+				'value' => 'professor.Nome',
 			],
 			[
-				'attribute' => 'aluno.Nome',
+				'attribute' => 'aluno',
 				'label' => 'Aluno',
+				'value' => 'aluno.Nome',
 			],
 			'Nome',
+			'Objetivos',
 			'DataInclusao',
 			'IndicadorAtivo',
 			[

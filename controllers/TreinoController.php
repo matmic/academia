@@ -8,12 +8,13 @@ use yii\data\ActiveDataProvider;
 use app\models\Professor;
 use app\models\Aluno;
 use app\models\Treino;
+use yii\helpers\VarDumper;
 
 class TreinoController extends Controller
 {
     public function actionListar()
     {
-		$treinos = Treino::find()->where(['IndicadorAtivo' => '1']);
+		$treinos = Treino::find()->joinWith(['aluno', 'professor'])->where(['treino.IndicadorAtivo' => '1']);
 		
 		$provider = new ActiveDataProvider([
 			'query' => $treinos,
@@ -22,11 +23,20 @@ class TreinoController extends Controller
 			],
 		]);
 		
+		$provider->sort->attributes['aluno'] = [
+			'asc' => ['aluno.Nome' => SORT_ASC],
+			'desc' => ['aluno.Nome' => SORT_DESC],
+		];
+		$provider->sort->attributes['professor'] = [
+			'asc' => ['professor.Nome' => SORT_ASC],
+			'desc' => ['professor.Nome' => SORT_DESC],
+		];
+
 		return $this->render('listar', ['dataProvider' => $provider]);
     }
 	
 	public function actionVisualizar($IdTreino) {
-		$treino = Treino::findOne($IdTreino);
+		$treino = Treino::find()->where(['IdTreino' => $IdTreino])->one();
 		
 		if (!empty($treino)) {
 			return $this->render('visualizar', ['treino' => $treino]);
