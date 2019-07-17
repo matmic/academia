@@ -4,6 +4,8 @@
 	use yii\widgets\ActiveForm;
 	use yii\jui\AutoComplete;
 	use yii\web\JsExpression;
+	use yii\grid\GridView;
+	use yii\grid\CheckboxColumn;
 	
 	echo Html::tag('h1', 'Formulário de Treino');
 	
@@ -13,9 +15,6 @@
 		'method' => 'POST',
 		'options' => ['class' => 'form-horizontal'],
 	]);
-	
-	//$data = Professor::find()->select(['Nome'])->orderBy('Nome')->asArray()->all();
-	//VarDumper::dump($data, 10, true);die;
 	
 	echo $form->field($treino, 'NomeProfessor')->label('Professor')->widget(AutoComplete::classname(), [
 		'options' => ['class' => 'form-control'],
@@ -47,18 +46,66 @@
 	echo $form->field($treino, 'Nome');
 	echo $form->field($treino, 'Objetivos');
 	
-	// echo $form->field($treino, 'IndicadorDorPeitoAtividadesFisicas')->checkbox();
-	// echo $form->field($treino, 'IndicadorDorPeitoUltimoMes')->checkbox();
-	// echo $form->field($treino, 'IndicadorPerdaConscienciaTontura')->checkbox();
-	// echo $form->field($treino, 'IndicadorProblemaArticular')->checkbox();
-	// echo $form->field($treino, 'IndicadorTabagista')->checkbox();
-	// echo $form->field($treino, 'IndicadorDiabetico')->checkbox();
-	// echo $form->field($treino, 'IndicadorFamiliarAtaqueCardiaco')->checkbox();
 	
-	// echo $form->field($treino, 'Lesoes')->TextArea();
-	// echo $form->field($treino, 'Observacoes')->TextArea();
-	// echo $form->field($treino, 'TreinoEspecifico')->TextArea();
-
+	echo GridView::widget([
+		'dataProvider' => $dataProvider,
+		'columns' => [
+			[
+				'attribute' => 'grupo',
+				'label' => 'Grupo',
+				'value' => 'grupo.Nome',
+			],
+			'Nome',
+			[
+				'class' => CheckboxColumn::className(),
+				'checkboxOptions' => function($model) {
+					$arr = [
+						'value' => $model->IdAparelho,
+						'id'=> "selection$model->IdAparelho",
+						'checked' => false,
+					];
+					
+					return $arr;
+				},
+			],
+			[
+				'value' => function($model) {
+					return Html::input('number', "Series[$model->IdAparelho]", 0, ['min' => '0', 'onclick' => "$('#selection$model->IdAparelho').prop('checked', true);"]);
+				},
+				'format' => 'raw',
+				'label' => 'Séries',
+			],
+			[
+				'value' => function($model) {
+					return Html::input('number', "Repeticoes[$model->IdAparelho]", 0, ['min' => '0']);
+				},
+				'format' => 'raw',
+				'label' => 'Repetições',
+			],
+			[
+				'value' => function($model) {
+					return Html::input('number', "Peso[$model->IdAparelho]", 0, ['min' => '0']);
+				},
+				'format' => 'raw',
+				'label' => 'Peso',
+			],
+			[
+				'header' => 'Operações',
+				'class' => 'yii\grid\ActionColumn',
+				'template' => '{view} {update}',
+				'buttons' => [
+					'view' => function($url, $model, $key) {
+						return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',  Url::to(['treino/visualizar', 'IdTreino' => $key], true));
+					},
+					'update' => function($url, $model, $key) {
+						return Html::a('<span class="glyphicon glyphicon-pencil"></span>',  Url::to(['treino/editar', 'IdTreino' => $key], true));
+					},
+				],
+			],
+		],
+	]);
+	
+	
 	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
 	echo Html::button('Voltar', ['onclick'=>'window.location.href = "' . Url::to(['treino/listar'], true) . '"', 'class'=>'btn btn-secondary']);
 	

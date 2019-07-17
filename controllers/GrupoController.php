@@ -6,7 +6,6 @@ use Yii;
 use yii\web\Controller;
 use app\models\Grupo;
 use yii\data\ActiveDataProvider;
-use yii\helpers\VarDumper;
 
 class GrupoController extends Controller
 {

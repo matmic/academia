@@ -72,7 +72,6 @@ class AlunoController extends Controller
 					Yii::$app->session->setFlash('success', 'Aluno salvo com sucesso!');
 					return $this->redirect('listar');
 				} else {
-					VarDumper::dump($aluno->getErrors(), 10, true);die;
 					Yii::$app->session->setFlash('error', 'Não foi possível salvar o aluno!');
 					return $this->redirect('listar');
 				}

@@ -53,10 +53,10 @@ class Exercicio extends \yii\db\ActiveRecord
             'IdExercicio' => 'Id Exercicio',
             'IdTreino' => 'Id Treino',
             'IdAparelho' => 'Id Aparelho',
-            'Series' => 'Series',
-            'Repeticoes' => 'Repeticoes',
+            'Series' => 'Séries',
+            'Repeticoes' => 'Repetições',
             'Peso' => 'Peso',
-            'IndicadorAtivo' => 'Indicador Ativo',
+            'IndicadorAtivo' => 'Ativo?',
         ];
     }
 
@@ -75,4 +75,22 @@ class Exercicio extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Aparelho::className(), ['IdAparelho' => 'IdAparelho']);
     }
+	
+	public function beforeValidate()
+	{
+		if (!parent::beforeValidate()) {
+			return false;
+		}
+		
+		if ($this->isNewRecord) {
+			$connection = Yii::$app->getDb();
+			$command = $connection->createCommand("SELECT IFNULL(MAX(IdExercicio), 0)+1 AS IdExercicio FROM exercicio");
+			$result = $command->queryOne();
+			
+			$this->IdExercicio = $result['IdExercicio'];
+			$this->IndicadorAtivo = '1';
+		}
+		
+		return parent::beforeValidate();
+	}
 }

@@ -82,4 +82,8 @@ class Aparelho extends \yii\db\ActiveRecord
 		
 		return parent::beforeSave($insert);
 	}
+	
+	public function isSet($IdTreino) {
+		return 10;
+	}
 }

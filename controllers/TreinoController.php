@@ -8,7 +8,10 @@ use yii\data\ActiveDataProvider;
 use app\models\Professor;
 use app\models\Aluno;
 use app\models\Treino;
+use app\models\Aparelho;
+use app\models\Exercicio;
 use yii\helpers\VarDumper;
+use Exception;
 
 class TreinoController extends Controller
 {
@@ -39,7 +42,16 @@ class TreinoController extends Controller
 		$treino = Treino::find()->where(['IdTreino' => $IdTreino])->one();
 		
 		if (!empty($treino)) {
-			return $this->render('visualizar', ['treino' => $treino]);
+			
+			$exercicios = Exercicio::find()->joinWith(['aparelho', 'aparelho.grupo'])->where(['IdTreino' => $IdTreino]);
+			$provider = new ActiveDataProvider([
+				'query' => $exercicios,
+				'pagination' => [
+					'pageSize' => 100,
+				],
+			]);
+			
+			return $this->render('visualizar', ['treino' => $treino, 'dataProvider' => $provider]);
 		} else {
 			Yii::$app->session->setFlash('error', 'Treino inválido!');
 			return $this->redirect('listar');
@@ -77,23 +89,56 @@ class TreinoController extends Controller
 					return $this->redirect('listar');
 				}
 			} else {
-				$treino = new Treino();
-				$treino->attributes =  $_POST['Treino'];
+				$transaction = Yii::$app->db->beginTransaction();
+				try {
+					$treino = new Treino();
+					$treino->attributes =  $_POST['Treino'];
 				
-				if ($treino->save()) {
-					Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
-					return $this->redirect('listar');
-				} else {
-					VarDumper::dump($treino->getErrors(), 10, true);die;
-					Yii::$app->session->setFlash('error', 'Não foi possível salvar o treino!');
+					if ($treino->save()) {
+						
+						foreach ($_POST['selection'] as $aparelho) {
+							$exercicio = new Exercicio();
+							$exercicio->IdTreino = $treino->IdTreino;
+							$exercicio->IdAparelho = $aparelho;
+							$exercicio->Series = $_POST['Series'][$aparelho];
+							$exercicio->Repeticoes = $_POST['Repeticoes'][$aparelho];
+							$exercicio->Peso = $_POST['Peso'][$aparelho];
+							
+							if (!$exercicio->save()) {
+								throw new Exception('Não foi possível salvar o exercício!');
+							}
+						}
+						
+						$transaction->commit();
+						Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
+						return $this->redirect('listar');
+					} else {
+						throw new Exception('Não foi possível salvar o treino!');
+						return $this->redirect('listar');
+					}
+				} catch (Exception $e) {
+					Yii::$app->session->setFlash('error', $e->getMessage());
 					return $this->redirect('listar');
 				}
 			}
 		} else {
 			$treino = new Treino();
-			$professores = Professor::find()->select(['IdProfessor', 'Nome'])->asArray()->all();
 			
-			return $this->render('editar', ['treino' => $treino, 'professores' => $professores]);
+			$aparelhos = Aparelho::find()->joinWith(['grupo']);
+			$provider = new ActiveDataProvider([
+				'query' => $aparelhos,
+				'pagination' => [
+					'pageSize' => 100,
+				],
+			]);
+			$provider->sort->attributes['grupo'] = [
+				'asc' => ['grupo.Nome' => SORT_ASC],
+				'desc' => ['grupo.Nome' => SORT_DESC],
+			];
+			
+			//VarDumper::dump($provider->query->all(), 10, true);die;
+			
+			return $this->render('editar', ['treino' => $treino, 'dataProvider' => $provider]);
 		}
 	}
 }
