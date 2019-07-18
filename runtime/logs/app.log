@@ -38384,3 +38384,1173 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1563400343.847
     'REQUEST_TIME' => 1563400343
 ]
+2019-07-18 20:54:50 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:175
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:54:50 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54318'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476090.117
+    'REQUEST_TIME' => 1563476090
+]
+2019-07-18 20:55:27 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:174
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:55:27 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54323'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476127.396
+    'REQUEST_TIME' => 1563476127
+]
+2019-07-18 20:56:17 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:173
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:56:17 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54327'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476177.793
+    'REQUEST_TIME' => 1563476177
+]
+2019-07-18 20:56:26 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:173
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:56:26 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54330'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476186.759
+    'REQUEST_TIME' => 1563476186
+]
+2019-07-18 20:56:43 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:173
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:56:43 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54334'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476203.032
+    'REQUEST_TIME' => 1563476203
+]
+2019-07-18 20:56:58 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:175
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:56:58 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54339'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476218.115
+    'REQUEST_TIME' => 1563476218
+]
+2019-07-18 20:57:02 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:175
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:57:02 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54340'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476222.332
+    'REQUEST_TIME' => 1563476222
+]
+2019-07-18 20:59:36 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:173
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 20:59:36 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/aluno/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54362'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476376.595
+    'REQUEST_TIME' => 1563476376
+]
+2019-07-18 21:00:05 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:173
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('editar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 21:00:05 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = [
+    'IdTreino' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54372'
+    'REDIRECT_URL' => '/yii/academia/web/treino/editar'
+    'REDIRECT_QUERY_STRING' => 'IdTreino=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'IdTreino=1'
+    'REQUEST_URI' => '/yii/academia/web/treino/editar?IdTreino=1'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476405.479
+    'REQUEST_TIME' => 1563476405
+]
+2019-07-18 21:00:08 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:173
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('editar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 21:00:08 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54373'
+    'REDIRECT_URL' => '/yii/academia/web/treino/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476408.258
+    'REQUEST_TIME' => 1563476408
+]
+2019-07-18 21:01:07 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: treino/editar in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php:128
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Página não encontrada. in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-07-18 21:01:07 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54379'
+    'REDIRECT_URL' => '/yii/academia/web/treino/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476467.411
+    'REQUEST_TIME' => 1563476467
+]
+2019-07-18 21:01:44 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][ParseError] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:173
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(637): class_exists('app\\controllers...')
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('treino')
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('listar')
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/listar', Array)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-07-18 21:01:44 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/treino/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54390'
+    'REDIRECT_URL' => '/yii/academia/web/treino/listar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/listar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476504.649
+    'REQUEST_TIME' => 1563476504
+]
+2019-07-18 21:02:09 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in C:\xampp\htdocs\yii\academia\views\treino\editar.php:63
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\views\treino\editar.php(63): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 [internal function]: yii\base\View->{closure}(Array, 0, 0, Object(yii\grid\CheckboxColumn))
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\CheckboxColumn.php(121): call_user_func(Object(Closure), Array, 0, 0, Object(yii\grid\CheckboxColumn))
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\CheckboxColumn->renderDataCellContent(Array, 0, 0)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Array, 0, 0)
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Array, 0, 0)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#10 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#12 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#14 C:\xampp\htdocs\yii\academia\views\treino\editar.php(102): yii\base\Widget::widget(Array)
+#15 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#17 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\TreinoController))
+#18 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('editar', Array, Object(app\controllers\TreinoController))
+#19 C:\xampp\htdocs\yii\academia\controllers\TreinoController.php(170): yii\base\Controller->render('editar', Array)
+#20 [internal function]: app\controllers\TreinoController->actionEditar()
+#21 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#22 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#23 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#24 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#25 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#27 {main}
+2019-07-18 21:02:09 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/treino/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54397'
+    'REDIRECT_URL' => '/yii/academia/web/treino/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476529.159
+    'REQUEST_TIME' => 1563476529
+]
+2019-07-18 21:02:15 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: Series in C:\xampp\htdocs\yii\academia\views\treino\editar2.php:70
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\views\treino\editar2.php(70): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 [internal function]: yii\base\View->{closure}(Array, 0, 0, Object(yii\grid\DataColumn))
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\DataColumn.php(230): call_user_func(Object(Closure), Array, 0, 0, Object(yii\grid\DataColumn))
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\grid\DataColumn->getDataCellValue(Array, 0, 0)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Array, 0, 0)
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Array, 0, 0)
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Array, 0, 0)
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#14 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#15 C:\xampp\htdocs\yii\academia\views\treino\editar2.php(87): yii\base\Widget::widget(Array)
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#18 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\TreinoController))
+#19 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('editar2', Array, Object(app\controllers\TreinoController))
+#20 C:\xampp\htdocs\yii\academia\controllers\TreinoController.php(170): yii\base\Controller->render('editar2', Array)
+#21 [internal function]: app\controllers\TreinoController->actionEditar()
+#22 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#25 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#26 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2019-07-18 21:02:15 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/treino/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '54402'
+    'REDIRECT_URL' => '/yii/academia/web/treino/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563476535.205
+    'REQUEST_TIME' => 1563476535
+]

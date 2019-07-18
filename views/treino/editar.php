@@ -6,6 +6,7 @@
 	use yii\web\JsExpression;
 	use yii\grid\GridView;
 	use yii\grid\CheckboxColumn;
+	use yii\app\models\Aparelho;
 	
 	echo Html::tag('h1', 'Formulário de Treino');
 	
@@ -50,18 +51,14 @@
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [
-			[
-				'attribute' => 'grupo',
-				'label' => 'Grupo',
-				'value' => 'grupo.Nome',
-			],
-			'Nome',
+			'NomeGrupo',
+			'NomeAparelho',
 			[
 				'class' => CheckboxColumn::className(),
 				'checkboxOptions' => function($model) {
 					$arr = [
-						'value' => $model->IdAparelho,
-						'id'=> "selection$model->IdAparelho",
+						'value' => $model["IdAparelho"],
+						'id'=> "selection$model[IdAparelho]",
 						'checked' => false,
 					];
 					
@@ -70,37 +67,24 @@
 			],
 			[
 				'value' => function($model) {
-					return Html::input('number', "Series[$model->IdAparelho]", 0, ['min' => '0', 'onclick' => "$('#selection$model->IdAparelho').prop('checked', true);"]);
+					return Html::input('number', "Series[$model[IdAparelho]]", isset($model["Series"]) ? $model["Series"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
 				},
 				'format' => 'raw',
 				'label' => 'Séries',
 			],
 			[
 				'value' => function($model) {
-					return Html::input('number', "Repeticoes[$model->IdAparelho]", 0, ['min' => '0']);
+					return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '', ['min' => '0']);
 				},
 				'format' => 'raw',
 				'label' => 'Repetições',
 			],
 			[
 				'value' => function($model) {
-					return Html::input('number', "Peso[$model->IdAparelho]", 0, ['min' => '0']);
+					return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '', ['min' => '0']);
 				},
 				'format' => 'raw',
 				'label' => 'Peso',
-			],
-			[
-				'header' => 'Operações',
-				'class' => 'yii\grid\ActionColumn',
-				'template' => '{view} {update}',
-				'buttons' => [
-					'view' => function($url, $model, $key) {
-						return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',  Url::to(['treino/visualizar', 'IdTreino' => $key], true));
-					},
-					'update' => function($url, $model, $key) {
-						return Html::a('<span class="glyphicon glyphicon-pencil"></span>',  Url::to(['treino/editar', 'IdTreino' => $key], true));
-					},
-				],
 			],
 		],
 	]);

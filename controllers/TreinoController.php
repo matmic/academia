@@ -80,7 +80,7 @@ class TreinoController extends Controller
 					// ],
 				]);
 				
-				return $this->render('editar2', ['treino' => $treino, 'dataProvider'=>$provider]);
+				return $this->render('editar', ['treino' => $treino, 'dataProvider'=>$provider]);
 			} else {
 				Yii::$app->session->setFlash('error', 'Treino inválido!');
 				return $this->redirect('listar');
@@ -152,9 +152,23 @@ class TreinoController extends Controller
 				'desc' => ['grupo.Nome' => SORT_DESC],
 			];
 			
-			//VarDumper::dump($provider->query->all(), 10, true);die;
+			if (!empty($treino)) {
+				$provider = new SqlDataProvider([
+					'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo',
+					'pagination' => [
+						'pageSize' => 100,
+					],
+					// 'sort' => [
+						// 'attributes' => [
+							// 'title',
+							// 'view_count',
+							// 'created_at',
+						// ],
+					// ],
+				]);
 			
-			return $this->render('editar', ['treino' => $treino, 'dataProvider' => $provider]);
+				return $this->render('editar', ['treino' => $treino, 'dataProvider' => $provider]);
+			}
 		}
 	}
 }
