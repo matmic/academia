@@ -12,6 +12,7 @@ use app\models\Aparelho;
 use app\models\Exercicio;
 use yii\helpers\VarDumper;
 use Exception;
+use yii\data\SqlDataProvider;
 
 class TreinoController extends Controller
 {
@@ -64,7 +65,22 @@ class TreinoController extends Controller
 			$treino = Treino::findOne($IdTreino);
 
 			if (!empty($treino)) {
-				return $this->render('editar', ['treino' => $treino]);
+				$provider = new SqlDataProvider([
+					'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo',
+					'params' => [':IdTreino' => $IdTreino],
+					'pagination' => [
+						'pageSize' => 100,
+					],
+					// 'sort' => [
+						// 'attributes' => [
+							// 'title',
+							// 'view_count',
+							// 'created_at',
+						// ],
+					// ],
+				]);
+				
+				return $this->render('editar2', ['treino' => $treino, 'dataProvider'=>$provider]);
 			} else {
 				Yii::$app->session->setFlash('error', 'Treino inválido!');
 				return $this->redirect('listar');
