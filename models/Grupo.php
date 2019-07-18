@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use yii\data\SqlDataProvider;
 
 /**
  * This is the model class for table "grupo".
@@ -76,5 +77,65 @@ class Grupo extends \yii\db\ActiveRecord
 	{
 		$grupos = Grupo::find()->orderBy('Nome ASC')->all();
 		return ArrayHelper::map($grupos, 'IdGrupo', 'Nome');
+	}
+	
+	public static function getDataProvidersGrupos() {
+		$providerPeito = new SqlDataProvider([
+			'id' => 'Peito',
+			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 1',
+			'pagination' => [
+				'pageSize' => 100,
+			],
+		]);
+		
+		$providerCostas = new SqlDataProvider([
+			'id' => 'Costas',
+			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 2',
+			'pagination' => [
+				'pageSize' => 100,
+			],
+		]);
+		
+		$providerOmbros = new SqlDataProvider([
+			'id' => 'Ombros',
+			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 3',
+			'pagination' => [
+				'pageSize' => 100,
+			],
+		]);
+		
+		$providerABS = new SqlDataProvider([
+			'id' => 'ABS',
+			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 4',
+			'pagination' => [
+				'pageSize' => 100,
+			],
+		]);
+		
+		$providerTriceps = new SqlDataProvider([
+			'id' => 'Tríceps',
+			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 5',
+			'pagination' => [
+				'pageSize' => 100,
+			],
+		]);
+		
+		$providerBiceps = new SqlDataProvider([
+			'id' => 'Bíceps',
+			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 6',
+			'pagination' => [
+				'pageSize' => 100,
+			],
+		]);
+		
+		$providerMembrosInferiores = new SqlDataProvider([
+			'id' => 'Membros Inferiores',
+			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 7',
+			'pagination' => [
+				'pageSize' => 100,
+			],
+		]);
+		
+		return [$providerPeito, $providerCostas, $providerOmbros, $providerABS, $providerTriceps, $providerBiceps, $providerMembrosInferiores];
 	}
 }

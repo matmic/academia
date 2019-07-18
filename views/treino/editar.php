@@ -47,47 +47,93 @@
 	echo $form->field($treino, 'Nome');
 	echo $form->field($treino, 'Objetivos');
 	
-	
-	echo GridView::widget([
-		'dataProvider' => $dataProvider,
-		'columns' => [
-			'NomeGrupo',
-			'NomeAparelho',
-			[
-				'class' => CheckboxColumn::className(),
-				'checkboxOptions' => function($model) {
-					$arr = [
-						'value' => $model["IdAparelho"],
-						'id'=> "selection$model[IdAparelho]",
-						'checked' => false,
-					];
+	// echo GridView::widget([
+		// 'dataProvider' => $dataProvider,
+		// 'columns' => [
+			// 'NomeGrupo',
+			// 'NomeAparelho',
+			// [
+				// 'class' => CheckboxColumn::className(),
+				// 'checkboxOptions' => function($model) {
+					// $arr = [
+						// 'value' => $model["IdAparelho"],
+						// 'id'=> "selection$model[IdAparelho]",
+						// 'checked' => false,
+					// ];
 					
-					return $arr;
-				},
+					// return $arr;
+				// },
+			// ],
+			// [
+				// 'value' => function($model) {
+					// return Html::input('number', "Series[$model[IdAparelho]]", isset($model["Series"]) ? $model["Series"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
+				// },
+				// 'format' => 'raw',
+				// 'label' => 'Séries',
+			// ],
+			// [
+				// 'value' => function($model) {
+					// return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '', ['min' => '0']);
+				// },
+				// 'format' => 'raw',
+				// 'label' => 'Repetições',
+			// ],
+			// [
+				// 'value' => function($model) {
+					// return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '', ['min' => '0']);
+				// },
+				// 'format' => 'raw',
+				// 'label' => 'Peso',
+			// ],
+		// ],
+	// ]);
+	
+	foreach ($arrProviders as $provider) {
+		echo "<fieldset><legend id='legend$provider->id'>" . $provider->id . "</legend>";
+		echo "<div id='div$provider->id'>";
+		echo GridView::widget([
+			'dataProvider' => $provider,
+			'columns' => [
+				'NomeGrupo',
+				'NomeAparelho',
+				[
+					'class' => CheckboxColumn::className(),
+					'checkboxOptions' => function($model) {
+						$arr = [
+							'value' => $model["IdAparelho"],
+							'id'=> "selection$model[IdAparelho]",
+							'checked' => false,
+						];
+						
+						return $arr;
+					},
+				],
+				[
+					'value' => function($model) {
+						return Html::input('number', "Series[$model[IdAparelho]]", isset($model["Series"]) ? $model["Series"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
+					},
+					'format' => 'raw',
+					'label' => 'Séries',
+				],
+				[
+					'value' => function($model) {
+						return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '', ['min' => '0']);
+					},
+					'format' => 'raw',
+					'label' => 'Repetições',
+				],
+				[
+					'value' => function($model) {
+						return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '', ['min' => '0']);
+					},
+					'format' => 'raw',
+					'label' => 'Peso',
+				],
 			],
-			[
-				'value' => function($model) {
-					return Html::input('number', "Series[$model[IdAparelho]]", isset($model["Series"]) ? $model["Series"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
-				},
-				'format' => 'raw',
-				'label' => 'Séries',
-			],
-			[
-				'value' => function($model) {
-					return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '', ['min' => '0']);
-				},
-				'format' => 'raw',
-				'label' => 'Repetições',
-			],
-			[
-				'value' => function($model) {
-					return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '', ['min' => '0']);
-				},
-				'format' => 'raw',
-				'label' => 'Peso',
-			],
-		],
-	]);
+		]);
+		echo '</div>';
+		echo '</fieldset>';
+	}
 	
 	
 	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
@@ -95,3 +141,32 @@
 	
 	ActiveForm::end();
 ?>
+<script>
+	$('#legendPeito').click(function() {
+		$('#divPeito').slideToggle();
+	});
+	
+	$('#legendCostas').click(function() {
+		$('#divCostas').slideToggle();
+	});
+	
+	$('#legendOmbros').click(function() {
+		$('#divOmbros').slideToggle();
+	});
+	
+	$('#legendABS').click(function() {
+		$('#divABS').slideToggle();
+	});
+	
+	$('#legendBiceps').click(function() {
+		$('#divPeito').slideToggle();
+	});
+	
+	$('#legendTriceps').click(function() {
+		$('#divPeito').slideToggle();
+	});
+	
+	$('#legendPeito').click(function() {
+		$('#divPeito').slideToggle();
+	});
+</script>

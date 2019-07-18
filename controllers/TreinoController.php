@@ -10,6 +10,7 @@ use app\models\Aluno;
 use app\models\Treino;
 use app\models\Aparelho;
 use app\models\Exercicio;
+use app\models\Grupo;
 use yii\helpers\VarDumper;
 use Exception;
 use yii\data\SqlDataProvider;
@@ -71,13 +72,12 @@ class TreinoController extends Controller
 					'pagination' => [
 						'pageSize' => 100,
 					],
-					// 'sort' => [
-						// 'attributes' => [
-							// 'title',
-							// 'view_count',
-							// 'created_at',
-						// ],
-					// ],
+					'sort' => [
+						'attributes' => [
+							'NomeGrupo',
+							'NomeAparelho',
+						],
+					],
 				]);
 				
 				return $this->render('editar', ['treino' => $treino, 'dataProvider'=>$provider]);
@@ -139,36 +139,23 @@ class TreinoController extends Controller
 			}
 		} else {
 			$treino = new Treino();
-			
-			$aparelhos = Aparelho::find()->joinWith(['grupo']);
-			$provider = new ActiveDataProvider([
-				'query' => $aparelhos,
+
+			$provider = new SqlDataProvider([
+				'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo',
 				'pagination' => [
 					'pageSize' => 100,
 				],
-			]);
-			$provider->sort->attributes['grupo'] = [
-				'asc' => ['grupo.Nome' => SORT_ASC],
-				'desc' => ['grupo.Nome' => SORT_DESC],
-			];
-			
-			if (!empty($treino)) {
-				$provider = new SqlDataProvider([
-					'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo',
-					'pagination' => [
-						'pageSize' => 100,
-					],
-					// 'sort' => [
-						// 'attributes' => [
-							// 'title',
-							// 'view_count',
-							// 'created_at',
-						// ],
+				// 'sort' => [
+					// 'attributes' => [
+						// 'NomeGrupo',
+						// 'NomeAparelho',
 					// ],
-				]);
+				// ],
+			]);
 			
-				return $this->render('editar', ['treino' => $treino, 'dataProvider' => $provider]);
-			}
+			$arrProviders = Grupo::getDataProvidersGrupos();
+			
+			return $this->render('editar', ['treino' => $treino, 'dataProvider' => $provider, 'arrProviders' => $arrProviders]);
 		}
 	}
 }
