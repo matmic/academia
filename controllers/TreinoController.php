@@ -3,17 +3,13 @@
 namespace app\controllers;
 
 use Yii;
+use Exception;
 use yii\web\Controller;
+use yii\data\SqlDataProvider;
 use yii\data\ActiveDataProvider;
-use app\models\Professor;
-use app\models\Aluno;
 use app\models\Treino;
-use app\models\Aparelho;
 use app\models\Exercicio;
 use app\models\Grupo;
-use yii\helpers\VarDumper;
-use Exception;
-use yii\data\SqlDataProvider;
 
 class TreinoController extends Controller
 {

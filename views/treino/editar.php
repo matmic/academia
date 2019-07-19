@@ -6,7 +6,8 @@
 	use yii\web\JsExpression;
 	use yii\grid\GridView;
 	use yii\grid\CheckboxColumn;
-	use yii\app\models\Aparelho;
+	use app\models\Professor;
+	use app\models\Aluno;
 	
 	echo Html::tag('h1', 'Formulário de Treino');
 	
@@ -17,31 +18,34 @@
 		'options' => ['class' => 'form-horizontal'],
 	]);
 	
-	echo $form->field($treino, 'NomeProfessor')->label('Professor')->widget(AutoComplete::classname(), [
-		'options' => ['class' => 'form-control'],
-		'clientOptions' => [
-            'source' => Url::to(['auxiliar/auto-complete-professor'], true),
-            'minLength' => '3', 
-			'autoFill' => true,
-			'select'=> new JsExpression("function(event, ui) {
-				$('#iptIdProfessor').val(ui.item['IdProfessor']);
-			}"),
-        ],
-	]);
-	echo Html::activeHiddenInput($treino, 'IdProfessor', ['id'=>'iptIdProfessor']);
+	echo $form->field($treino, 'IdProfessor')->label('Professor')->dropDownList(Professor::getProfessores(), ['prompt' => '']);
+	echo $form->field($treino, 'IdAluno')->label('Aluno')->dropDownList(Aluno::getAlunos(), ['prompt' => '']);
 	
-	echo $form->field($treino, 'NomeAluno')->label('Aluno')->widget(AutoComplete::classname(), [
-		'options' => ['class' => 'form-control'],
-		'clientOptions' => [
-            'source' => Url::to(['auxiliar/auto-complete-aluno'], true),
-            'minLength' => '3', 
-			'autoFill' => true,
-			'select'=> new JsExpression("function(event, ui) {
-				$('#iptIdAluno').val(ui.item['IdAluno']);
-			}"),
-        ],
-	]);
-	echo Html::activeHiddenInput($treino, 'IdAluno', ['id'=>'iptIdAluno']);
+	// echo $form->field($treino, 'NomeProfessor')->label('Professor')->widget(AutoComplete::classname(), [
+		// 'options' => ['class' => 'form-control'],
+		// 'clientOptions' => [
+            // 'source' => Url::to(['auxiliar/auto-complete-professor'], true),
+            // 'minLength' => '3', 
+			// 'autoFill' => true,
+			// 'select'=> new JsExpression("function(event, ui) {
+				// $('#iptIdProfessor').val(ui.item['IdProfessor']);
+			// }"),
+        // ],
+	// ]);
+	// echo Html::activeHiddenInput($treino, 'IdProfessor', ['id'=>'iptIdProfessor']);
+	
+	// echo $form->field($treino, 'NomeAluno')->label('Aluno')->widget(AutoComplete::classname(), [
+		// 'options' => ['class' => 'form-control'],
+		// 'clientOptions' => [
+            // 'source' => Url::to(['auxiliar/auto-complete-aluno'], true),
+            // 'minLength' => '3', 
+			// 'autoFill' => true,
+			// 'select'=> new JsExpression("function(event, ui) {
+				// $('#iptIdAluno').val(ui.item['IdAluno']);
+			// }"),
+        // ],
+	// ]);
+	// echo Html::activeHiddenInput($treino, 'IdAluno', ['id'=>'iptIdAluno']);
 	
 	echo Html::activeHiddenInput($treino, 'IdTreino', []);
 	echo $form->field($treino, 'Nome');
@@ -107,3 +111,27 @@
 	
 	ActiveForm::end();
 ?>
+
+<script>
+	$(document).ready(function() {
+		$('#treino-idprofessor').select2({
+			'placeholder': 'Selecione uma opção...',
+			'language': {
+			   'noResults': function(){
+				   return 'Sem resultados';
+			   }
+		   },
+		});
+		
+		$('#treino-idaluno').select2({
+			'placeholder': 'Selecione uma opção...',
+			'language': {
+			   'noResults': function(){
+				   return 'Sem resultados';
+			   }
+		   },
+		});
+	});
+	
+	
+</script>

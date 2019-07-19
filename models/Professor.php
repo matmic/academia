@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\db\Expression;
+use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 
 /**
@@ -156,4 +157,8 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
     {
         //return $this->getAuthKey() === $authKey;
     }
+	
+	public static function getProfessores() {
+		return ArrayHelper::map(Professor::find()->where(['IndicadorAtivo' => '1'])->orderBy('Nome ASC')->all(), 'IdProfessor', 'Nome');
+	}
 }

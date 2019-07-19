@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\db\Expression;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "aluno".
@@ -156,5 +157,9 @@ class Aluno extends \yii\db\ActiveRecord
 		//$this->DataNascimento = (\DateTime::createFromFormat('Y-m-d', $this->DataNascimento))->format('d/m/Y');
 
 		return parent::afterFind();
+	}
+	
+	public static function getAlunos() {
+		return ArrayHelper::map(Aluno::find()->where(['IndicadorAtivo' => '1'])->orderBy('Nome ASC')->all(), 'IdAluno', 'Nome');
 	}
 }
