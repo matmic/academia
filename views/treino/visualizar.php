@@ -7,6 +7,7 @@
 	echo Html::tag('h1', 'Treino');
 	echo Html::a('Voltar', ['treino/listar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
+	echo '<div class="table-responsive">';
 	echo DetailView::widget([
 		'model' => $treino,
 		'attributes' => [
@@ -19,7 +20,9 @@
 			'IndicadorAtivo',
 		],
 	]);
+	echo '</div>';
 	
+	echo '<div class="table-responsive">';
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [
@@ -38,4 +41,5 @@
 			'Peso',
 		],
 	]);
+	echo '</div>';
 ?>

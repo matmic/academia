@@ -59,7 +59,7 @@
 			<legend style="cursor: pointer;" data-toggle="collapse" data-target="#div<?= $provider['provider']->id; ?>"  id="lgd<?= $provider['provider']->id; ?>">
 				<?= $provider['titulo']; ?>
 			</legend>
-			<div class="collapse" id="div<?= $provider['provider']->id;?>">
+			<div class="collapse table-responsive" id="div<?= $provider['provider']->id;?>">
 			<?php
 				echo GridView::widget([
 					'dataProvider' => $provider['provider'],

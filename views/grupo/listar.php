@@ -6,6 +6,7 @@
 	echo Html::tag('h1', 'Grupos');
 	echo Html::a('Novo', ['grupo/editar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
+	echo '<div class="table-responsive">';
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [
@@ -26,4 +27,5 @@
 			],
 		],
 	]);
+	echo '</div>';
 ?>

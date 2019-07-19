@@ -7,6 +7,7 @@
 	echo Html::tag('h1', 'Aluno');
 	echo Html::a('Voltar', ['aluno/listar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
+	echo '<div class="table-responsive">';
 	echo DetailView::widget([
 		'model' => $aluno,
 		'attributes' => [
@@ -68,7 +69,9 @@
 			'IndicadorAtivo',
 		],
 	]);
+	echo '</div>';
 	
+	echo '<div class="table-responsive">';
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [
@@ -96,4 +99,5 @@
 			],
 		],
 	]);
+	echo '</div>';
 ?>

@@ -6,6 +6,7 @@
 	echo Html::tag('h1', 'Professores');
 	echo Html::a('Novo', ['professor/editar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
+	echo '<div class="table-responsive">';
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [
@@ -32,4 +33,5 @@
 			],
 		],
 	]);
+	echo '</div>';
 ?>
