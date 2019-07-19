@@ -30,6 +30,8 @@ tests/_output/*
 tests/_support/_generated
 
 runtime/*
+runtime/debug/index.data
+runtime/logs/app.log
 
 #vagrant folder
 /.vagrant
