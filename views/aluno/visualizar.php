@@ -57,18 +57,6 @@
 					return ($data->IndicadorFamiliarAtaqueCardiaco == '1' ? 'Sim' : 'Não'); // $data['name'] for array data, e.g. using SqlDataProvider.
 				},
 			],
-			[
-				'attribute' => 'IndicadorFamiliarAtaqueCardiaco',
-				'value' => function ($data) {
-					return ($data->IndicadorFamiliarAtaqueCardiaco == '1' ? 'Sim' : 'Não'); // $data['name'] for array data, e.g. using SqlDataProvider.
-				},
-			],
-			[
-				'attribute' => 'IndicadorFamiliarAtaqueCardiaco',
-				'value' => function ($data) {
-					return ($data->IndicadorFamiliarAtaqueCardiaco == '1' ? 'Sim' : 'Não'); // $data['name'] for array data, e.g. using SqlDataProvider.
-				},
-			],
 			'Lesoes',
 			'Observacoes',
 			'TreinoEspecifico',
