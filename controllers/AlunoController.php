@@ -52,8 +52,22 @@ class AlunoController extends Controller
 				
 				if (!empty($aluno)) {
 					$aluno->attributes = $_POST['Aluno'];
+					$arrSalvar = [
+						'Nome', 
+						'DataNascimento', 
+						'IndicadorDorPeitoAtividadesFisicas', 
+						'IndicadorDorPeitoUltimoMes', 
+						'IndicadorPerdaConscienciaTontura',
+						'IndicadorProblemaArticular',
+						'IndicadorTabagista',
+						'IndicadorDiabetico',
+						'IndicadorFamiliarAtaqueCardiaco',
+						'Lesoes',
+						'Observacoes',
+						'TreinoEspecifico',
+					];
 					
-					if ($aluno->save()) {
+					if ($aluno->update(true, $arrSalvar) !== false) {
 						Yii::$app->session->setFlash('success', 'Aluno salvo com sucesso!');
 						return $this->redirect('listar');
 					} else {
