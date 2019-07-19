@@ -41684,3 +41684,415 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1563545770.715
     'REQUEST_TIME' => 1563545770
 ]
+2019-07-19 16:38:19 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][yii\db\Exception] PDOException: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'Peso' in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Query.php(463): yii\db\Command->queryScalar()
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Query.php(347): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\SqlDataProvider.php(169): yii\db\Query->count('*', Object(yii\db\Connection))
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(169): yii\data\SqlDataProvider->prepareTotalCount()
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\SqlDataProvider.php(130): yii\data\BaseDataProvider->getTotalCount()
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(101): yii\data\SqlDataProvider->prepareModels()
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(190): yii\data\BaseDataProvider->getCount()
+#12 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(158): yii\widgets\BaseListView->renderSummary()
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{summary}')
+#14 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{summary}')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#17 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#18 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#19 C:\xampp\htdocs\yii\academia\views\treino\editar.php(99): yii\base\Widget::widget(Array)
+#20 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#22 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\TreinoController))
+#23 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('editar', Array, Object(app\controllers\TreinoController))
+#24 C:\xampp\htdocs\yii\academia\controllers\TreinoController.php(126): yii\base\Controller->render('editar', Array)
+#25 [internal function]: app\controllers\TreinoController->actionEditar()
+#26 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#28 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#29 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#30 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#32 {main}
+
+Next yii\db\Exception: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'Peso'
+The SQL being executed was: SELECT COUNT(*) FROM (SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, NULL AS Series, NULL AS Repeticoes, NULL AS Peso, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 7 ORDER BY NomeAparelho) `sub` in C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Query.php(463): yii\db\Command->queryScalar()
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\db\Query.php(347): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\SqlDataProvider.php(169): yii\db\Query->count('*', Object(yii\db\Connection))
+#6 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(169): yii\data\SqlDataProvider->prepareTotalCount()
+#7 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\SqlDataProvider.php(130): yii\data\BaseDataProvider->getTotalCount()
+#8 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(101): yii\data\SqlDataProvider->prepareModels()
+#9 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#10 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\data\BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#11 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(190): yii\data\BaseDataProvider->getCount()
+#12 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(158): yii\widgets\BaseListView->renderSummary()
+#13 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{summary}')
+#14 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{summary}')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#16 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#17 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#18 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#19 C:\xampp\htdocs\yii\academia\views\treino\editar.php(99): yii\base\Widget::widget(Array)
+#20 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#21 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', '[<span class="s...')
+#22 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\TreinoController))
+#23 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('editar', Array, Object(app\controllers\TreinoController))
+#24 C:\xampp\htdocs\yii\academia\controllers\TreinoController.php(126): yii\base\Controller->render('editar', Array)
+#25 [internal function]: app\controllers\TreinoController->actionEditar()
+#26 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#28 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#29 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#30 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'Peso'
+)
+
+2019-07-19 16:38:19 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/treino/listar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '60428'
+    'REDIRECT_URL' => '/yii/academia/web/treino/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563547099.269
+    'REQUEST_TIME' => 1563547099
+]
+2019-07-19 16:41:01 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][error][Error] Error: Class 'Yii\helpers\VarDumper' not found in C:\xampp\htdocs\yii\academia\controllers\TreinoController.php:91
+Stack trace:
+#0 [internal function]: app\controllers\TreinoController->actionEditar()
+#1 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('editar', Array)
+#4 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('treino/editar', Array)
+#5 C:\xampp\htdocs\yii\academia\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii\academia\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2019-07-19 16:41:01 [::1][1][9bnrbs2anrp639oqa4dp8fd5n0][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'lMVytVVmPv-KKG3Cg1jLxZdDhyd4LgQG8gzO_w9IJKbOlDDBBFVRpedRHarzN_uDpHHddSscTjeoNIyOSw9wiw=='
+    'Treino' => [
+        'IdProfessor' => '1'
+        'IdAluno' => '2'
+        'IdTreino' => ''
+        'Nome' => 'Teste'
+        'Objetivos' => 'marombar'
+    ]
+    'Series' => [
+        6 => ''
+        7 => '3'
+        8 => ''
+        4 => ''
+        2 => ''
+        3 => ''
+        1 => ''
+        5 => ''
+        9 => ''
+        15 => ''
+        11 => ''
+        10 => '3'
+        13 => ''
+        12 => ''
+        14 => ''
+        17 => ''
+        16 => ''
+        24 => ''
+        20 => ''
+        22 => ''
+        21 => ''
+        19 => ''
+        18 => '3'
+        23 => ''
+        39 => ''
+        41 => ''
+        40 => ''
+        34 => ''
+        33 => ''
+        32 => '4'
+        35 => ''
+        36 => ''
+        37 => ''
+        38 => ''
+        31 => ''
+        27 => ''
+        28 => ''
+        25 => '3'
+        26 => ''
+        30 => ''
+        29 => ''
+        52 => ''
+        51 => ''
+        50 => ''
+        43 => ''
+        42 => ''
+        48 => ''
+        49 => ''
+        47 => ''
+        46 => ''
+        45 => '5'
+        44 => ''
+    ]
+    'Repeticoes' => [
+        6 => ''
+        7 => '15'
+        8 => ''
+        4 => ''
+        2 => ''
+        3 => ''
+        1 => ''
+        5 => ''
+        9 => ''
+        15 => ''
+        11 => ''
+        10 => '15'
+        13 => ''
+        12 => ''
+        14 => ''
+        17 => ''
+        16 => ''
+        24 => ''
+        20 => ''
+        22 => ''
+        21 => ''
+        19 => ''
+        18 => '15'
+        23 => ''
+        39 => ''
+        41 => ''
+        40 => ''
+        34 => ''
+        33 => ''
+        32 => '10'
+        35 => ''
+        36 => ''
+        37 => ''
+        38 => ''
+        31 => ''
+        27 => ''
+        28 => ''
+        25 => '15'
+        26 => ''
+        30 => ''
+        29 => ''
+        52 => ''
+        51 => ''
+        50 => ''
+        43 => ''
+        42 => ''
+        48 => ''
+        49 => ''
+        47 => ''
+        46 => ''
+        45 => '5'
+        44 => ''
+    ]
+    'Peso' => [
+        6 => ''
+        7 => '20'
+        8 => ''
+        4 => ''
+        2 => ''
+        3 => ''
+        1 => ''
+        5 => ''
+        9 => ''
+        15 => ''
+        11 => ''
+        10 => '20'
+        13 => ''
+        12 => ''
+        14 => ''
+        17 => ''
+        16 => ''
+        24 => ''
+        20 => ''
+        22 => ''
+        21 => ''
+        19 => ''
+        18 => '20'
+        23 => ''
+        39 => ''
+        41 => ''
+        40 => ''
+        34 => ''
+        33 => ''
+        32 => '15'
+        35 => ''
+        36 => ''
+        37 => ''
+        38 => ''
+        31 => ''
+        27 => ''
+        28 => ''
+        25 => '10'
+        26 => ''
+        30 => ''
+        29 => ''
+        52 => ''
+        51 => ''
+        50 => ''
+        43 => ''
+        42 => ''
+        48 => ''
+        49 => ''
+        47 => ''
+        46 => ''
+        45 => '10'
+        44 => ''
+    ]
+    'selection' => [
+        0 => '7'
+        1 => '10'
+        2 => '18'
+        3 => '32'
+        4 => '25'
+        5 => '45'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9bnrbs2anrp639oqa4dp8fd5n0'
+    '_csrf' => '914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '2937'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/yii/academia/web/treino/editar'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9bnrbs2anrp639oqa4dp8fd5n0; _csrf=914d8e1053fa660867404f80ff1a6f5388ec42c335de10bcb8953960151cc8d9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZQBtQ3oZmyphpo0F32ZRS2J1Z8BqDGT-%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\Program Files\\Git\\bin;C:\\composer;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Program Files\\nodejs\\;C:\\Users\\matheus_dna\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\matheus_dna\\AppData\\Local\\Yarn\\bin;C:\\Users\\matheus_dna\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.0.2s PHP/7.1.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii/academia/web/index.php'
+    'REMOTE_PORT' => '60459'
+    'REDIRECT_URL' => '/yii/academia/web/treino/editar'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii/academia/web/treino/editar'
+    'SCRIPT_NAME' => '/yii/academia/web/index.php'
+    'PHP_SELF' => '/yii/academia/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563547261.081
+    'REQUEST_TIME' => 1563547261
+]

@@ -86,14 +86,14 @@
 						],
 						[
 							'value' => function($model) {
-								return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '', ['min' => '0']);
+								return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
 							},
 							'format' => 'raw',
 							'label' => 'Repetições',
 						],
 						[
 							'value' => function($model) {
-								return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '', ['min' => '0']);
+								return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
 							},
 							'format' => 'raw',
 							'label' => 'Peso',
