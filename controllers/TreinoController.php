@@ -37,7 +37,7 @@ class TreinoController extends Controller
     }
 	
 	public function actionVisualizar($IdTreino) {
-		$treino = Treino::find()->where(['IdTreino' => $IdTreino])->one();
+		$treino = Treino::find()->joinWith(['aluno', 'professor'])->where(['IdTreino' => $IdTreino])->one();
 		
 		if (!empty($treino)) {
 			

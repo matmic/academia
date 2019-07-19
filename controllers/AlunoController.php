@@ -6,6 +6,7 @@ use Yii;
 use yii\web\Controller;
 use yii\data\ActiveDataProvider;
 use app\models\Aluno;
+use app\models\Treino;
 
 class AlunoController extends Controller
 {
@@ -27,7 +28,16 @@ class AlunoController extends Controller
 		$aluno = Aluno::findOne($IdAluno);
 		
 		if (!empty($aluno)) {
-			return $this->render('visualizar', ['aluno' => $aluno]);
+			$treinos = Treino::find()->joinWith(['professor'])->where(['treino.IndicadorAtivo' => '1', 'treino.IdAluno' => $IdAluno]);
+		
+			$provider = new ActiveDataProvider([
+				'query' => $treinos,
+				'pagination' => [
+					'pageSize' => 10,
+				],
+			]);
+			
+			return $this->render('visualizar', ['aluno' => $aluno, 'dataProvider' => $provider]);
 		} else {
 			Yii::$app->session->setFlash('error', 'Aluno inválido!');
 			return $this->redirect('listar');

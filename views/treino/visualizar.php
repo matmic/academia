@@ -11,8 +11,8 @@
 		'model' => $treino,
 		'attributes' => [
 			'IdTreino',
-			'NomeProfessor',
-			'NomeAluno',
+			'professor.Nome',
+			'aluno.Nome',
 			'Nome',
 			'Objetivos',
 			'DataInclusao',
