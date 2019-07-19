@@ -79,63 +79,125 @@ class Grupo extends \yii\db\ActiveRecord
 		return ArrayHelper::map($grupos, 'IdGrupo', 'Nome');
 	}
 	
-	public static function getDataProvidersGrupos() {
+	public static function getDataProviders($IdTreino = null) {
+		if (!empty($IdTreino)) {
+			$adicionarParams = true;
+			$sqlPeito = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 1 ORDER BY NomeAparelho';
+			$sqlCostas = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 2 ORDER BY NomeAparelho';
+			$sqlOmbros = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 3 ORDER BY NomeAparelho';
+			$sqlABS = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 4 ORDER BY NomeAparelho';
+			$sqlTriceps = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 5 ORDER BY NomeAparelho';
+			$sqlBiceps = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 6 ORDER BY NomeAparelho';
+			$sqlMembrosInferiores = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 7 ORDER BY NomeAparelho';			
+		} else {
+			$adicionarParams = false;
+			$sqlPeito = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 1 ORDER BY NomeAparelho';
+			$sqlCostas = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 2 ORDER BY NomeAparelho';
+			$sqlOmbros = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 3 ORDER BY NomeAparelho';
+			$sqlABS = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 4 ORDER BY NomeAparelho';
+			$sqlTriceps = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 5 ORDER BY NomeAparelho';
+			$sqlBiceps = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 6 ORDER BY NomeAparelho';
+			$sqlMembrosInferiores = 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 7 ORDER BY NomeAparelho';			
+		}
+			
 		$providerPeito = new SqlDataProvider([
-			'id' => 'Peito',
-			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 1',
+			'id' => 'peito',
+			'sql' => $sqlPeito,
+			'params' => $adicionarParams ? [':IdTreino' => $IdTreino] : [],
 			'pagination' => [
 				'pageSize' => 100,
 			],
+			// 'sort' => [
+				// 'attributes' => [
+					// 'NomeGrupo',
+					// 'NomeAparelho',
+				// ],
+			// ],
 		]);
 		
 		$providerCostas = new SqlDataProvider([
-			'id' => 'Costas',
-			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 2',
+			'id' => 'costas',
+			'sql' => $sqlCostas,
+			'params' => $adicionarParams ? [':IdTreino' => $IdTreino] : [],
 			'pagination' => [
 				'pageSize' => 100,
 			],
 		]);
 		
 		$providerOmbros = new SqlDataProvider([
-			'id' => 'Ombros',
-			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 3',
+			'id' => 'ombros',
+			'sql' => $sqlOmbros,
+			'params' => $adicionarParams ? [':IdTreino' => $IdTreino] : [],
 			'pagination' => [
 				'pageSize' => 100,
 			],
 		]);
 		
 		$providerABS = new SqlDataProvider([
-			'id' => 'ABS',
-			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 4',
+			'id' => 'abs',
+			'sql' => $sqlABS,
+			'params' => $adicionarParams ? [':IdTreino' => $IdTreino] : [],
 			'pagination' => [
 				'pageSize' => 100,
 			],
 		]);
 		
 		$providerTriceps = new SqlDataProvider([
-			'id' => 'Tríceps',
-			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 5',
+			'id' => 'triceps',
+			'sql' => $sqlTriceps,
+			'params' => $adicionarParams ? [':IdTreino' => $IdTreino] : [],
 			'pagination' => [
 				'pageSize' => 100,
 			],
 		]);
 		
 		$providerBiceps = new SqlDataProvider([
-			'id' => 'Bíceps',
-			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 6',
+			'id' => 'biceps',
+			'sql' => $sqlBiceps,
+			'params' => $adicionarParams ? [':IdTreino' => $IdTreino] : [],
 			'pagination' => [
 				'pageSize' => 100,
 			],
 		]);
 		
 		$providerMembrosInferiores = new SqlDataProvider([
-			'id' => 'Membros Inferiores',
-			'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo WHERE GPO.IdGrupo = 7',
+			'id' => 'membrosInferiores',
+			'sql' => $sqlMembrosInferiores,
+			'params' => $adicionarParams ? [':IdTreino' => $IdTreino] : [],
 			'pagination' => [
 				'pageSize' => 100,
 			],
 		]);
 		
-		return [$providerPeito, $providerCostas, $providerOmbros, $providerABS, $providerTriceps, $providerBiceps, $providerMembrosInferiores];
+		return [
+			[
+				'provider' => $providerPeito, 
+				'titulo' => 'Peito'
+			], 
+			[
+				'provider' => $providerCostas, 
+				'titulo' => 'Costas'
+			], 
+			[
+				'provider' => $providerOmbros, 
+				'titulo' => 'Ombros'
+			], 
+			[
+				'provider' => $providerABS, 
+				'titulo' => 'ABS'
+			], 
+			[
+				'provider' => $providerTriceps, 
+				'titulo' => 'Tríceps'
+			], 
+			[
+				'provider' => $providerBiceps, 
+				'titulo' => 'Bíceps'
+			], 
+			[
+				'provider' => $providerMembrosInferiores, 
+				'titulo' => 'Membros Inferiores'
+			]
+		];
 	}
 }

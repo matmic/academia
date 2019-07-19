@@ -66,21 +66,8 @@ class TreinoController extends Controller
 			$treino = Treino::findOne($IdTreino);
 
 			if (!empty($treino)) {
-				$provider = new SqlDataProvider([
-					'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho, EXE.Series, EXE.Repeticoes, EXE.Peso FROM aparelho AP LEFT JOIN exercicio EXE ON AP.IdAparelho = EXE.IdAparelho AND EXE.IdTreino = :IdTreino INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo',
-					'params' => [':IdTreino' => $IdTreino],
-					'pagination' => [
-						'pageSize' => 100,
-					],
-					'sort' => [
-						'attributes' => [
-							'NomeGrupo',
-							'NomeAparelho',
-						],
-					],
-				]);
-				
-				return $this->render('editar', ['treino' => $treino, 'dataProvider'=>$provider]);
+				$arrProviders = Grupo::getDataProviders($IdTreino);
+				return $this->render('editar', ['treino' => $treino, 'arrProviders'=>$arrProviders]);
 			} else {
 				Yii::$app->session->setFlash('error', 'Treino inválido!');
 				return $this->redirect('listar');
@@ -139,23 +126,8 @@ class TreinoController extends Controller
 			}
 		} else {
 			$treino = new Treino();
-
-			$provider = new SqlDataProvider([
-				'sql' => 'SELECT GPO.Nome AS NomeGrupo, AP.Nome as NomeAparelho, AP.IdAparelho FROM aparelho AP INNER JOIN grupo GPO ON AP.IdGrupo = GPO.IdGrupo',
-				'pagination' => [
-					'pageSize' => 100,
-				],
-				// 'sort' => [
-					// 'attributes' => [
-						// 'NomeGrupo',
-						// 'NomeAparelho',
-					// ],
-				// ],
-			]);
-			
-			$arrProviders = Grupo::getDataProvidersGrupos();
-			
-			return $this->render('editar', ['treino' => $treino, 'dataProvider' => $provider, 'arrProviders' => $arrProviders]);
+			$arrProviders = Grupo::getDataProviders();
+			return $this->render('editar', ['treino' => $treino, 'arrProviders' => $arrProviders]);
 		}
 	}
 }
