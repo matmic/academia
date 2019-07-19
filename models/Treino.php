@@ -22,9 +22,6 @@ use yii\db\Expression;
  */
 class Treino extends \yii\db\ActiveRecord
 {
-    public $NomeProfessor;
-	public $NomeAluno;
-	
 	/**
      * {@inheritdoc}
      */
@@ -124,9 +121,7 @@ class Treino extends \yii\db\ActiveRecord
 			$this->IndicadorAtivo = 'Não';
 		}
 		
-		$this->NomeProfessor = $this->professor->Nome;
-		$this->NomeAluno = $this->aluno->Nome;
-		$this->DataInclusao = (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y');
+		$this->DataInclusao = isset($this->DataInclusao) ? (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y') : '';
 
 		return parent::afterFind();
 	}

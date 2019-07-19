@@ -51,6 +51,9 @@
 	echo $form->field($treino, 'Nome');
 	echo $form->field($treino, 'Objetivos');
 	
+?>
+<div id='divGridsView'>
+<?php
 	foreach ($arrProviders as $provider) : ?>
 		<fieldset>
 			<legend style="cursor: pointer;" data-toggle="collapse" data-target="#div<?= $provider['provider']->id; ?>"  id="lgd<?= $provider['provider']->id; ?>">
@@ -66,12 +69,13 @@
 							'label' => 'Exercício',
 						],
 						[
+							'footer'=>'Selecione os exercícios',
 							'class' => CheckboxColumn::className(),
 							'checkboxOptions' => function($model) {
 								$arr = [
 									'value' => $model["IdAparelho"],
 									'id'=> "selection$model[IdAparelho]",
-									'checked' => false,
+									'checked' => isset($model["Series"]) ? true : false,
 								];
 								
 								return $arr;
@@ -79,21 +83,21 @@
 						],
 						[
 							'value' => function($model) {
-								return Html::input('number', "Series[$model[IdAparelho]]", isset($model["Series"]) ? $model["Series"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
+								return Html::input('number', "Series[$model[IdAparelho]]", isset($model["Series"]) ? $model["Series"] : '0', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
 							},
 							'format' => 'raw',
 							'label' => 'Séries',
 						],
 						[
 							'value' => function($model) {
-								return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
+								return Html::input('number', "Repeticoes[$model[IdAparelho]]", isset($model["Repeticoes"]) ? $model["Repeticoes"] : '0', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
 							},
 							'format' => 'raw',
 							'label' => 'Repetições',
 						],
 						[
 							'value' => function($model) {
-								return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
+								return Html::input('number', "Peso[$model[IdAparelho]]", isset($model["Peso"]) ? $model["Peso"] : '0', ['min' => '0', 'onclick' => "$('#selection$model[IdAparelho]').prop('checked', true);"]);
 							},
 							'format' => 'raw',
 							'label' => 'Peso',
@@ -105,7 +109,9 @@
 		</fieldset>
 <?php
 	endforeach;
-
+?>
+</div>
+<?php
 	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
 	echo Html::button('Voltar', ['onclick'=>'window.location.href = "' . Url::to(['treino/listar'], true) . '"', 'class'=>'btn btn-secondary']);
 	
@@ -133,5 +139,17 @@
 		});
 	});
 	
+	$("#frmTreino").submit(function(event) {
+        var nroCheckboxChecados = $('#divGridsView').find('input[type=checkbox]:checked').length;
+		
+		console.log(nroCheckboxChecados);
+		
+         if (nroCheckboxChecados >= 1) {
+            return true;
+        } else {
+            alert('Você deve marcar ao menos 1 exercício!');
+            return false;
+        }
+    });
 	
 </script>

@@ -6,6 +6,7 @@ use Yii;
 use yii\web\Controller;
 use yii\data\ActiveDataProvider;
 use app\models\Professor;
+use app\models\Treino;
 
 class ProfessorController extends Controller
 {
@@ -126,5 +127,17 @@ class ProfessorController extends Controller
 		} else {
 			return $this->redirect(['site/index']);
 		}
+	}
+	
+	public function actionMeusAlunos() {
+		$treinos = Treino::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->joinWith(['aluno'])->where(['aluno.IndicadorAtivo' => '1', 'IdProfessor' => Yii::$app->user->id])->orderBy('aluno.Nome');
+		$provider = new ActiveDataProvider([
+			'query' => $treinos,
+			'pagination' => [
+				'pageSize' => 10,
+			],
+		]);
+		
+		return $this->render('meusAlunos', ['dataProvider' => $provider]);
 	}
 }

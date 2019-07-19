@@ -38,11 +38,12 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-			['label'=>'Treino', 'url' => ['treino/listar']],
-			['label'=>'Professor', 'url' => ['professor/listar']],
-			['label'=>'Aluno', 'url' => ['aluno/listar']],
-			['label'=>'Aparelho', 'url' => ['aparelho/listar']],
-			['label'=>'Grupo', 'url' => ['grupo/listar']],
+			['label' => 'Meus Alunos', 'url' => ['professor/meus-alunos']],
+			['label' => 'Treino', 'url' => ['treino/listar']],
+			['label' => 'Professor', 'url' => ['professor/listar']],
+			['label' => 'Aluno', 'url' => ['aluno/listar']],
+			['label' => 'Aparelho', 'url' => ['aparelho/listar']],
+			['label' => 'Grupo', 'url' => ['grupo/listar']],
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],

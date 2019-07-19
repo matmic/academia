@@ -125,12 +125,6 @@ class Aluno extends \yii\db\ActiveRecord
 			$this->TreinoEspecifico = null;
 		}
 		
-		if ($this->IndicadorAtivo == 'Sim') {
-			$this->IndicadorAtivo = '1';
-		} else {
-			$this->IndicadorAtivo = '0';
-		}
-		
 		return parent::beforeValidate();
 	}
 	

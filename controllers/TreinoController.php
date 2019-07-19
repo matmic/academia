@@ -74,13 +74,35 @@ class TreinoController extends Controller
 				$treino = Treino::findOne($IdTreino);
 				
 				if (!empty($treino)) {
-					$treino->attributes = $_POST['Treino'];
-					
-					if ($treino->save()) {
-						Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
-						return $this->redirect('listar');
-					} else {
-						Yii::$app->session->setFlash('error', 'Não foi possível salvar o treino!');
+					$transaction = Yii::$app->db->beginTransaction();
+					try {
+						$treino->attributes = $_POST['Treino'];
+						
+						if ($treino->update(true, ['IdProfessor', 'IdAluno', 'Nome', 'Objetivos']) !== false) {
+							Exercicio::DeletarExerciciosDoTreino($treino->IdTreino);
+							
+							foreach ($_POST['selection'] as $aparelho) {
+								$exercicio = new Exercicio();
+								$exercicio->IdTreino = $treino->IdTreino;
+								$exercicio->IdAparelho = $aparelho;
+								$exercicio->Series = $_POST['Series'][$aparelho];
+								$exercicio->Repeticoes = $_POST['Repeticoes'][$aparelho];
+								$exercicio->Peso = $_POST['Peso'][$aparelho];
+								
+								if (!$exercicio->save()) {
+									throw new Exception('Não foi possível salvar o exercício!');
+								}
+							}
+							
+							$transaction->commit();
+							Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
+							return $this->redirect('listar');
+						} else {
+							throw new Exception('Não foi possível salvar o treino!');
+						}
+					} catch (Exception $e) {
+						$transaction->rollBack();
+						Yii::$app->session->setFlash($e->getMessage());
 						return $this->redirect('listar');
 					}
 				} else {
@@ -116,6 +138,7 @@ class TreinoController extends Controller
 						return $this->redirect('listar');
 					}
 				} catch (Exception $e) {
+					$transaction->rollBack();
 					Yii::$app->session->setFlash('error', $e->getMessage());
 					return $this->redirect('listar');
 				}

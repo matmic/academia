@@ -91,6 +91,22 @@ class Exercicio extends \yii\db\ActiveRecord
 			$this->IndicadorAtivo = '1';
 		}
 		
+		if (trim($this->Series) == '') {
+			$this->Series = '0';
+		}
+		
+		if (trim($this->Repeticoes) == '') {
+			$this->Repeticoes = '0';
+		}
+		
+		if (trim($this->Peso) == '') {
+			$this->Peso = '0';
+		}
+		
 		return parent::beforeValidate();
+	}
+	
+	public static function DeletarExerciciosDoTreino($IdTreino) {
+		return Exercicio::deleteAll('IdTreino = ' . $IdTreino);
 	}
 }
