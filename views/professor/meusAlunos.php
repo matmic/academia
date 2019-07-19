@@ -20,10 +20,10 @@
 				'template' => '{view} {update}',
 				'buttons' => [
 					'view' => function($url, $model, $key) {
-						return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',  Url::to(['professor/visualizar', 'IdProfessor' => $key], true));
+						return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',  Url::to(['aluno/visualizar', 'IdAluno' => $model->IdAluno], true));
 					},
 					'update' => function($url, $model, $key) {
-						return Html::a('<span class="glyphicon glyphicon-pencil"></span>',  Url::to(['professor/editar', 'IdProfessor' => $key], true));
+						return Html::a('<span class="glyphicon glyphicon-pencil"></span>',  Url::to(['aluno/editar', 'IdAluno' => $model->IdAluno], true));
 					},
 				],
 			],
