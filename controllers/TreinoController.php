@@ -95,7 +95,7 @@ class TreinoController extends Controller
 							
 							$transaction->commit();
 							Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
-							return $this->redirect('listar');
+							return $this->redirect(['visualizar', 'IdTreino' => $treino->IdTreino]);
 						} else {
 							throw new Exception('Não foi possível salvar o treino!');
 						}
@@ -131,7 +131,7 @@ class TreinoController extends Controller
 						
 						$transaction->commit();
 						Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
-						return $this->redirect('listar');
+						return $this->redirect(['visualizar', 'IdTreino' => $treino->IdTreino]);
 					} else {
 						throw new Exception('Não foi possível salvar o treino!');
 						return $this->redirect('listar');
