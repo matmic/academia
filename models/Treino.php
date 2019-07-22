@@ -57,7 +57,7 @@ class Treino extends \yii\db\ActiveRecord
             'IdTreino' => '#',
             'IdProfessor' => 'Professor',
             'IdAluno' => 'Aluno',
-            'Nome' => 'Nome do Treino',
+            'Nome' => 'Treino',
             'Objetivos' => 'Objetivos',
             'DataInclusao' => 'Data de Inclusão',
             'IndicadorAtivo' => 'Ativo?',

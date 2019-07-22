@@ -79,7 +79,7 @@ class AlunoController extends Controller
 					
 					if ($aluno->update(true, $arrSalvar) !== false) {
 						Yii::$app->session->setFlash('success', 'Aluno salvo com sucesso!');
-						return $this->redirect('listar');
+						return $this->redirect(['visualizar', 'IdAluno' => $aluno->IdAluno]);
 					} else {
 						Yii::$app->session->setFlash('error', 'Não foi possível salvar o aluno!');
 						return $this->redirect('listar');
@@ -94,7 +94,7 @@ class AlunoController extends Controller
 				
 				if ($aluno->save()) {
 					Yii::$app->session->setFlash('success', 'Aluno salvo com sucesso!');
-					return $this->redirect('listar');
+					return $this->redirect(['visualizar', 'IdAluno' => $aluno->IdAluno]);
 				} else {
 					Yii::$app->session->setFlash('error', 'Não foi possível salvar o aluno!');
 					return $this->redirect('listar');

@@ -12,8 +12,14 @@
 		'model' => $treino,
 		'attributes' => [
 			'IdTreino',
-			'professor.Nome',
-			'aluno.Nome',
+			[
+				'attribute' => 'professor.Nome',
+				'label' => 'Professor',
+			],
+			[
+				'attribute' => 'aluno.Nome',
+				'label' => 'Aluno',
+			],
 			'Nome',
 			'Objetivos',
 			'DataInclusao',
@@ -21,25 +27,41 @@
 		],
 	]);
 	echo '</div>';
-	
-	echo '<div class="table-responsive">';
-	echo GridView::widget([
-		'dataProvider' => $dataProvider,
-		'columns' => [
-			[
-				'attribute' => 'aparelho.grupo.Nome',
-				'label' => 'Grupo',
-				'value' => 'aparelho.grupo.Nome',
-			],
-			[
-				'attribute' => 'aparelho.Nome',
-				'label' => 'Aparelho',
-				'value' => 'aparelho.Nome',
-			],
-			'Series',
-			'Repeticoes',
-			'Peso',
-		],
-	]);
-	echo '</div>';
 ?>
+<div id='divGridsView'>
+<?php
+	foreach ($arrProviders as $provider) : ?>
+		<fieldset>
+			<legend style="cursor: pointer;" data-toggle="collapse" data-target="#div<?= $provider['provider']->id; ?>"  id="lgd<?= $provider['provider']->id; ?>">
+				<?= $provider['titulo']; ?>
+			</legend>
+			<div class="collapse table-responsive" id="div<?= $provider['provider']->id;?>">
+			<?php
+				echo GridView::widget([
+					'dataProvider' => $provider['provider'],
+					'columns' => [
+						[
+							'attribute' => 'aparelho.Nome',
+							'label' => 'Exercício',
+						],
+						[
+							'value' => 'Series',
+							'label' => 'Séries',
+						],
+						[
+							'value' => 'Repeticoes',
+							'format' => 'raw',
+							'label' => 'Repetições',
+						],
+						[
+							'value' => 'Peso',
+							'format' => 'raw',
+							'label' => 'Peso',
+						],
+					],
+				]);
+			?>
+			</div>
+		</fieldset>
+	<?php endforeach; ?>
+</div>

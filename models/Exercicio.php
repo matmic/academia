@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use app\models\Grupo;
+use yii\data\ActiveDataProvider;
 
 /**
  * This is the model class for table "exercicio".
@@ -108,5 +110,24 @@ class Exercicio extends \yii\db\ActiveRecord
 	
 	public static function DeletarExerciciosDoTreino($IdTreino) {
 		return Exercicio::deleteAll('IdTreino = ' . $IdTreino);
+	}
+	
+	public static function getExerciciosDoTreino($IdTreino) {
+		$arrProviders = array();
+		$i = 0;
+		foreach (Grupo::GRUPOS as $key => $value) {
+			$exercicios = Exercicio::find()->joinWith(['aparelho', 'aparelho.grupo'])->where(['IdTreino' => $IdTreino, 'aparelho.IdGrupo' => $key])->orderBy('aparelho.Nome');
+			$arrProviders[$i]['provider'] = new ActiveDataProvider([
+				'query' => $exercicios,
+				'pagination' => [
+					'pageSize' => 100,
+				],
+			]);
+			$arrProviders[$i]['titulo'] = $value;
+			
+			$i++;
+		}
+		
+		return $arrProviders;
 	}
 }

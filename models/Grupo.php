@@ -16,6 +16,8 @@ use yii\data\SqlDataProvider;
  */
 class Grupo extends \yii\db\ActiveRecord
 {
+	const GRUPOS = ['1' => 'Peito', '2' => 'Costas', '3' => 'Ombros', '4' => 'ABS', '5' => 'Tríceps', '6' => 'Bíceps', '7' => 'Membros Inferiores'];
+	
     /**
      * {@inheritdoc}
      */
