@@ -3,7 +3,11 @@
 	use yii\helpers\Url;
 	use yii\widgets\ActiveForm;
 	
-	echo Html::tag('h1', 'Formulário de Aluno');
+	$this->title = 'Formulário de Aluno';
+	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->params['breadcrumbs'][] = $this->title;
+	
+	echo Html::tag('h1', $this->title);
 	
 	$form = ActiveForm::begin([
 		'id' => 'frmAluno',
@@ -29,7 +33,7 @@
 	echo $form->field($aluno, 'TreinoEspecifico')->TextArea();
 
 	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
-	echo Html::button('Voltar', ['onclick'=>'window.location.href = "' . Url::to(['aluno/listar'], true) . '"', 'class'=>'btn btn-secondary']);
+	echo Html::button('Voltar', ['onClick'=>'window.history.back();', 'style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
 	ActiveForm::end();
 ?>

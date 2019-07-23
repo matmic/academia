@@ -4,8 +4,12 @@
 	use yii\helpers\Html;
 	use yii\helpers\Url;
 	
-	echo Html::tag('h1', 'Aluno');
-	echo Html::a('Voltar', ['aluno/listar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
+	$this->title = 'Aluno';
+	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->params['breadcrumbs'][] = $this->title;
+	
+	echo Html::tag('h1', $this->title);
+	echo Html::button('Voltar', ['onClick'=>'window.history.back();', 'style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
 	echo '<div class="table-responsive">';
 	echo DetailView::widget([

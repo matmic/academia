@@ -3,18 +3,16 @@
 	use yii\helpers\Html;
 	use yii\helpers\Url;
 	
-	echo Html::tag('h1', 'Meus Alunos');
-	echo Html::a('Novo', ['professor/editar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
+	$this->title = 'Meus Alunos';
+	$this->params['breadcrumbs'][] = $this->title;
+	
+	echo Html::tag('h1', $this->title);
 	
 	echo '<div class="table-responsive">';
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [
 			'aluno.Nome',
-			// [
-				// 'attribute' => 'DataInclusao',
-				// 'format' => ['date', 'php:d/m/Y'],
-			// ],
 			[
 				'header' => 'Operações',
 				'class' => 'yii\grid\ActionColumn',

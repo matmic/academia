@@ -3,7 +3,10 @@
 	use yii\helpers\Html;
 	use yii\helpers\Url;
 	
-	echo Html::tag('h1', 'Alunos');
+	$this->title = 'Alunos';
+	$this->params['breadcrumbs'][] = $this->title;
+	
+	echo Html::tag('h1', $this->title);
 	echo Html::a('Novo', ['aluno/editar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
 	
 	echo '<div class="table-responsive">';
