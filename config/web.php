@@ -12,6 +12,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+	'layout' => 'admin',
     'components' => [
 		'formatter' => [
 			   'dateFormat' => 'd/m/Y',
