@@ -13,7 +13,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-	'layout' => 'main',
+	'layout' => 'adminator',
     'components' => [
 		'formatter' => [
 			   'dateFormat' => 'd/m/Y',

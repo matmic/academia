@@ -98,6 +98,7 @@
 	$(document).ready(function() {
 		$('#treino-idprofessor').select2({
 			'placeholder': 'Selecione uma opção...',
+            width: '100%',
 			'language': {
 			   'noResults': function(){
 				   return 'Sem resultados';
@@ -107,6 +108,7 @@
 		
 		$('#treino-idaluno').select2({
 			'placeholder': 'Selecione uma opção...',
+            width: '100%',
 			'language': {
 			   'noResults': function(){
 				   return 'Sem resultados';

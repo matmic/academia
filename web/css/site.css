@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    font-size: 14px !important;
 }
 
 .wrap {
@@ -112,8 +113,4 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
-}
-
-.botoesSalvarVoltar {
-	margin-right: 10px;
 }

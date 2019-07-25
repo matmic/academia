@@ -20,17 +20,17 @@ class AcademiaAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/style.css',
+        'css/site.css',
 		'css/select2.min.css',
+        'css/style.css',
     ];
     public $js = [
 		'js/jquery-3.4.1.min.js',
 		'js/select2.min.js',
-		//'js/vendor.js',
-		//'js/bundle.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
 	public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
 }

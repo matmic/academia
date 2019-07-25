@@ -120,6 +120,14 @@ class Treino extends \yii\db\ActiveRecord
 		} else {
 			$this->IndicadorAtivo = 'Não';
 		}
+
+        if ($this->Nome == null) {
+            $this->Nome = '';
+        }
+
+        if ($this->Objetivos == null) {
+            $this->Objetivos = '';
+        }
 		
 		$this->DataInclusao = isset($this->DataInclusao) ? (\DateTime::createFromFormat('Y-m-d', $this->DataInclusao))->format('d/m/Y') : '';
 

@@ -79,19 +79,21 @@ class TreinoController extends BaseController
 						
 						if ($treino->update(true, ['IdProfessor', 'IdAluno', 'Nome', 'Objetivos']) !== false) {
 							Exercicio::DeletarExerciciosDoTreino($treino->IdTreino);
-							
-							foreach ($_POST['selection'] as $aparelho) {
-								$exercicio = new Exercicio();
-								$exercicio->IdTreino = $treino->IdTreino;
-								$exercicio->IdAparelho = $aparelho;
-								$exercicio->Series = $_POST['Series'][$aparelho];
-								$exercicio->Repeticoes = $_POST['Repeticoes'][$aparelho];
-								$exercicio->Peso = $_POST['Peso'][$aparelho];
-								
-								if (!$exercicio->save()) {
-									throw new Exception('Não foi possível salvar o exercício!');
-								}
-							}
+
+							if (isset($_POST[$_POST['selection']])) {
+                                foreach ($_POST['selection'] as $aparelho) {
+                                    $exercicio = new Exercicio();
+                                    $exercicio->IdTreino = $treino->IdTreino;
+                                    $exercicio->IdAparelho = $aparelho;
+                                    $exercicio->Series = $_POST['Series'][$aparelho];
+                                    $exercicio->Repeticoes = $_POST['Repeticoes'][$aparelho];
+                                    $exercicio->Peso = $_POST['Peso'][$aparelho];
+
+                                    if (!$exercicio->save()) {
+                                        throw new Exception('Não foi possível salvar o exercício!');
+                                    }
+                                }
+                            }
 							
 							$transaction->commit();
 							Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
@@ -115,19 +117,20 @@ class TreinoController extends BaseController
 					$treino->attributes =  $_POST['Treino'];
 				
 					if ($treino->save()) {
-						
-						foreach ($_POST['selection'] as $aparelho) {
-							$exercicio = new Exercicio();
-							$exercicio->IdTreino = $treino->IdTreino;
-							$exercicio->IdAparelho = $aparelho;
-							$exercicio->Series = $_POST['Series'][$aparelho];
-							$exercicio->Repeticoes = $_POST['Repeticoes'][$aparelho];
-							$exercicio->Peso = $_POST['Peso'][$aparelho];
-							
-							if (!$exercicio->save()) {
-								throw new Exception('Não foi possível salvar o exercício!');
-							}
-						}
+						if (isset($_POST['selection'])) {
+                            foreach ($_POST['selection'] as $aparelho) {
+                                $exercicio = new Exercicio();
+                                $exercicio->IdTreino = $treino->IdTreino;
+                                $exercicio->IdAparelho = $aparelho;
+                                $exercicio->Series = $_POST['Series'][$aparelho];
+                                $exercicio->Repeticoes = $_POST['Repeticoes'][$aparelho];
+                                $exercicio->Peso = $_POST['Peso'][$aparelho];
+
+                                if (!$exercicio->save()) {
+                                    throw new Exception('Não foi possível salvar o exercício!');
+                                }
+                            }
+                        }
 						
 						$transaction->commit();
 						Yii::$app->session->setFlash('success', 'Treino salvo com sucesso!');
