@@ -7,7 +7,7 @@ use yii\web\Controller;
 use app\models\Aparelho;
 use yii\data\ActiveDataProvider;
 
-class AparelhoController extends Controller
+class AparelhoController extends BaseController
 {
     public function actionListar()
     {

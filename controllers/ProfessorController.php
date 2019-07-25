@@ -8,7 +8,7 @@ use yii\data\ActiveDataProvider;
 use app\models\Professor;
 use app\models\Treino;
 
-class ProfessorController extends Controller
+class ProfessorController extends BaseController
 {
     public function actionListar()
     {
@@ -128,6 +128,13 @@ class ProfessorController extends Controller
 			return $this->redirect(['site/index']);
 		}
 	}
+	
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
+
+        return $this->goHome();
+    }
 	
 	public function actionMeusAlunos() {
 		$treinos = Treino::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->joinWith(['aluno'])->where(['aluno.IndicadorAtivo' => '1', 'IdProfessor' => Yii::$app->user->id])->orderBy('aluno.Nome');

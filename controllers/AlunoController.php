@@ -3,12 +3,12 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
-use yii\data\ActiveDataProvider;
 use app\models\Aluno;
 use app\models\Treino;
+use yii\web\Controller;
+use yii\data\ActiveDataProvider;
 
-class AlunoController extends Controller
+class AlunoController extends BaseController
 {
     public function actionListar()
     {

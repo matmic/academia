@@ -1,22 +1,26 @@
 <?php
-	use yii\helpers\Html;
 	use yii\helpers\Url;
+	use yii\helpers\Html;
 	use yii\widgets\ActiveForm;
 	
-	echo Html::tag('h1', 'Formulário de Grupo');
+	$this->title = 'Formulário de Grupo';
+	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->params['breadcrumbs'][] = $this->title;
+	
+	echo Html::tag('h1', $this->title);
 	
 	$form = ActiveForm::begin([
 		'id' => 'frmGrupo',
 		'action' => Url::to(['grupo/editar'], true),
 		'method' => 'POST',
-		'options' => ['class' => 'form-horizontal'],
+		'options' => [],
 	]);
 	
 	echo Html::activeHiddenInput($grupo, 'IdGrupo', []);
 	echo $form->field($grupo, 'Nome');
 
-	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
-	echo Html::button('Voltar', ['onclick'=>'window.location.href = "' . Url::to(['grupo/listar'], true) . '"', 'class'=>'btn btn-secondary']);
+	echo Html::submitButton('Salvar', ['class' => 'botoesSalvarVoltar btn btn-primary']);
+	echo Html::button('Voltar', ['onClick'=>'window.history.back();', 'class'=>'botoesSalvarVoltar btn btn-secondary']);
 	
 	ActiveForm::end();
 ?>

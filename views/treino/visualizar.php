@@ -1,11 +1,15 @@
 <?php
-	use yii\widgets\DetailView;
-	use yii\helpers\Html;
 	use yii\helpers\Url;
+	use yii\helpers\Html;
 	use yii\grid\GridView;
+	use yii\widgets\DetailView;
 	
-	echo Html::tag('h1', 'Treino');
-	echo Html::a('Voltar', ['treino/listar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
+	$this->title = 'Treino';
+	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->params['breadcrumbs'][] = $this->title;
+	
+	echo Html::tag('h1', $this->title);
+	echo Html::a('Voltar', ['treino/listar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-secondary']);
 	
 	echo '<div class="table-responsive">';
 	echo DetailView::widget([

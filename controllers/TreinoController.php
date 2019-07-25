@@ -4,14 +4,14 @@ namespace app\controllers;
 
 use Yii;
 use Exception;
+use app\models\Grupo;
+use app\models\Treino;
 use yii\web\Controller;
+use app\models\Exercicio;
 use yii\data\SqlDataProvider;
 use yii\data\ActiveDataProvider;
-use app\models\Treino;
-use app\models\Exercicio;
-use app\models\Grupo;
 
-class TreinoController extends Controller
+class TreinoController extends BaseController
 {
     public function actionListar()
     {

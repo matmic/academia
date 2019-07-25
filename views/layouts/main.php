@@ -38,20 +38,17 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-			['label' => 'Meus Alunos', 'url' => ['professor/meus-alunos']],
-			['label' => 'Treino', 'url' => ['treino/listar']],
-			['label' => 'Professor', 'url' => ['professor/listar']],
-			['label' => 'Aluno', 'url' => ['aluno/listar']],
-			['label' => 'Aparelho', 'url' => ['aparelho/listar']],
-			['label' => 'Grupo', 'url' => ['grupo/listar']],
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
+			['label' => 'Meus Alunos', 'url' => ['professor/meus-alunos'], 'visible' => !Yii::$app->user->isGuest],
+			['label' => 'Treino', 'url' => ['treino/listar'], 'visible' => !Yii::$app->user->isGuest],
+			['label' => 'Professor', 'url' => ['professor/listar'], 'visible' => !Yii::$app->user->isGuest],
+			['label' => 'Aluno', 'url' => ['aluno/listar'], 'visible' => !Yii::$app->user->isGuest],
+			['label' => 'Aparelho', 'url' => ['aparelho/listar'], 'visible' => !Yii::$app->user->isGuest],
+			['label' => 'Grupo', 'url' => ['grupo/listar'], 'visible' => !Yii::$app->user->isGuest],
+			Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/professor/login']]
             ) : (
                 '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
+                . Html::beginForm(['professor/logout'], 'post')
                 . Html::submitButton(
                     'Logout (' . Yii::$app->user->identity->Nome . ')',
                     ['class' => 'btn btn-link logout']

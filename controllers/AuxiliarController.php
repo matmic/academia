@@ -3,12 +3,12 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
-use yii\data\ActiveDataProvider;
-use app\models\Professor;
 use app\models\Aluno;
+use yii\web\Controller;
+use app\models\Professor;
+use yii\data\ActiveDataProvider;
 
-class AuxiliarController extends Controller
+class AuxiliarController extends BaseController
 {
     // public function actionAutoCompleteProfessor($term) {
 		// $professores = Professor::find()->select(['IdProfessor', 'Nome'])->where(['and', 'IndicadorAtivo="1"', ['like', 'Nome', $term]])->orderBy('Nome')->all();

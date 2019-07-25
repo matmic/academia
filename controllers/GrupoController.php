@@ -3,11 +3,11 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
 use app\models\Grupo;
+use yii\web\Controller;
 use yii\data\ActiveDataProvider;
 
-class GrupoController extends Controller
+class GrupoController extends BaseController
 {
     public function actionListar()
     {

@@ -1,6 +1,6 @@
 <?php
-	use yii\helpers\Html;
 	use yii\helpers\Url;
+	use yii\helpers\Html;
 	use yii\widgets\ActiveForm;
 	
 	$this->title = 'Formulário de Aluno';
@@ -13,7 +13,7 @@
 		'id' => 'frmAluno',
 		'action' => Url::to(['aluno/editar'], true),
 		'method' => 'POST',
-		'options' => ['class' => 'form-horizontal'],
+		'options' => [],
 	]);
 	
 	echo Html::activeHiddenInput($aluno, 'IdAluno', []);
@@ -32,8 +32,8 @@
 	echo $form->field($aluno, 'Observacoes')->TextArea();
 	echo $form->field($aluno, 'TreinoEspecifico')->TextArea();
 
-	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
-	echo Html::button('Voltar', ['onClick'=>'window.history.back();', 'style'=>'margin-bottom: 10px', 'class'=>'btn btn-primary']);
+	echo Html::submitButton('Salvar', ['class' => 'botoesSalvarVoltar btn btn-primary']);
+	echo Html::button('Voltar', ['onClick'=>'window.history.back();', 'class'=>'botoesSalvarVoltar btn btn-secondary']);
 	
 	ActiveForm::end();
 ?>

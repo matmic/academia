@@ -5,6 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+	'name' => 'Academia',
 	'language' => 'pt-BR',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -12,7 +13,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-	'layout' => 'admin',
+	'layout' => 'main',
     'components' => [
 		'formatter' => [
 			   'dateFormat' => 'd/m/Y',

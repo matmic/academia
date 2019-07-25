@@ -1,53 +1,28 @@
 <?php
-	use yii\helpers\Html;
 	use yii\helpers\Url;
-	use yii\widgets\ActiveForm;
-	use yii\jui\AutoComplete;
-	use yii\web\JsExpression;
-	use yii\grid\GridView;
-	use yii\grid\CheckboxColumn;
-	use app\models\Professor;
+	use yii\helpers\Html;
 	use app\models\Aluno;
+	use yii\grid\GridView;
+	use app\models\Professor;
+	use yii\widgets\ActiveForm;
+	use yii\grid\CheckboxColumn;
 	
-	echo Html::tag('h1', 'Formulário de Treino');
+	$this->title = 'Formulário de Treino';
+	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->params['breadcrumbs'][] = $this->title;
+	
+	echo Html::tag('h1', $this->title);
 	
 	$form = ActiveForm::begin([
 		'id' => 'frmTreino',
 		'action' => Url::to(['treino/editar'], true),
 		'method' => 'POST',
-		'options' => ['class' => 'form-horizontal'],
+		'options' => [],
 	]);
 	
+	echo Html::activeHiddenInput($treino, 'IdTreino', []);
 	echo $form->field($treino, 'IdProfessor')->label('Professor')->dropDownList(Professor::getProfessores(), ['prompt' => '']);
 	echo $form->field($treino, 'IdAluno')->label('Aluno')->dropDownList(Aluno::getAlunos(), ['prompt' => '']);
-	
-	// echo $form->field($treino, 'NomeProfessor')->label('Professor')->widget(AutoComplete::classname(), [
-		// 'options' => ['class' => 'form-control'],
-		// 'clientOptions' => [
-            // 'source' => Url::to(['auxiliar/auto-complete-professor'], true),
-            // 'minLength' => '3', 
-			// 'autoFill' => true,
-			// 'select'=> new JsExpression("function(event, ui) {
-				// $('#iptIdProfessor').val(ui.item['IdProfessor']);
-			// }"),
-        // ],
-	// ]);
-	// echo Html::activeHiddenInput($treino, 'IdProfessor', ['id'=>'iptIdProfessor']);
-	
-	// echo $form->field($treino, 'NomeAluno')->label('Aluno')->widget(AutoComplete::classname(), [
-		// 'options' => ['class' => 'form-control'],
-		// 'clientOptions' => [
-            // 'source' => Url::to(['auxiliar/auto-complete-aluno'], true),
-            // 'minLength' => '3', 
-			// 'autoFill' => true,
-			// 'select'=> new JsExpression("function(event, ui) {
-				// $('#iptIdAluno').val(ui.item['IdAluno']);
-			// }"),
-        // ],
-	// ]);
-	// echo Html::activeHiddenInput($treino, 'IdAluno', ['id'=>'iptIdAluno']);
-	
-	echo Html::activeHiddenInput($treino, 'IdTreino', []);
 	echo $form->field($treino, 'Nome');
 	echo $form->field($treino, 'Objetivos');
 	
@@ -111,9 +86,10 @@
 	endforeach;
 ?>
 </div>
+
 <?php
-	echo Html::submitButton('Salvar', ['class' => 'btn btn-primary']);
-	echo Html::button('Voltar', ['onclick'=>'window.location.href = "' . Url::to(['treino/listar'], true) . '"', 'class'=>'btn btn-secondary']);
+	echo Html::submitButton('Salvar', ['class' => 'botoesSalvarVoltar btn btn-primary']);
+	echo Html::button('Voltar', ['onClick'=>'window.history.back();', 'class'=>'botoesSalvarVoltar btn btn-secondary']);
 	
 	ActiveForm::end();
 ?>
@@ -139,17 +115,16 @@
 		});
 	});
 	
-	$("#frmTreino").submit(function(event) {
-        var nroCheckboxChecados = $('#divGridsView').find('input[type=checkbox]:checked').length;
+	// $("#frmTreino").submit(function(event) {
+        // var nroCheckboxChecados = $('#divGridsView').find('input[type=checkbox]:checked').length;
 		
-		console.log(nroCheckboxChecados);
+		// console.log(nroCheckboxChecados);
 		
-         if (nroCheckboxChecados >= 1) {
-            return true;
-        } else {
-            alert('Você deve marcar ao menos 1 exercício!');
-            return false;
-        }
-    });
-	
+         // if (nroCheckboxChecados >= 1) {
+            // return true;
+        // } else {
+            // alert('Você deve marcar ao menos 1 exercício!');
+            // return false;
+        // }
+    // });
 </script>
