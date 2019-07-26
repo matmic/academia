@@ -3,6 +3,8 @@
 	use yii\helpers\Html;
 	use yii\grid\GridView;
 	use yii\widgets\DetailView;
+    use app\models\Disponibilidade;
+    //yii\helpers\VarDumper::dump($aluno, 10, true);die;
 	
 	$this->title = 'Aluno';
 	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
@@ -71,11 +73,15 @@
 				'format' => ['date', 'php:d/m/Y'],
 			],
 			'IndicadorAtivo',
+            [
+                'label' => 'Disponibilidade',
+                'value' => $aluno->getDisponibilidadesTexto(),
+            ]
 		],
 	]);
 	echo '</div>';
-	
-	echo '<div class="table-responsive">';
+
+    echo '<div class="table-responsive">';
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [

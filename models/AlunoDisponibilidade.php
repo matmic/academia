@@ -24,6 +24,10 @@ class AlunoDisponibilidade extends \yii\db\ActiveRecord
         return 'alunodisponibilidade';
     }
 
+    public static function excluirDisponibilidadesDoAluno($IdAluno) {
+        return AlunoDisponibilidade::deleteAll('IdAluno = ' . $IdAluno);
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -77,4 +81,20 @@ class AlunoDisponibilidade extends \yii\db\ActiveRecord
 		
 		return $arrAlunoDisponibilidades;
 	}
+
+    public function beforeValidate() {
+        if (!parent::beforeValidate()) {
+            return false;
+        }
+
+        if ($this->isNewRecord) {
+            $connection = Yii::$app->getDb();
+            $command = $connection->createCommand("SELECT IFNULL(MAX(IdAlunoDisponibilidade), 0)+1 AS IdAlunoDisponibilidade FROM alunodisponibilidade");
+            $result = $command->queryOne();
+
+            $this->IdAlunoDisponibilidade = $result['IdAlunoDisponibilidade'];
+        }
+
+        return parent::beforeValidate();
+    }
 }

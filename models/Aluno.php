@@ -25,7 +25,7 @@ use yii\helpers\ArrayHelper;
  * @property string $IndicadorAtivo
  * @property int $IdUsuarioInclusao
  * @property string $DataInclusao
- * @property string $DataInclusao
+ * @property string $DataUltimaAtu
  *
  * @property Professor $usuarioInclusao
  * @property Treino[] $treinos
@@ -170,4 +170,13 @@ class Aluno extends \yii\db\ActiveRecord
 	public static function getAlunos() {
 		return ArrayHelper::map(Aluno::find()->where(['IndicadorAtivo' => '1'])->orderBy('Nome ASC')->all(), 'IdAluno', 'Nome');
 	}
+
+	public function getDisponibilidadesTexto() {
+	    $str = '';
+	    foreach ($this->alunodisponibilidades as $disponibilidade) {
+	        $str .= $disponibilidade->disponibilidade->Nome . ', ';
+        }
+
+	    return rtrim($str,', ');
+    }
 }
