@@ -99,6 +99,14 @@ class Aluno extends \yii\db\ActiveRecord
         return $this->hasMany(Treino::className(), ['IdAluno' => 'IdAluno']);
     }
 	
+	/**
+    * @return \yii\db\ActiveQuery
+    */
+	public function getAlunodisponibilidades() 
+	{ 
+		return $this->hasMany(AlunoDisponibilidade::className(), ['IdAluno' => 'IdAluno']); 
+	} 
+	
 	public function beforeValidate() {
 		if (!parent::beforeValidate()) {
 			return false;

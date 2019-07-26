@@ -89,6 +89,14 @@ class Treino extends \yii\db\ActiveRecord
         return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdProfessor']);
     }
 	
+	/** 
+    * @return \yii\db\ActiveQuery 
+    */ 
+	public function getFrequencia() 
+	{ 
+		return $this->hasMany(Frequencia::className(), ['IdTreino' => 'IdTreino']); 
+	}
+	
 	public function beforeValidate() {
 		if (!parent::beforeValidate()) {
 			return false;

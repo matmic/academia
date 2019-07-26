@@ -64,6 +64,31 @@ KEY `fkIdx_119` (`IdUsuarioInclusao`),
 CONSTRAINT `FK_119` FOREIGN KEY `fkIdx_119` (`IdUsuarioInclusao`) REFERENCES `Professor` (`IdProfessor`)
 );
 
+-- ************************************** `Disponibilidade`
+
+CREATE TABLE `Disponibilidade`
+(
+ `IdDisponibilidade` int NOT NULL ,
+ `Nome`              varchar(7) NOT NULL ,
+
+PRIMARY KEY (`IdDisponibilidade`)
+);
+
+-- ************************************** `AlunoDisponibilidade`
+
+CREATE TABLE `AlunoDisponibilidade`
+(
+ `IdAlunoDisponibilidade` int NOT NULL ,
+ `IdAluno`                int NOT NULL ,
+ `IdDisponibilidade`      int NOT NULL ,
+
+PRIMARY KEY (`IdAlunoDisponibilidade`),
+KEY `fkIdx_144` (`IdAluno`),
+CONSTRAINT `FK_144` FOREIGN KEY `fkIdx_144` (`IdAluno`) REFERENCES `Aluno` (`IdAluno`),
+KEY `fkIdx_147` (`IdDisponibilidade`),
+CONSTRAINT `FK_147` FOREIGN KEY `fkIdx_147` (`IdDisponibilidade`) REFERENCES `Disponibilidade` (`IdDisponibilidade`)
+);
+
 -- ************************************** `Treino`
 
 CREATE TABLE `Treino`
@@ -82,6 +107,19 @@ KEY `fkIdx_122` (`IdAluno`),
 CONSTRAINT `FK_122` FOREIGN KEY `fkIdx_122` (`IdAluno`) REFERENCES `Aluno` (`IdAluno`),
 KEY `fkIdx_125` (`IdProfessor`),
 CONSTRAINT `FK_125` FOREIGN KEY `fkIdx_125` (`IdProfessor`) REFERENCES `Professor` (`IdProfessor`)
+);
+
+-- ************************************** `Frequencia`
+
+CREATE TABLE `Frequencia`
+(
+ `IdFrequencia`   int NOT NULL ,
+ `IdTreino`       int NOT NULL ,
+ `DataFrequencia` datetime NOT NULL ,
+
+PRIMARY KEY (`IdFrequencia`),
+KEY `fkIdx_153` (`IdTreino`),
+CONSTRAINT `FK_153` FOREIGN KEY `fkIdx_153` (`IdTreino`) REFERENCES `Treino` (`IdTreino`)
 );
 
 -- ************************************** `Exercicio`
