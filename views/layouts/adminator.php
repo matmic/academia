@@ -3,13 +3,13 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
+use yii\helpers\Url;
 use yii\helpers\Html;
+use yii\widgets\Alert;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AcademiaAsset;
-use yii\helpers\Url;
 
 AcademiaAsset::register($this);
 ?>
