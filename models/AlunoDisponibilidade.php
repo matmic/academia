@@ -65,4 +65,16 @@ class AlunoDisponibilidade extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Disponibilidade::className(), ['IdDisponibilidade' => 'IdDisponibilidade']);
     }
+	
+	public static function getDisponibilidadesDoAluno($IdAluno) {
+		
+		$alunoDisponibilidades = AlunoDisponibilidade::find()->where(['IdAluno' => $IdAluno])->all();
+		$arrAlunoDisponibilidades = array();
+		
+		foreach ($alunoDisponibilidades as $alunoDisponibilidade) {
+			$arrAlunoDisponibilidades[] = $alunoDisponibilidade->IdDisponibilidade;
+		}
+		
+		return $arrAlunoDisponibilidades;
+	}
 }

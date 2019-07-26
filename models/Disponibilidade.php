@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "disponibilidade".
@@ -53,4 +54,10 @@ class Disponibilidade extends \yii\db\ActiveRecord
     {
         return $this->hasMany(AlunoDisponibilidade::className(), ['IdDisponibilidade' => 'IdDisponibilidade']);
     }
+	
+	public static function getDisponibilidades()
+	{
+		$disponibilidades = Disponibilidade::find()->orderBy('IdDisponibilidade ASC')->all();
+		return ArrayHelper::map($disponibilidades, 'IdDisponibilidade', 'Nome');
+	}
 }

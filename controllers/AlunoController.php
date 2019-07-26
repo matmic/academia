@@ -7,6 +7,7 @@ use app\models\Aluno;
 use app\models\Treino;
 use yii\web\Controller;
 use yii\data\ActiveDataProvider;
+use app\models\AlunoDisponibilidade;
 
 class AlunoController extends BaseController
 {
@@ -50,7 +51,7 @@ class AlunoController extends BaseController
 			$aluno = Aluno::findOne($IdAluno);
 
 			if (!empty($aluno)) {
-				return $this->render('editar', ['aluno' => $aluno]);
+				return $this->render('editar', ['aluno' => $aluno, 'disponibilidades' => AlunoDisponibilidade::getDisponibilidadesDoAluno($IdAluno)]);
 			} else {
 				Yii::$app->session->setFlash('error', 'Aluno inválido!');
 				return $this->redirect('listar');
@@ -59,6 +60,8 @@ class AlunoController extends BaseController
 			if (!empty($_POST['Aluno']['IdAluno'])) {
 				$IdAluno = $_POST['Aluno']['IdAluno'];
 				$aluno = Aluno::findOne($IdAluno);
+				
+				\yii\helpers\VarDumper::dump($_POST, 10, true);die;
 				
 				if (!empty($aluno)) {
 					$aluno->attributes = $_POST['Aluno'];
@@ -103,7 +106,7 @@ class AlunoController extends BaseController
 			}
 		} else {
 			$aluno = new Aluno();
-			return $this->render('editar', ['aluno' => $aluno]);
+			return $this->render('editar', ['aluno' => $aluno, 'disponibilidades' => []]);
 		}
 	}
 }

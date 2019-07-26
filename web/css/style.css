@@ -4,7 +4,23 @@
 
 .form-control {
 	font-size: 14px !important;
-	height: initial !important;;
+	line-height: 1.5 !important;
+}
+
+input[type=text] {
+	height: initial !important;
+}
+
+input[type=date] {
+	height: initial !important;
+}
+
+input[type=number] {
+	height: initial !important;
+}
+
+input[type=textarea] {
+	height: auto !important;
 }
 
 .btn {

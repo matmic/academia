@@ -1,145 +1,145 @@
--- ************************************** `Grupo`
+-- ************************************** Grupo
 
-CREATE TABLE `Grupo`
+CREATE TABLE Grupo
 (
- `IdGrupo` int NOT NULL ,
- `Nome`    varchar(20) NOT NULL ,
+ IdGrupo int NOT NULL ,
+ Nome    varchar(20) NOT NULL ,
 
-PRIMARY KEY (`IdGrupo`)
+PRIMARY KEY (IdGrupo)
 );
 
--- ************************************** `Aparelho`
+-- ************************************** Aparelho
 
-CREATE TABLE `Aparelho`
+CREATE TABLE Aparelho
 (
- `IdAparelho` int NOT NULL ,
- `IdGrupo`    int NOT NULL ,
- `Nome`       varchar(45) NOT NULL ,
+ IdAparelho int NOT NULL ,
+ IdGrupo    int NOT NULL ,
+ Nome       varchar(45) NOT NULL ,
 
-PRIMARY KEY (`IdAparelho`),
-KEY `fkIdx_105` (`IdGrupo`),
-CONSTRAINT `FK_105` FOREIGN KEY `fkIdx_105` (`IdGrupo`) REFERENCES `Grupo` (`IdGrupo`)
+PRIMARY KEY (IdAparelho),
+KEY fkIdx_105 (IdGrupo),
+CONSTRAINT FK_105 FOREIGN KEY fkIdx_105 (IdGrupo) REFERENCES Grupo (IdGrupo)
 );
 
--- ************************************** `Professor`
+-- ************************************** Professor
 
-CREATE TABLE `Professor`
+CREATE TABLE Professor
 (
- `IdProfessor`    		int NOT NULL ,
- `Nome`           		varchar(100) NOT NULL ,
- `Email`          		varchar(45) NOT NULL ,
- `Senha`          		varchar(255) NOT NULL ,
- `DataInclusao`   		date NOT NULL ,
- `DataHoraUltimaAtu`	datetime NOT NULL ,
- `IndicadorAtivo` 		varchar(1) NOT NULL ,
+ IdProfessor    		int NOT NULL ,
+ Nome           		varchar(100) NOT NULL ,
+ Email          		varchar(45) NOT NULL ,
+ Senha          		varchar(255) NOT NULL ,
+ DataInclusao   		date NOT NULL ,
+ DataHoraUltimaAtu	datetime NOT NULL ,
+ IndicadorAtivo 		varchar(1) NOT NULL ,
 
-PRIMARY KEY (`IdProfessor`),
-UNIQUE KEY `Ind_131` (`Email`)
+PRIMARY KEY (IdProfessor),
+UNIQUE KEY Ind_131 (Email)
 );
 
--- ************************************** `Aluno`
+-- ************************************** Aluno
 
-CREATE TABLE `Aluno`
+CREATE TABLE Aluno
 (
- `IdAluno`                            int NOT NULL ,
- `IdUsuarioInclusao`                  int NOT NULL ,
- `Nome`                               varchar(100) NOT NULL ,
- `DataNascimento`                     date NOT NULL ,
- `IndicadorDorPeitoAtividadesFisicas` varchar(1) NOT NULL ,
- `IndicadorDorPeitoUltimoMes`         varchar(1) NOT NULL ,
- `IndicadorPerdaConscienciaTontura`   varchar(1) NOT NULL ,
- `IndicadorProblemaArticular`         varchar(1) NOT NULL ,
- `IndicadorTabagista`                 varchar(1) NOT NULL ,
- `IndicadorDiabetico`                 varchar(1) NOT NULL ,
- `IndicadorFamiliarAtaqueCardiaco`    varchar(1) NOT NULL ,
- `Lesoes`                             varchar(200) NULL ,
- `Observacoes`                        varchar(200) NULL ,
- `TreinoEspecifico`                   varchar(200) NULL ,
- `DataInclusao`                       date NOT NULL ,
- `DataHoraUltimaAtu`				  datetime NOT NULL ,
- `IndicadorAtivo`                     varchar(1) NOT NULL ,
+ IdAluno                            int NOT NULL ,
+ IdUsuarioInclusao                  int NOT NULL ,
+ Nome                               varchar(100) NOT NULL ,
+ DataNascimento                     date NOT NULL ,
+ IndicadorDorPeitoAtividadesFisicas varchar(1) NOT NULL ,
+ IndicadorDorPeitoUltimoMes         varchar(1) NOT NULL ,
+ IndicadorPerdaConscienciaTontura   varchar(1) NOT NULL ,
+ IndicadorProblemaArticular         varchar(1) NOT NULL ,
+ IndicadorTabagista                 varchar(1) NOT NULL ,
+ IndicadorDiabetico                 varchar(1) NOT NULL ,
+ IndicadorFamiliarAtaqueCardiaco    varchar(1) NOT NULL ,
+ Lesoes                             varchar(200) NULL ,
+ Observacoes                        varchar(200) NULL ,
+ TreinoEspecifico                   varchar(200) NULL ,
+ DataInclusao                       date NOT NULL ,
+ DataHoraUltimaAtu				  datetime NOT NULL ,
+ IndicadorAtivo                     varchar(1) NOT NULL ,
 
-PRIMARY KEY (`IdAluno`),
-KEY `fkIdx_119` (`IdUsuarioInclusao`),
-CONSTRAINT `FK_119` FOREIGN KEY `fkIdx_119` (`IdUsuarioInclusao`) REFERENCES `Professor` (`IdProfessor`)
+PRIMARY KEY (IdAluno),
+KEY fkIdx_119 (IdUsuarioInclusao),
+CONSTRAINT FK_119 FOREIGN KEY fkIdx_119 (IdUsuarioInclusao) REFERENCES Professor (IdProfessor)
 );
 
--- ************************************** `Disponibilidade`
+-- ************************************** Disponibilidade
 
-CREATE TABLE `Disponibilidade`
+CREATE TABLE Disponibilidade
 (
- `IdDisponibilidade` int NOT NULL ,
- `Nome`              varchar(7) NOT NULL ,
+ IdDisponibilidade int NOT NULL ,
+ Nome              varchar(7) NOT NULL ,
 
-PRIMARY KEY (`IdDisponibilidade`)
+PRIMARY KEY (IdDisponibilidade)
 );
 
--- ************************************** `AlunoDisponibilidade`
+-- ************************************** AlunoDisponibilidade
 
-CREATE TABLE `AlunoDisponibilidade`
+CREATE TABLE AlunoDisponibilidade
 (
- `IdAlunoDisponibilidade` int NOT NULL ,
- `IdAluno`                int NOT NULL ,
- `IdDisponibilidade`      int NOT NULL ,
+ IdAlunoDisponibilidade int NOT NULL ,
+ IdAluno                int NOT NULL ,
+ IdDisponibilidade      int NOT NULL ,
 
-PRIMARY KEY (`IdAlunoDisponibilidade`),
-KEY `fkIdx_144` (`IdAluno`),
-CONSTRAINT `FK_144` FOREIGN KEY `fkIdx_144` (`IdAluno`) REFERENCES `Aluno` (`IdAluno`),
-KEY `fkIdx_147` (`IdDisponibilidade`),
-CONSTRAINT `FK_147` FOREIGN KEY `fkIdx_147` (`IdDisponibilidade`) REFERENCES `Disponibilidade` (`IdDisponibilidade`)
+PRIMARY KEY (IdAlunoDisponibilidade),
+KEY fkIdx_144 (IdAluno),
+CONSTRAINT FK_144 FOREIGN KEY fkIdx_144 (IdAluno) REFERENCES Aluno (IdAluno),
+KEY fkIdx_147 (IdDisponibilidade),
+CONSTRAINT FK_147 FOREIGN KEY fkIdx_147 (IdDisponibilidade) REFERENCES Disponibilidade (IdDisponibilidade)
 );
 
--- ************************************** `Treino`
+-- ************************************** Treino
 
-CREATE TABLE `Treino`
+CREATE TABLE Treino
 (
- `IdTreino`       		int NOT NULL ,
- `IdProfessor`    		int NOT NULL ,
- `IdAluno`        		int NOT NULL ,
- `Nome`           		varchar(45) NULL ,
- `Objetivos`      		varchar(200) NULL ,
- `DataInclusao`   		date NOT NULL ,
- `DataHoraUltimaAtu`	datetime NOT NULL ,
- `IndicadorAtivo` 		varchar(1) NOT NULL ,
+ IdTreino       		int NOT NULL ,
+ IdProfessor    		int NOT NULL ,
+ IdAluno        		int NOT NULL ,
+ Nome           		varchar(45) NULL ,
+ Objetivos      		varchar(200) NULL ,
+ DataInclusao   		date NOT NULL ,
+ DataHoraUltimaAtu	datetime NOT NULL ,
+ IndicadorAtivo 		varchar(1) NOT NULL ,
 
-PRIMARY KEY (`IdTreino`),
-KEY `fkIdx_122` (`IdAluno`),
-CONSTRAINT `FK_122` FOREIGN KEY `fkIdx_122` (`IdAluno`) REFERENCES `Aluno` (`IdAluno`),
-KEY `fkIdx_125` (`IdProfessor`),
-CONSTRAINT `FK_125` FOREIGN KEY `fkIdx_125` (`IdProfessor`) REFERENCES `Professor` (`IdProfessor`)
+PRIMARY KEY (IdTreino),
+KEY fkIdx_122 (IdAluno),
+CONSTRAINT FK_122 FOREIGN KEY fkIdx_122 (IdAluno) REFERENCES Aluno (IdAluno),
+KEY fkIdx_125 (IdProfessor),
+CONSTRAINT FK_125 FOREIGN KEY fkIdx_125 (IdProfessor) REFERENCES Professor (IdProfessor)
 );
 
--- ************************************** `Frequencia`
+-- ************************************** Frequencia
 
-CREATE TABLE `Frequencia`
+CREATE TABLE Frequencia
 (
- `IdFrequencia`   int NOT NULL ,
- `IdTreino`       int NOT NULL ,
- `DataFrequencia` datetime NOT NULL ,
+ IdFrequencia   int NOT NULL ,
+ IdTreino       int NOT NULL ,
+ DataFrequencia datetime NOT NULL ,
 
-PRIMARY KEY (`IdFrequencia`),
-KEY `fkIdx_153` (`IdTreino`),
-CONSTRAINT `FK_153` FOREIGN KEY `fkIdx_153` (`IdTreino`) REFERENCES `Treino` (`IdTreino`)
+PRIMARY KEY (IdFrequencia),
+KEY fkIdx_153 (IdTreino),
+CONSTRAINT FK_153 FOREIGN KEY fkIdx_153 (IdTreino) REFERENCES Treino (IdTreino)
 );
 
--- ************************************** `Exercicio`
+-- ************************************** Exercicio
 
-CREATE TABLE `Exercicio`
+CREATE TABLE Exercicio
 (
- `IdExercicio`   		 int NOT NULL ,
- `IdTreino`       		int NOT NULL ,
- `IdAparelho`     		int NOT NULL ,
- `Series`         		int NOT NULL ,
- `Repeticoes`     		int NOT NULL ,
- `Peso`           		varchar(3) NOT NULL ,
- `DataHoraUltimaAtu`	datetime NOT NULL ,
- `IndicadorAtivo` 		varchar(1) NOT NULL ,
+ IdExercicio   		 int NOT NULL ,
+ IdTreino       		int NOT NULL ,
+ IdAparelho     		int NOT NULL ,
+ Series         		int NOT NULL ,
+ Repeticoes     		int NOT NULL ,
+ Peso           		varchar(3) NOT NULL ,
+ DataHoraUltimaAtu	datetime NOT NULL ,
+ IndicadorAtivo 		varchar(1) NOT NULL ,
 
-PRIMARY KEY (`IdExercicio`),
-KEY `fkIdx_63` (`IdTreino`),
-CONSTRAINT `FK_63` FOREIGN KEY `fkIdx_63` (`IdTreino`) REFERENCES `Treino` (`IdTreino`),
-KEY `fkIdx_66` (`IdAparelho`),
-CONSTRAINT `FK_66` FOREIGN KEY `fkIdx_66` (`IdAparelho`) REFERENCES `Aparelho` (`IdAparelho`)
+PRIMARY KEY (IdExercicio),
+KEY fkIdx_63 (IdTreino),
+CONSTRAINT FK_63 FOREIGN KEY fkIdx_63 (IdTreino) REFERENCES Treino (IdTreino),
+KEY fkIdx_66 (IdAparelho),
+CONSTRAINT FK_66 FOREIGN KEY fkIdx_66 (IdAparelho) REFERENCES Aparelho (IdAparelho)
 );
 
 --  ************************************** INÍCIO INSERÇÃO DE DADOS
@@ -209,5 +209,14 @@ INSERT INTO aparelho (IdAparelho, IdGrupo, Nome) VALUES
 (51, 7, 'Abdução'),
 (52, 7, '3 Apoios');
 
-INSERT INTO `professor` (`IdProfessor`, `Nome`, `Email`, `Senha`, `DataInclusao`, `IndicadorAtivo`) VALUES
+INSERT INTO professor (IdProfessor, Nome, Email, Senha, DataInclusao, IndicadorAtivo) VALUES
 (1, 'Matheus', 'matmic08@gmail.com', '$2y$13$gExU/Exjr1emyT8Pq1ZriudLs.bsxLFrbut2gaikNQ6AOjlkSXDi6', '2019-07-12', '1');
+
+INSERT INTO disponibilidade (IdDisponibilidade, Nome) VALUES
+(1, 'Segunda'),
+(2, 'Terça'),
+(3, 'Quarta'),
+(4, 'Quinta'),
+(5, 'Sexta'),
+(6, 'Sábado'),
+(7, 'Domingo');
