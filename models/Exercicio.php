@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use app\models\Grupo;
+use yii\db\Expression;
 use yii\data\ActiveDataProvider;
 
 /**
@@ -36,7 +37,7 @@ class Exercicio extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdExercicio', 'IdTreino', 'IdAparelho', 'Series', 'Repeticoes', 'Peso', 'IndicadorAtivo'], 'required'],
+            [['IdExercicio', 'IdTreino', 'IdAparelho', 'Series', 'Repeticoes', 'Peso', 'IndicadorAtivo', 'DataHoraUltimaAtu'], 'required'],
             [['IdExercicio', 'IdTreino', 'IdAparelho', 'Series', 'Repeticoes'], 'integer'],
             [['Peso'], 'string', 'max' => 3],
             [['IndicadorAtivo'], 'string', 'max' => 1],
@@ -59,6 +60,7 @@ class Exercicio extends \yii\db\ActiveRecord
             'Repeticoes' => 'Repetições',
             'Peso' => 'Peso',
             'IndicadorAtivo' => 'Ativo?',
+			'DataHoraUltimaAtu' => 'Data da Última Alteração',
         ];
     }
 
@@ -92,6 +94,8 @@ class Exercicio extends \yii\db\ActiveRecord
 			$this->IdExercicio = $result['IdExercicio'];
 			$this->IndicadorAtivo = '1';
 		}
+		
+		$this->DataHoraUltimaAtu = new Expression('NOW()');
 		
 		if (trim($this->Series) == '') {
 			$this->Series = '0';

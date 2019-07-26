@@ -25,12 +25,13 @@ CONSTRAINT `FK_105` FOREIGN KEY `fkIdx_105` (`IdGrupo`) REFERENCES `Grupo` (`IdG
 
 CREATE TABLE `Professor`
 (
- `IdProfessor`    int NOT NULL ,
- `Nome`           varchar(100) NOT NULL ,
- `Email`          varchar(45) NOT NULL ,
- `Senha`          varchar(255) NOT NULL ,
- `DataInclusao`   date NOT NULL ,
- `IndicadorAtivo` varchar(1) NOT NULL ,
+ `IdProfessor`    		int NOT NULL ,
+ `Nome`           		varchar(100) NOT NULL ,
+ `Email`          		varchar(45) NOT NULL ,
+ `Senha`          		varchar(255) NOT NULL ,
+ `DataInclusao`   		date NOT NULL ,
+ `DataHoraUltimaAtu`	datetime NOT NULL ,
+ `IndicadorAtivo` 		varchar(1) NOT NULL ,
 
 PRIMARY KEY (`IdProfessor`),
 UNIQUE KEY `Ind_131` (`Email`)
@@ -55,6 +56,7 @@ CREATE TABLE `Aluno`
  `Observacoes`                        varchar(200) NULL ,
  `TreinoEspecifico`                   varchar(200) NULL ,
  `DataInclusao`                       date NOT NULL ,
+ `DataHoraUltimaAtu`				  datetime NOT NULL ,
  `IndicadorAtivo`                     varchar(1) NOT NULL ,
 
 PRIMARY KEY (`IdAluno`),
@@ -66,13 +68,14 @@ CONSTRAINT `FK_119` FOREIGN KEY `fkIdx_119` (`IdUsuarioInclusao`) REFERENCES `Pr
 
 CREATE TABLE `Treino`
 (
- `IdTreino`       int NOT NULL ,
- `IdProfessor`    int NOT NULL ,
- `IdAluno`        int NOT NULL ,
- `Nome`           varchar(45) NULL ,
- `Objetivos`      varchar(200) NULL ,
- `DataInclusao`   date NOT NULL ,
- `IndicadorAtivo` varchar(1) NOT NULL ,
+ `IdTreino`       		int NOT NULL ,
+ `IdProfessor`    		int NOT NULL ,
+ `IdAluno`        		int NOT NULL ,
+ `Nome`           		varchar(45) NULL ,
+ `Objetivos`      		varchar(200) NULL ,
+ `DataInclusao`   		date NOT NULL ,
+ `DataHoraUltimaAtu`	datetime NOT NULL ,
+ `IndicadorAtivo` 		varchar(1) NOT NULL ,
 
 PRIMARY KEY (`IdTreino`),
 KEY `fkIdx_122` (`IdAluno`),
@@ -85,13 +88,14 @@ CONSTRAINT `FK_125` FOREIGN KEY `fkIdx_125` (`IdProfessor`) REFERENCES `Professo
 
 CREATE TABLE `Exercicio`
 (
- `IdExercicio`    int NOT NULL ,
- `IdTreino`       int NOT NULL ,
- `IdAparelho`     int NOT NULL ,
- `Series`         int NOT NULL ,
- `Repeticoes`     int NOT NULL ,
- `Peso`           varchar(3) NOT NULL ,
- `IndicadorAtivo` varchar(1) NOT NULL ,
+ `IdExercicio`   		 int NOT NULL ,
+ `IdTreino`       		int NOT NULL ,
+ `IdAparelho`     		int NOT NULL ,
+ `Series`         		int NOT NULL ,
+ `Repeticoes`     		int NOT NULL ,
+ `Peso`           		varchar(3) NOT NULL ,
+ `DataHoraUltimaAtu`	datetime NOT NULL ,
+ `IndicadorAtivo` 		varchar(1) NOT NULL ,
 
 PRIMARY KEY (`IdExercicio`),
 KEY `fkIdx_63` (`IdTreino`),

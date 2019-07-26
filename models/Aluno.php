@@ -25,6 +25,7 @@ use yii\helpers\ArrayHelper;
  * @property string $IndicadorAtivo
  * @property int $IdUsuarioInclusao
  * @property string $DataInclusao
+ * @property string $DataInclusao
  *
  * @property Professor $usuarioInclusao
  * @property Treino[] $treinos
@@ -45,9 +46,9 @@ class Aluno extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdAluno', 'Nome', 'DataNascimento', 'IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo', 'IdUsuarioInclusao', 'DataInclusao'], 'required'],
+            [['IdAluno', 'Nome', 'DataNascimento', 'IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo', 'IdUsuarioInclusao', 'DataInclusao', 'DataHoraUltimaAtu'], 'required'],
             [['IdAluno', 'IdUsuarioInclusao'], 'integer'],
-            [['DataNascimento', 'DataInclusao'], 'safe'],
+            [['DataNascimento', 'DataInclusao', 'DataHoraUltimaAtu'], 'safe'],
             [['Nome'], 'string', 'max' => 100],
             [['IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo'], 'string', 'max' => 1],
             [['Lesoes', 'Observacoes', 'TreinoEspecifico'], 'string', 'max' => 200],
@@ -78,6 +79,7 @@ class Aluno extends \yii\db\ActiveRecord
             'IndicadorAtivo' => 'Ativo?',
             'IdUsuarioInclusao' => 'Usuário Inclusão',
             'DataInclusao' => 'Data de Inclusão',
+			'DataHoraUltimaAtu' => 'Data da Última Alteração',
         ];
     }
 
@@ -102,6 +104,8 @@ class Aluno extends \yii\db\ActiveRecord
 			return false;
 		}
 		
+		$dataAtual = new Expression('NOW()');
+		
 		if ($this->isNewRecord) {
 			$connection = Yii::$app->getDb();
 			$command = $connection->createCommand("SELECT IFNULL(MAX(IdAluno), 0)+1 AS IdAluno FROM aluno");
@@ -109,9 +113,11 @@ class Aluno extends \yii\db\ActiveRecord
 			
 			$this->IdAluno = $result['IdAluno'];
 			$this->IndicadorAtivo = '1';
-			$this->DataInclusao = new Expression('NOW()');
+			$this->DataInclusao = $dataAtual;
 			$this->IdUsuarioInclusao = Yii::$app->user->getId();
 		}
+		
+		$this->DataHoraUltimaAtu = $dataAtual;
 		
 		if (trim($this->Lesoes) == '') {
 			$this->Lesoes = null;

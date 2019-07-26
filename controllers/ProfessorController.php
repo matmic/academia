@@ -54,7 +54,7 @@ class ProfessorController extends BaseController
 				if (!empty($professor)) {
 					$professor->attributes = $_POST['Professor'];
 					
-					if ($professor->update(true, ['Nome', 'Email']) !== false) {
+					if ($professor->update(true, ['Nome', 'Email', 'DataHoraUltimaAtu']) !== false) {
 						Yii::$app->session->setFlash('success', 'Professor salvo com sucesso!');
 						return $this->redirect('listar');
 					} else {

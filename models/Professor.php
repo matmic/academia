@@ -36,9 +36,9 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['IdProfessor', 'Nome', 'Email', 'Senha', 'DataInclusao', 'IndicadorAtivo'], 'required'],
+            [['IdProfessor', 'Nome', 'Email', 'Senha', 'DataInclusao', 'IndicadorAtivo', 'DataHoraUltimaAtu'], 'required'],
             [['IdProfessor'], 'integer'],
-            [['DataInclusao'], 'safe'],
+            [['DataInclusao', 'DataHoraUltimaAtu'], 'safe'],
             [['Nome'], 'string', 'max' => 100],
             [['Email'], 'string', 'max' => 45],
             [['Senha'], 'string', 'max' => 255],
@@ -60,6 +60,7 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
             'Senha' => 'Senha',
             'DataInclusao' => 'Data de Inclusão',
             'IndicadorAtivo' => 'Ativo?',
+			'DataHoraUltimaAtu' => 'Data da Última Alteração',
         ];
     }
 
@@ -85,6 +86,8 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
 			return false;
 		}
 		
+		$dataAtual = new Expression('NOW()');
+		
 		if ($this->isNewRecord) {
 			$connection = Yii::$app->getDb();
 			$command = $connection->createCommand("SELECT IFNULL(MAX(IdProfessor), 0)+1 AS IdProfessor FROM professor");
@@ -92,8 +95,10 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
 			
 			$this->IdProfessor = $result['IdProfessor'];
 			$this->IndicadorAtivo = '1';
-			$this->DataInclusao = new Expression('NOW()');
+			$this->DataInclusao = $dataAtual;
 		}
+		
+		$this->DataHoraUltimaAtu = $dataAtual;
 		
 		return parent::beforeValidate();
 	}

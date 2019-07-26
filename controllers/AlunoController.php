@@ -75,6 +75,7 @@ class AlunoController extends BaseController
 						'Lesoes',
 						'Observacoes',
 						'TreinoEspecifico',
+						'DataHoraUltimaAtu',
 					];
 					
 					if ($aluno->update(true, $arrSalvar) !== false) {

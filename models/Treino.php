@@ -36,9 +36,9 @@ class Treino extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdTreino', 'IdProfessor', 'IdAluno', 'DataInclusao', 'IndicadorAtivo'], 'required'],
+            [['IdTreino', 'IdProfessor', 'IdAluno', 'DataInclusao', 'IndicadorAtivo', 'DataHoraUltimaAtu'], 'required'],
             [['IdTreino', 'IdProfessor', 'IdAluno'], 'integer'],
-            [['DataInclusao'], 'safe'],
+            [['DataInclusao', 'DataHoraUltimaAtu'], 'safe'],
             [['Nome'], 'string', 'max' => 45],
             [['Objetivos'], 'string', 'max' => 200],
             [['IndicadorAtivo'], 'string', 'max' => 1],
@@ -61,6 +61,7 @@ class Treino extends \yii\db\ActiveRecord
             'Objetivos' => 'Objetivos',
             'DataInclusao' => 'Data de Inclusão',
             'IndicadorAtivo' => 'Ativo?',
+			'DataHoraUltimaAtu' => 'Data da Última Alteração',
         ];
     }
 
@@ -93,6 +94,8 @@ class Treino extends \yii\db\ActiveRecord
 			return false;
 		}
 		
+		$dataAtual = new Expression('NOW()');
+		
 		if ($this->isNewRecord) {
 			$connection = Yii::$app->getDb();
 			$command = $connection->createCommand("SELECT IFNULL(MAX(IdTreino), 0)+1 AS IdTreino FROM treino");
@@ -100,8 +103,10 @@ class Treino extends \yii\db\ActiveRecord
 			
 			$this->IdTreino = $result['IdTreino'];
 			$this->IndicadorAtivo = '1';
-			$this->DataInclusao = new Expression('NOW()');
+			$this->DataInclusao = $dataAtual;
 		}
+		
+		$this->DataHoraUltimaAtu = $dataAtual;
 		
 		if (trim($this->Objetivos) == '') {
 			$this->Objetivos = null;
