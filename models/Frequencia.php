@@ -46,7 +46,7 @@ class Frequencia extends \yii\db\ActiveRecord
         return [
             'IdFrequencia' => 'Id Frequencia',
             'IdTreino' => 'Id Treino',
-            'DataFrequencia' => 'Data Frequencia',
+            'DataFrequencia' => 'Data',
         ];
     }
 
@@ -74,5 +74,12 @@ class Frequencia extends \yii\db\ActiveRecord
         }
 
         return parent::beforeValidate();
+    }
+
+    public function afterFind()
+    {
+        $this->DataFrequencia = (\DateTime::createFromFormat('Y-m-d', $this->DataFrequencia))->format('d/m/Y');
+
+        return parent::afterFind();
     }
 }

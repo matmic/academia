@@ -44,15 +44,16 @@ class TreinoController extends BaseController
 		$treino = Treino::find()->joinWith(['aluno', 'professor'])->where(['IdTreino' => $IdTreino])->one();
 		
 		if (!empty($treino)) {
-			$exercicios = Exercicio::find()->joinWith(['aparelho', 'aparelho.grupo'])->where(['IdTreino' => $IdTreino]);
-			$provider = new ActiveDataProvider([
-				'query' => $exercicios,
-				'pagination' => [
-					'pageSize' => 100,
-				],
-			]);
-			
-			return $this->render('visualizar', ['treino' => $treino, 'dataProvider' => $provider, 'arrProviders' => Exercicio::getExerciciosDoTreino($IdTreino)]);
+            $frequencias = Frequencia::find()->where(['IdTreino' => $IdTreino])->orderBy('DataFrequencia DESC');
+
+            $dataProvider = new ActiveDataProvider([
+                'query' => $frequencias,
+                'pagination' => [
+                    'pageSize' => 10,
+                ],
+            ]);
+
+            return $this->render('visualizar', ['treino' => $treino, 'dataProviderFrequencia' => $dataProvider, 'arrProviders' => Exercicio::getExerciciosDoTreino($IdTreino)]);
 		} else {
 			Yii::$app->session->setFlash('error', 'Treino inválido!');
 			return $this->redirect('listar');

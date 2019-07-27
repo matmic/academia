@@ -50,3 +50,7 @@ input[type=textarea] {
 .fade:not(.show) {
 	opacity: 1 !important;
 }
+
+fieldset fieldset {
+	padding-left: 20px;
+}
