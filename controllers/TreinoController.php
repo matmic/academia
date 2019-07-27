@@ -3,11 +3,15 @@
 namespace app\controllers;
 
 use Yii;
+use DateTime;
 use Exception;
+use DateTimeZone;
 use app\models\Grupo;
 use app\models\Treino;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 use app\models\Exercicio;
+use app\models\Frequencia;
 use yii\data\SqlDataProvider;
 use yii\data\ActiveDataProvider;
 
@@ -151,4 +155,41 @@ class TreinoController extends BaseController
 			return $this->render('editar', ['treino' => $treino, 'arrProviders' => $arrProviders]);
 		}
 	}
+
+    public function actionMarcarFrequencia()
+    {
+        if (isset($_POST['IdTreino']) && !empty($_POST['IdTreino'])) {
+            $IdTreino = $_POST['IdTreino'];
+            $dataAtual = (new DateTime('now', new DateTimeZone('America/Sao_Paulo')))->format('Y-m-d');
+
+            $frequencia = Frequencia::find()->where(['IdTreino' => $IdTreino, 'DataFrequencia' => $dataAtual])->one();
+
+            if (empty($frequencia)) {
+                $frequencia = new Frequencia();
+                $frequencia->IdTreino = $IdTreino;
+
+                if ($frequencia->save()) {
+                    echo json_encode(array(
+                        "msg" => 'Frequência salva com sucesso!',
+                        "erro" => 0,
+                    ));
+                } else {
+                    echo json_encode(array(
+                        "msg" => 'Não foi possível salvar a frequência!',
+                        "erro" => 1,
+                    ));
+                }
+            } else {
+                echo json_encode(array(
+                    "msg" => 'A frequência de hoje já foi adicionada!',
+                    "erro" => 1,
+                ));
+            }
+        } else {
+            echo json_encode(array(
+                "msg" => 'Não foi possível salvar a frequência!',
+                "erro" => 1,
+            ));
+        }
+    }
 }

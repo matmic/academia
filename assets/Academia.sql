@@ -113,13 +113,13 @@ CONSTRAINT FK_125 FOREIGN KEY fkIdx_125 (IdProfessor) REFERENCES Professor (IdPr
 
 CREATE TABLE Frequencia
 (
- IdFrequencia   int NOT NULL ,
- IdTreino       int NOT NULL ,
- DataFrequencia datetime NOT NULL ,
+  IdFrequencia   int  NOT NULL ,
+  IdTreino       int  NOT NULL ,
+  DataFrequencia date NOT NULL,
 
-PRIMARY KEY (IdFrequencia),
-KEY fkIdx_153 (IdTreino),
-CONSTRAINT FK_153 FOREIGN KEY fkIdx_153 (IdTreino) REFERENCES Treino (IdTreino)
+  PRIMARY KEY (IdFrequencia),
+  KEY            fkIdx_153 (IdTreino),
+  CONSTRAINT FK_153 FOREIGN KEY fkIdx_153 (IdTreino) REFERENCES Treino (IdTreino)
 );
 
 -- ************************************** Exercicio

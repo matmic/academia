@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "frequencia".
@@ -55,5 +56,23 @@ class Frequencia extends \yii\db\ActiveRecord
     public function getTreino()
     {
         return $this->hasOne(Treino::className(), ['IdTreino' => 'IdTreino']);
+    }
+
+    public function beforeValidate()
+    {
+        if (!parent::beforeValidate()) {
+            return false;
+        }
+
+        if ($this->isNewRecord) {
+            $connection = Yii::$app->getDb();
+            $command = $connection->createCommand("SELECT IFNULL(MAX(IdFrequencia), 0)+1 AS IdFrequencia FROM frequencia");
+            $result = $command->queryOne();
+
+            $this->IdFrequencia = $result['IdFrequencia'];
+            $this->DataFrequencia = new Expression('NOW()');
+        }
+
+        return parent::beforeValidate();
     }
 }

@@ -9,7 +9,8 @@
 	$this->params['breadcrumbs'][] = $this->title;
 	
 	echo Html::tag('h1', $this->title);
-	echo Html::a('Voltar', ['treino/listar'], ['style'=>'margin-bottom: 10px', 'class'=>'btn btn-secondary']);
+echo Html::button('Marcar Frequência', ['onclick' => 'marcarFrequencia()', 'style' => 'margin-bottom: 10px', 'class' => 'botoesSalvarVoltar btn btn-primary']);
+echo Html::a('Voltar', ['treino/listar'], ['style' => 'margin-bottom: 10px', 'class' => 'botoesSalvarVoltar btn btn-secondary']);
 	
 	echo '<div class="table-responsive">';
 	echo DetailView::widget([
@@ -69,3 +70,19 @@
 		</fieldset>
 	<?php endforeach; ?>
 </div>
+<script>
+    function marcarFrequencia() {
+        $.ajax({
+            type: 'POST',
+            url: <?= json_encode(Url::to(['treino/marcar-frequencia'], true)); ?>,
+            data: {
+                IdTreino: <?= json_encode($treino->IdTreino); ?>,
+                _csrf: '<?= Yii::$app->request->getCsrfToken()?>'
+            },
+            success: function (retorno) {
+                var obj = JSON.parse(retorno);
+                alert(obj.msg);
+            },
+        });
+    }
+</script>
