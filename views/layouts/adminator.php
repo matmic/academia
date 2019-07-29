@@ -117,9 +117,9 @@ AcademiaAsset::register($this);
                 </div>
             </main>
             <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
-					<span>
-						Rua Silva Jardim, 278 - Bairro Auxiliadora - Porto Alegre/RS - (51) 3331.1333 | Whatsapp (51) 9.9933.6686
-					</span>
+                <span>
+                    &copy; Fitness Hall Academia <?= date('Y'); ?> | Rua Silva Jardim, 278 - Bairro Auxiliadora - Porto Alegre/RS - (51) 3331.1333 | Whatsapp (51) 9.9933.6686
+                </span>
             </footer>
         </div>
     </div>

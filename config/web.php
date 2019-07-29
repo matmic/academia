@@ -5,15 +5,15 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
-	'name' => 'Academia',
+	'name' => 'Fitness Hall Academia',
 	'language' => 'pt-BR',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'layout' => 'adminator',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-	'layout' => 'adminator',
     'components' => [
 		'formatter' => [
 			   'dateFormat' => 'd/m/Y',
