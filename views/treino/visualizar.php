@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
@@ -7,13 +6,15 @@ use yii\grid\GridView;
 use yii\widgets\DetailView;
 
 $this->title = 'Treino';
-$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+$this->params['breadcrumbs'][] = ['label' => 'Treinos', 'url' => ['listar']];
 $this->params['breadcrumbs'][] = $this->title;
 
 echo Html::tag('h1', $this->title);
-echo Html::button('Marcar Frequência', ['onclick' => 'marcarFrequencia()', 'style' => 'margin-bottom: 10px', 'class' => 'botoesSalvarVoltar btn btn-primary']);
-echo Html::a('Voltar', ['treino/listar'], ['style' => 'margin-bottom: 10px', 'class' => 'botoesSalvarVoltar btn btn-secondary']);
+echo Html::button('Marcar Frequência', ['onclick' => 'marcarFrequencia()', 'style' => 'margin-bottom: 10px', 'class' => 'botoesSalvarVoltar btn btn-info']);
+echo Html::a('Editar', Url::to(['treino/editar', 'IdTreino'=>$treino->IdTreino], true), ['style'=>'margin-bottom: 10px', 'class'=>'botoesSalvarVoltar btn btn-primary']);
+echo Html::button('Voltar', ['onClick'=>'window.history.back();', 'style' => 'margin-bottom: 10px', 'class' => 'botoesSalvarVoltar btn btn-secondary']);
 ?>
+
 <!-- Fieldset de dados do aluno -->
 <fieldset>
     <legend style="cursor: pointer;" data-toggle="collapse" data-target="#divDadosAlunos">Dados do Aluno</legend>
@@ -22,7 +23,6 @@ echo Html::a('Voltar', ['treino/listar'], ['style' => 'margin-bottom: 10px', 'cl
         echo DetailView::widget([
             'model' => $treino,
             'attributes' => [
-                'IdTreino',
                 [
                     'attribute' => 'professor.Nome',
                     'label' => 'Professor',

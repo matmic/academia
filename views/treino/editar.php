@@ -8,7 +8,7 @@
 	use yii\grid\CheckboxColumn;
 	
 	$this->title = 'Formulário de Treino';
-	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->params['breadcrumbs'][] = ['label' => 'Treinos', 'url' => ['listar']];
 	$this->params['breadcrumbs'][] = $this->title;
 	
 	echo Html::tag('h1', $this->title);
