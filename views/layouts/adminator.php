@@ -48,10 +48,12 @@ AcademiaAsset::register($this);
                             <a class="sidebar-link td-n" href="<?=Yii::$app->homeUrl; ?>">
                                 <div class="peers ai-c fxw-nw">
                                     <div class="peer">
-                                        <div class="logo"></div>
+                                        <div class="logo">
+                                            <img src="<?= Yii::$app->homeUrl; ?>img/fitness-hall.png" alt="">
+                                        </div>
                                     </div>
                                     <div class="peer peer-greed">
-                                        <h5 class="lh-1 mB-0 logo-text">Academia</h5>
+                                        <h5 class="lh-1 mB-0 logo-text">Fitness Hall Academia</h5>
                                     </div>
                                 </div>
                             </a>
@@ -61,14 +63,16 @@ AcademiaAsset::register($this);
                         </div>
                     </div>
                 </div>
-                <ul class="sidebar-menu scrollable pos-r">
-                    <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['professor/meus-alunos'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-agenda"></i> </span><span class="title">Meus Alunos</span></a></li>
-                    <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['treino/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-notepad"></i> </span><span class="title">Treinos</span></a></li>
-                    <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['professor/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-user"></i> </span><span class="title">Professores</span></a></li>
-                    <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['aluno/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-user"></i> </span><span class="title">Alunos</span></a></li>
-                    <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['aparelho/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-split-v"></i> </span><span class="title">Aparelhos</span></a></li>
-                    <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['grupo/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-package"></i> </span><span class="title">Grupos</span></a></li>
-                </ul>
+                <?php if (!Yii::$app->user->isGuest) : ?>
+                    <ul class="sidebar-menu scrollable pos-r">
+                        <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['professor/meus-alunos'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-agenda"></i> </span><span class="title">Meus Alunos</span></a></li>
+                        <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['treino/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-notepad"></i> </span><span class="title">Treinos</span></a></li>
+                        <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['professor/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-user"></i> </span><span class="title">Professores</span></a></li>
+                        <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['aluno/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-user"></i> </span><span class="title">Alunos</span></a></li>
+                        <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['aparelho/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-split-v"></i> </span><span class="title">Aparelhos</span></a></li>
+                        <li class="nav-item"><a class="sidebar-link" href="<?= Url::to(['grupo/listar'], true); ?>"><span class="icon-holder"><i class="c-black-500 ti-package"></i> </span><span class="title">Grupos</span></a></li>
+                    </ul>
+                <?php endif; ?>
             </div>
         </div>
         <div class="page-container">
@@ -112,10 +116,9 @@ AcademiaAsset::register($this);
                     </div>
                 </div>
             </main>
-            <footer class="footer bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+            <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
 					<span>
-						Academia XYZ! Entre em contato: <a href="http://www.ufrgs.br/" target="_blank" title="Academia">Academia</a> - Avenida lalala
-						<a href="hahaha">Envie um e-mail!</a>
+						Rua Silva Jardim, 278 - Bairro Auxiliadora - Porto Alegre/RS - (51) 3331.1333 | Whatsapp (51) 9.9933.6686
 					</span>
             </footer>
         </div>
