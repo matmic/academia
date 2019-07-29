@@ -7,7 +7,7 @@ $this->title = 'Fitness Hall Academia';
 <div class="site-index">
     <div style="background-color: #fff !important; padding: 0 !important;" class="jumbotron">
         <!--        <h1>Fitness Hall Academia</h1>-->
-        <img src="<?= Yii::$app->homeUrl; ?>img/fitness-hall2.png" alt="">
+        <img src="<?= Yii::$app->homeUrl; ?>img/fitness-hall2.png" class="img-fluid" alt="Fitness Hall Academia">
         <p class="lead">Portal para manutenção das fichas de alunos.</p>
 
         <?php if (Yii::$app->user->isGuest) : ?>
