@@ -3,7 +3,7 @@
 	use yii\helpers\Html;
 	use yii\grid\GridView;
 	
-	$this->title = 'Aparelhos';
+	$this->title = 'Exercícios';
 	$this->params['breadcrumbs'][] = $this->title;
 	
 	echo Html::tag('h1', $this->title);
@@ -13,7 +13,6 @@
 	echo GridView::widget([
 		'dataProvider' => $dataProvider,
 		'columns' => [
-			'IdAparelho',
 			'grupo.Nome',
 			'Nome',
 			[

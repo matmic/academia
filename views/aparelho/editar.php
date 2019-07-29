@@ -4,8 +4,8 @@
 	use app\models\Grupo;
 	use yii\widgets\ActiveForm;
 	
-	$this->title = 'Formulário de Aparelho';
-	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->title = 'Formulário de Exercício';
+	$this->params['breadcrumbs'][] = ['label' => 'Exercícios', 'url' => ['listar']];
 	$this->params['breadcrumbs'][] = $this->title;
 	
 	echo Html::tag('h1', $this->title);

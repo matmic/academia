@@ -46,7 +46,7 @@ class Aparelho extends \yii\db\ActiveRecord
         return [
             'IdAparelho' => '#',
             'IdGrupo' => 'Grupo',
-            'Nome' => 'Aparelho',
+            'Nome' => 'Exercício',
         ];
     }
 

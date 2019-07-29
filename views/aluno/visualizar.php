@@ -6,7 +6,7 @@ use yii\grid\GridView;
 use yii\widgets\DetailView;
 
 $this->title = $aluno->Nome;
-$this->params['breadcrumbs'][] = ['label' => 'Listar Alunos', 'url' => ['listar']];
+$this->params['breadcrumbs'][] = ['label' => 'Alunos', 'url' => ['listar']];
 $this->params['breadcrumbs'][] = $this->title;
 
 echo Html::tag('h1', $this->title);

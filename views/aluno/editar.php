@@ -5,7 +5,7 @@
 	use app\models\Disponibilidade;
 	
 	$this->title = 'Formulário de Aluno';
-	$this->params['breadcrumbs'][] = ['label' => 'Listar', 'url' => ['listar']];
+	$this->params['breadcrumbs'][] = ['label' => 'Alunos', 'url' => ['listar']];
 	$this->params['breadcrumbs'][] = $this->title;
 	
 	echo Html::tag('h1', $this->title);
