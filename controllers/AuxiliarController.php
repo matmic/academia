@@ -2,12 +2,6 @@
 
 namespace app\controllers;
 
-use Yii;
-use app\models\Aluno;
-use yii\web\Controller;
-use app\models\Professor;
-use yii\data\ActiveDataProvider;
-
 class AuxiliarController extends BaseController
 {
     // public function actionAutoCompleteProfessor($term) {

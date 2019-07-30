@@ -3,10 +3,9 @@
 namespace app\controllers;
 
 use Yii;
+use yii\db\Exception;
 use app\models\Aluno;
 use app\models\Treino;
-use yii\db\Exception;
-use yii\web\Controller;
 use yii\data\ActiveDataProvider;
 use app\models\AlunoDisponibilidade;
 

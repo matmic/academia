@@ -8,11 +8,8 @@ use Exception;
 use DateTimeZone;
 use app\models\Grupo;
 use app\models\Treino;
-use yii\helpers\VarDumper;
-use yii\web\Controller;
 use app\models\Exercicio;
 use app\models\Frequencia;
-use yii\data\SqlDataProvider;
 use yii\data\ActiveDataProvider;
 
 class TreinoController extends BaseController

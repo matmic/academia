@@ -3,10 +3,9 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
-use yii\data\ActiveDataProvider;
-use app\models\Professor;
 use app\models\Treino;
+use app\models\Professor;
+use yii\data\ActiveDataProvider;
 
 class ProfessorController extends BaseController
 {
