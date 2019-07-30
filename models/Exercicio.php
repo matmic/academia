@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-use app\models\Grupo;
 use yii\db\Expression;
 use yii\data\ActiveDataProvider;
 
