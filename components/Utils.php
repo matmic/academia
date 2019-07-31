@@ -2,6 +2,8 @@
 
 namespace app\components;
 
+use PHPMailer\PHPMailer\PHPMailer;
+
 class Utils
 {
     /**
@@ -28,7 +30,7 @@ class Utils
      * @param $email
      * @return string
      */
-    public static function hideEmail($email) {
+    public static function esconderEmail($email) {
         // Formata o nome do email (a parte antes do @)
         $email = explode('@',  $email);
         $name = $email[0];
@@ -43,5 +45,65 @@ class Utils
         $lengthDomain = floor(strlen($domain) / 2);
 
         return $str . substr($domain, 0, $lengthDomain) . str_repeat('*', strlen($domain) - $lengthDomain) . '.' . $resto[1];
+    }
+
+    /**
+     * Monta o body do email para nova conta
+     * @param $nome
+     * @param $email
+     * @param $senha
+     * @param $link
+     * @return string
+     */
+    public static function montarEmailNovaConta($nome, $email, $senha, $link)
+    {
+        $body = "Olá $nome, <br /><br />";
+        $body .= "Sua conta foi criada com sucesso! Use as seguintes credenciais para fazer login:<br /><br />";
+        $body .= "<b>Login:</b> " . $email . "<br /><b>Senha:</b> " . $senha;
+        $body .= "<br /><br />Faça login <a href='$link'>aqui!</a>";
+        $body .= "<br /><br />Atenciosamente,<br /><a href='https://www.fitnesshall.com.br/'>Fitness Hall Academia</a>";
+
+        return $body;
+    }
+
+    /**
+     * Monta o body do email para alteração da senha
+     * @param $nome
+     * @param $link
+     * @return string
+     */
+    public static function montarEmailAlteraoSenha($nome, $link) {
+        $body =  "Olá $nome, <br /><br />";
+        $body .= "Para alterar sua senha acesse o seguinte link: <a href='" . $link . "'>$link</a>";
+        $body .= "<br /><br />Atenciosamente,<br /><a href='https://www.fitnesshall.com.br/'>Fitness Hall Academia</a>";
+
+        return $body;
+    }
+
+    /**
+     * @param $nome
+     * @param $emailDestino
+     * @param $assunto
+     * @param $body
+     * @throws \PHPMailer\PHPMailer\Exception
+     */
+    public static function enviarEmail($nome, $emailDestino, $assunto, $body) {
+        $mail = new PHPMailer(true);
+        $mail->IsSMTP();
+        $mail->CharSet = 'UTF-8';
+        $mail->Host = ""; // Servidor SMTP
+        $mail->SMTPSecure = ""; // conexão segura com TLS
+        $mail->Port = 587;
+        $mail->SMTPAuth = true; // Caso o servidor SMTP precise de autenticação
+        $mail->Username = ""; // SMTP username
+        $mail->Password = ""; // SMTP password
+        $mail->From = ""; // From
+        $mail->FromName = "" ; // Nome de quem envia o email
+        $mail->AddAddress($emailDestino, $nome); // Email e nome de quem receberá //Responder
+        $mail->WordWrap = 50; // Definir quebra de linha
+        $mail->IsHTML = true ; // Enviar como HTML
+        $mail->Subject = $assunto; // Assunto
+        $mail->Body = $body; //Corpo da mensagem caso seja HTML
+        $mail->send();
     }
 }

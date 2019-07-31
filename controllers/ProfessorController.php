@@ -71,33 +71,24 @@ class ProfessorController extends BaseController
 					return $this->redirect('listar');
 				}
 			} else {
-				$professor = new Professor();
-				$professor->attributes =  $_POST['Professor'];
-				
-				$senha = Yii::$app->getSecurity()->generateRandomString(8);
-				$professor->Senha = Yii::$app->getSecurity()->generatePasswordHash($senha);
-				
-				if ($professor->save()) {
-					// $msg = "Olá " . $professor->Nome . "!<br />";
-					// $msg .= "Sua conta foi criada com sucesso!<br /><br />";
-					// $msg .= "<b>Login:</b> " . $professor->Email . "<br /><b>Senha:</b> " . $senha;
-					// //$msg .= "<br /><br />Faça login <a href='https://www.ufrgs.br/pmm-pub/portal/site/login'>aqui!</a>";
-					// //$msg .= "<br /><br />Atenciosamente,<br />Equipe <a href='http://www.ufrgs.br/laisc/'>LAISC</a>";
-					// $to = $professor->Email . ' < ' . $professor->Email . '>';
-					// $subject = 'Conta criada!';
-					
-					// $headers = 'From: naorespondaacademia <naorespondaacademia@naoresponda.com.br> ' . "\r\n" .
-							   // 'Content-Type: text/html;charset=utf-8' . "\r\n" .
-							   // 'X-Mailer: PHP/' . phpversion();
-					// $real_sender = '-f naorespondaacademia@naoresponda.com.br';
-					// mail($to, $subject, $msg, $headers, $real_sender);
-					
-					Yii::$app->session->setFlash('success', 'Professor salvo com sucesso!');
-					return $this->redirect('listar');
-				} else {
-					Yii::$app->session->setFlash('error', 'Não foi possível salvar o professor!');
-					return $this->redirect('listar');
-				}
+			    try {
+                    $professor = new Professor();
+                    $professor->attributes = $_POST['Professor'];
+
+                    $senha = Yii::$app->getSecurity()->generateRandomString(8);
+                    $professor->Senha = Yii::$app->getSecurity()->generatePasswordHash($senha);
+
+                    if ($professor->save()) {
+                        //Utils::enviarEmail($professor->Nome, $professor->Email, 'Sua conta foi criada com sucesso!', Utils::montarEmailNovaConta($professor->Nome, $professor->Email, $senha, Url::to(['professor/login'], true)));
+                        Yii::$app->session->setFlash('success', 'Professor salvo com sucesso!');
+                        return $this->redirect('listar');
+                    } else {
+                        throw new Exception('Não foi possível salvar o professor!');
+                    }
+                } catch (Exception $e) {
+                    Yii::$app->session->setFlash('error', $e->getMessage());
+                    return $this->redirect('listar');
+                }
 			}
 		} else {
 			$professor = new Professor();
@@ -154,26 +145,27 @@ class ProfessorController extends BaseController
 
     public function actionEsqueceuSuaSenha() {
         if (isset($_POST['Professor'])) {
-            $professor = Professor::find()->where(['Email' => $_POST['Professor']['Email']])->one();
+            try {
+                $professor = Professor::find()->where(['Email' => $_POST['Professor']['Email']])->one();
 
-            if (!empty($professor)) {
-                $resetPassword = new ResetPassword();
-                $resetPassword->DataExpiracao = (new DateTime('now'))->add(new DateInterval('PT8H'))->format('Y-m-d H:i:s');//;
-                $resetPassword->Hash = Utils::getToken();
-                $resetPassword->Email = $professor->Email;
+                if (!empty($professor)) {
+                    $resetPassword = new ResetPassword();
+                    $resetPassword->DataExpiracao = (new DateTime('now'))->add(new DateInterval('PT8H'))->format('Y-m-d H:i:s');//;
+                    $resetPassword->Hash = Utils::getToken();
+                    $resetPassword->Email = $professor->Email;
 
-                if ($resetPassword->save()) {
-                    // $this->sendEmail();
-                    Yii::$app->session->setFlash('info', 'Acesse o seguinte link para alterar sua senha: ' . '<a href="' . Url::to(['professor/alterar-senha', 'email' => $professor->Email, 'token' => $resetPassword->Hash], true) . '">Teste</a>');
-                    Yii::$app->session->setFlash('success', 'Um email foi enviado para <b>' . Utils::hideEmail($professor->Email) . '</b> com instruições de como proceder para alterar a senha!');
-                    return $this->redirect(['site/index']);
+                    if ($resetPassword->save()) {
+                        //Utils::enviarEmail($professor->Nome, $professor->Email, 'Troca de Senha', Utils::montarEmailAlteraoSenha($professor->Nome, Url::to(['professor/alterar-senha', 'email' => $professor->Email, 'token' => $resetPassword->Hash], true)));
+                        Yii::$app->session->setFlash('success', 'Um email foi enviado para <b>' . Utils::esconderEmail($professor->Email) . '</b> com instruições de como proceder para alterar a senha!');
+                        return $this->redirect(['site/index']);
+                    } else {
+                        throw new Exception('Usuário não encontrado!');
+                    }
                 } else {
-                    Yii::$app->session->setFlash('error', 'Não foi possível realizar a operação!');
-                    return $this->render('esqueceuSuaSenha', ['professor' => new Professor()]);
+                    throw new Exception('Usuário não encontrado!');
                 }
-
-            } else {
-                Yii::$app->session->setFlash('error', 'Usuário não encontrado!');
+            } catch (Exception $e) {
+                Yii::$app->session->setFlash('error', $e->getMessage());
                 return $this->render('esqueceuSuaSenha', ['professor' => new Professor()]);
             }
         } else {
