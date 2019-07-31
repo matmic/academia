@@ -30,8 +30,9 @@ CREATE TABLE Professor
  Email          		varchar(45) NOT NULL ,
  Senha          		varchar(255) NOT NULL ,
  DataInclusao   		date NOT NULL ,
- DataHoraUltimaAtu	datetime NOT NULL ,
+ DataHoraUltimaAtu	    datetime NOT NULL ,
  IndicadorAtivo 		varchar(1) NOT NULL ,
+ TentativasLogin        int NOT NULL DEFAULT 0,
 
 PRIMARY KEY (IdProfessor),
 UNIQUE KEY Ind_131 (Email)
@@ -56,7 +57,7 @@ CREATE TABLE Aluno
  Observacoes                        varchar(200) NULL ,
  TreinoEspecifico                   varchar(200) NULL ,
  DataInclusao                       date NOT NULL ,
- DataHoraUltimaAtu				  datetime NOT NULL ,
+ DataHoraUltimaAtu				    datetime NOT NULL ,
  IndicadorAtivo                     varchar(1) NOT NULL ,
 
 PRIMARY KEY (IdAluno),

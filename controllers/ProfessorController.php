@@ -15,6 +15,8 @@ use yii\data\ActiveDataProvider;
 
 class ProfessorController extends BaseController
 {
+    private const NRO_MAXIMO_TENTATIVAS_LOGIN = 3;
+
     public function actionListar()
     {
 		$professores = Professor::find()->where(['IndicadorAtivo' => '1']);
@@ -99,28 +101,66 @@ class ProfessorController extends BaseController
 	public function actionLogin()
 	{
 		if (Yii::$app->user->isGuest) {
-			if (isset($_POST['Professor'])) {
-				$identity = Professor::findOne(['Email' => $_POST['Professor']['Email'], 'IndicadorAtivo' => '1']);
-				
-				if (!empty($identity)) {
-					if (Yii::$app->getSecurity()->validatePassword($_POST['Professor']['Senha'], $identity->Senha)) {
-						Yii::$app->user->login($identity);
-						
-						Yii::$app->session->setFlash('success', 'Você está logado!');
-						return $this->redirect(['site/index']);
-					} else {
-						Yii::$app->session->setFlash('error', 'Não foi possível logar! Verifique as informações preenchidas!');
-						return $this->redirect(['professor/login']);
-					}
-				} else {
-					Yii::$app->session->setFlash('error', 'Não foi possível logar! Verifique as informações preenchidas!');
-					return $this->redirect(['professor/login']);
-				}
-			} else {
-				$professor = new Professor();
-				return $this->render('login', ['professor' => $professor]);
-			}
-		} else {
+            if (isset($_POST['Professor'])) {
+                $identity = Professor::findOne(['Email' => $_POST['Professor']['Email']]);
+
+                if (!empty($identity)) {
+                    if ($identity->getOldAttribute('IndicadorAtivo') == '1') {
+                        if (Yii::$app->getSecurity()->validatePassword($_POST['Professor']['Senha'], $identity->Senha)) {
+                            $identity->IndicadorAtivo = '1';
+                            $identity->TentativasLogin = 0;
+
+                            if ($identity->update(true, ['TentativasLogin', 'IndicadorAtivo', 'DataHoraUltimaAtu']) !== false) {
+                                Yii::$app->user->login($identity);
+                                Yii::$app->session->setFlash('success', 'Você está logado!');
+                                return $this->redirect(['site/index']);
+                            } else {
+                                Yii::$app->session->setFlash('error', 'Não foi possível logar! Verifique as informações preenchidas!');
+                                return $this->redirect(['professor/login']);
+                            }
+                        } else {
+                            $numeroTentativasErradas = $identity->TentativasLogin;
+                            $numeroTentativasErradas++;
+
+                            if ($numeroTentativasErradas >= self::NRO_MAXIMO_TENTATIVAS_LOGIN) {
+                                $identity->TentativasLogin = $numeroTentativasErradas;
+                                $identity->IndicadorAtivo = '0';
+                                $msg = 'Sua conta foi bloqueada por excesso de tentativas de login! Solicite alteração de sua senha!';
+                            } else {
+                                $identity->TentativasLogin = $numeroTentativasErradas;
+                                $identity->IndicadorAtivo = '1';
+                                $msg = 'Não foi possível logar! Verifique as informações preenchidas!';
+                            }
+
+                            if ($identity->update(true, ['TentativasLogin', 'IndicadorAtivo', 'DataHoraUltimaAtu']) !== false) {
+                                Yii::$app->session->setFlash('error', $msg);
+                                return $this->redirect(['professor/login']);
+                            } else {
+                                Yii::$app->session->setFlash('error', 'Problema ao fazer login!');
+                                return $this->redirect(['professor/login']);
+                            }
+                        }
+                    } else {
+                        $identity->TentativasLogin++;
+                        $identity->IndicadorAtivo = '0';
+
+                        if ($identity->update(true, ['TentativasLogin', 'IndicadorAtivo', 'DataHoraUltimaAtu']) !== false) {
+                            Yii::$app->session->setFlash('error', 'Sua conta foi bloqueada por excesso de tentativas de login! Solicite alteração de sua senha!');
+                            return $this->redirect(['professor/login']);
+                        } else {
+                            Yii::$app->session->setFlash('error', 'Problema ao fazer login!');
+                            return $this->redirect(['professor/login']);
+                        }
+                    }
+                } else {
+                    Yii::$app->session->setFlash('error', 'Não foi possível logar! Verifique as informações preenchidas!');
+                    return $this->redirect(['professor/login']);
+                }
+            } else {
+                $professor = new Professor();
+                return $this->render('login', ['professor' => $professor]);
+            }
+        } else {
 			return $this->redirect(['site/index']);
 		}
 	}

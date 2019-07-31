@@ -16,6 +16,7 @@ use yii\web\IdentityInterface;
  * @property string $Senha
  * @property string $DataInclusao
  * @property string $IndicadorAtivo
+ * @property string $TentativasLogin
  *
  * @property Aluno[] $alunos
  * @property Treino[] $treinos
@@ -37,7 +38,7 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return [
             [['IdProfessor', 'Nome', 'Email', 'Senha', 'DataInclusao', 'IndicadorAtivo', 'DataHoraUltimaAtu'], 'required'],
-            [['IdProfessor'], 'integer'],
+            [['IdProfessor', 'TentativasLogin'], 'integer'],
             [['DataInclusao', 'DataHoraUltimaAtu'], 'safe'],
             [['Nome'], 'string', 'max' => 100],
             [['Email'], 'string', 'max' => 45],
@@ -61,6 +62,7 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
             'DataInclusao' => 'Data de Inclusão',
             'IndicadorAtivo' => 'Ativo?',
 			'DataHoraUltimaAtu' => 'Data da Última Alteração',
+            'TentativasLogin' => 'Tentativas de Login',
         ];
     }
 
