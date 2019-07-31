@@ -1,6 +1,4 @@
-var getUrl = window.location;
-var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1] + "/" + getUrl.pathname.split('/')[2] + "/" + getUrl.pathname.split('/')[3];
-baseUrl = baseUrl + "/fonts/";
+var baseUrl = "../fonts/";
 
 webpackJsonp([0], {
 	139: function (t, i, a) {
