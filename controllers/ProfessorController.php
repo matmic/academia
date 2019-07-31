@@ -122,7 +122,7 @@ class ProfessorController extends BaseController
                             $numeroTentativasErradas = $identity->TentativasLogin;
                             $numeroTentativasErradas++;
 
-                            if ($numeroTentativasErradas >= self::NRO_MAXIMO_TENTATIVAS_LOGIN) {
+                            if ($numeroTentativasErradas > self::NRO_MAXIMO_TENTATIVAS_LOGIN) {
                                 $identity->TentativasLogin = $numeroTentativasErradas;
                                 $identity->IndicadorAtivo = '0';
                                 $msg = 'Sua conta foi bloqueada por excesso de tentativas de login! Solicite alteração de sua senha!';
