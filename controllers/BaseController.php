@@ -20,7 +20,7 @@ class BaseController extends Controller
                     ],
 					[
 						'allow' => true,
-                        'actions' => ['login', 'index'],
+                        'actions' => ['login', 'index', 'esqueceu-sua-senha', 'alterar-senha'],
                         'roles' => ['?'],
 					],
                 ],

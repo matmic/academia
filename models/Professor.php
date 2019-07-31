@@ -67,6 +67,14 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getResetpasswords()
+    {
+        return $this->hasMany(Resetpassword::className(), ['IdProfessor' => 'IdProfessor']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getAlunos()
     {
         return $this->hasMany(Aluno::className(), ['IdUsuarioInclusao' => 'IdProfessor']);

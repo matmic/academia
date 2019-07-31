@@ -25,6 +25,10 @@ class ComposerStaticInit69bc007cc1fdda79262e8d2c88973d07
         array (
             'cebe\\markdown\\' => 14,
         ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'O' => 
         array (
             'Opis\\Closure\\' => 13,
@@ -59,6 +63,10 @@ class ComposerStaticInit69bc007cc1fdda79262e8d2c88973d07
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Opis\\Closure\\' => 
         array (

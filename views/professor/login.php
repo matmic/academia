@@ -16,10 +16,11 @@ $form = ActiveForm::begin([
     'options' => [],
 ]);
 
-echo $form->field($professor, 'Email')->textInput();
+echo $form->field($professor, 'Email')->textInput(['type'=>'email']);
 echo $form->field($professor, 'Senha')->passwordInput();
 
 echo Html::submitButton('Fazer Login', ['class' => 'botoesSalvarVoltar btn btn-primary']);
+echo Html::a('Esqueceu sua senha?', Url::to(['professor/esqueceu-sua-senha']), ['class' => 'botoesSalvarVoltar btn btn-secondary']);
 
 ActiveForm::end();
 ?>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86e19ec888fb9a87faee4256fcc995a0",
+    "content-hash": "2452010c938cb566cebd6098835108bd",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -96,7 +96,7 @@
             "version": "v1.3.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:bestiejs/punycode.js.git",
+                "url": "https://github.com/bestiejs/punycode.js.git",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
@@ -237,17 +237,83 @@
             "time": "2019-07-14T18:58:38+00:00"
         },
         {
-            "name": "yiisoft/yii2",
-            "version": "2.0.23",
+            "name": "phpmailer/phpmailer",
+            "version": "v6.0.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "d430bf78cf59e341bf4a1cb401a4ae71a889a492"
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/d430bf78cf59e341bf4a1cb401a4ae71a889a492",
-                "reference": "d430bf78cf59e341bf4a1cb401a4ae71a889a492",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/0c41a36d4508d470e376498c1c0c527aa36a2d59",
+                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-filter": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "1.2.*",
+                "friendsofphp/php-cs-fixer": "^2.2",
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phpunit/phpunit": "^4.8 || ^5.7",
+                "zendframework/zend-eventmanager": "3.0.*",
+                "zendframework/zend-i18n": "2.7.3",
+                "zendframework/zend-serializer": "2.7.*"
+            },
+            "suggest": {
+                "ext-mbstring": "Needed to send email in multibyte encoding charset",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2019-02-01T15:04:28+00:00"
+        },
+        {
+            "name": "yiisoft/yii2",
+            "version": "2.0.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-framework.git",
+                "reference": "4c9e05f7411bfe4d6ba9b38a2feea6e4353f1457"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/4c9e05f7411bfe4d6ba9b38a2feea6e4353f1457",
+                "reference": "4c9e05f7411bfe4d6ba9b38a2feea6e4353f1457",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +400,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2019-07-16T19:44:09+00:00"
+            "time": "2019-07-30T15:17:45+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -603,16 +669,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.6",
+            "version": "2.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "726999bbcc04d8aeb6db02fd6719290793793cbf"
+                "reference": "c54717af9172cf6233fea3eec113c0e0293e2bb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/726999bbcc04d8aeb6db02fd6719290793793cbf",
-                "reference": "726999bbcc04d8aeb6db02fd6719290793793cbf",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/c54717af9172cf6233fea3eec113c0e0293e2bb2",
+                "reference": "c54717af9172cf6233fea3eec113c0e0293e2bb2",
                 "shasum": ""
             },
             "require": {
@@ -657,7 +723,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2019-07-23T20:20:47+00:00"
+            "time": "2019-07-30T12:40:16+00:00"
         },
         {
             "name": "yiisoft/yii2-gii",

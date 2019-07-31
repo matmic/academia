@@ -142,6 +142,18 @@ KEY fkIdx_66 (IdAparelho),
 CONSTRAINT FK_66 FOREIGN KEY fkIdx_66 (IdAparelho) REFERENCES Aparelho (IdAparelho)
 );
 
+-- ************************************** ResetPassword
+
+CREATE TABLE ResetPassword
+(
+ IdResetPassword int NOT NULL ,
+ Email           varchar(45) NOT NULL ,
+ Hash            varchar(256) NOT NULL ,
+ DataExpiracao   datetime NOT NULL ,
+
+PRIMARY KEY (IdResetPassword)
+);
+
 --  ************************************** INÍCIO INSERÇÃO DE DADOS
 
 -- GRUPO
