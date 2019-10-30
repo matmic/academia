@@ -13,6 +13,10 @@ class SiteController extends BaseController
     {
         return $this->render('index');
     }
+
+    public function actionWebservice(){
+    	return $this->render('webservice');
+    }
 	
 	/**
      * {@inheritdoc}

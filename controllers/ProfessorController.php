@@ -12,6 +12,7 @@ use app\components\Utils;
 use app\models\Professor;
 use app\models\ResetPassword;
 use yii\data\ActiveDataProvider;
+use yii\rest\ActiveController;
 
 class ProfessorController extends BaseController
 {

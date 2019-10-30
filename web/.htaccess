@@ -1,4 +1,20 @@
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . index.php [L]
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+
+    RewriteCond %{REQUEST_FILENAME} -d
+
+    RewriteRule ^.*$ - [NC,L]
+
+
+    RewriteRule ^.*$ index.php [NC,L]
+
+</IfModule>
+
+
+DirectoryIndex index.php
