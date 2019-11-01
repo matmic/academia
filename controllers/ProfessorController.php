@@ -14,67 +14,66 @@ use app\models\ResetPassword;
 use yii\data\ActiveDataProvider;
 use yii\rest\ActiveController;
 
-class ProfessorController extends BaseController
-{
+class ProfessorController extends BaseController {
+
     private const NRO_MAXIMO_TENTATIVAS_LOGIN = 3;
 
-    public function actionListar()
-    {
-		$professores = Professor::find()->where(['IndicadorAtivo' => '1']);
-		
-		$provider = new ActiveDataProvider([
-			'query' => $professores,
-			'pagination' => [
-				'pageSize' => 10,
-			],
-		]);
-		
-		return $this->render('listar', ['dataProvider' => $provider]);
-    }
-	
-	public function actionVisualizar($IdProfessor) {
-		$professor = Professor::findOne($IdProfessor);
-		
-		if (!empty($professor)) {
-			return $this->render('visualizar', ['professor' => $professor]);
-		} else {
-			Yii::$app->session->setFlash('error', 'Professor inválido!');
-			return $this->redirect('listar');
-		}
-	}
-	
-	public function actionEditar() {
-		if (isset($_GET['IdProfessor'])) {
-			$IdProfessor = $_GET['IdProfessor'];
-			$professor = Professor::findOne($IdProfessor);
+    public function actionListar() {
+        $professores = Professor::find()->where(['IndicadorAtivo' => '1']);
 
-			if (!empty($professor)) {
-				return $this->render('editar', ['professor' => $professor]);
-			} else {
-				Yii::$app->session->setFlash('error', 'Professor inválido!');
-				return $this->redirect('listar');
-			}
-		} elseif (isset($_POST['Professor'])) {
-			if (!empty($_POST['Professor']['IdProfessor'])) {
-				$IdProfessor = $_POST['Professor']['IdProfessor'];
-				$professor = Professor::findOne($IdProfessor);
-				
-				if (!empty($professor)) {
-					$professor->attributes = $_POST['Professor'];
-					
-					if ($professor->update(true, ['Nome', 'Email', 'DataHoraUltimaAtu']) !== false) {
-						Yii::$app->session->setFlash('success', 'Professor salvo com sucesso!');
-						return $this->redirect('listar');
-					} else {
-						Yii::$app->session->setFlash('error', 'Não foi possível salvar o professor!');
-						return $this->redirect('listar');
-					}
-				} else {
-					Yii::$app->session->setFlash('error', 'Professor inválido!');
-					return $this->redirect('listar');
-				}
-			} else {
-			    try {
+        $provider = new ActiveDataProvider([
+            'query' => $professores,
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+
+        return $this->render('listar', ['dataProvider' => $provider]);
+    }
+
+    public function actionVisualizar($IdProfessor) {
+        $professor = Professor::findOne($IdProfessor);
+
+        if (!empty($professor)) {
+            return $this->render('visualizar', ['professor' => $professor]);
+        } else {
+            Yii::$app->session->setFlash('error', 'Professor inválido!');
+            return $this->redirect('listar');
+        }
+    }
+
+    public function actionEditar() {
+        if (isset($_GET['IdProfessor'])) {
+            $IdProfessor = $_GET['IdProfessor'];
+            $professor = Professor::findOne($IdProfessor);
+
+            if (!empty($professor)) {
+                return $this->render('editar', ['professor' => $professor]);
+            } else {
+                Yii::$app->session->setFlash('error', 'Professor inválido!');
+                return $this->redirect('listar');
+            }
+        } elseif (isset($_POST['Professor'])) {
+            if (!empty($_POST['Professor']['IdProfessor'])) {
+                $IdProfessor = $_POST['Professor']['IdProfessor'];
+                $professor = Professor::findOne($IdProfessor);
+
+                if (!empty($professor)) {
+                    $professor->attributes = $_POST['Professor'];
+
+                    if ($professor->update(true, ['Nome', 'Email', 'DataHoraUltimaAtu']) !== false) {
+                        Yii::$app->session->setFlash('success', 'Professor salvo com sucesso!');
+                        return $this->redirect('listar');
+                    } else {
+                        Yii::$app->session->setFlash('error', 'Não foi possível salvar o professor!');
+                        return $this->redirect('listar');
+                    }
+                } else {
+                    Yii::$app->session->setFlash('error', 'Professor inválido!');
+                    return $this->redirect('listar');
+                }
+            } else {
+                try {
                     $professor = new Professor();
                     $professor->attributes = $_POST['Professor'];
 
@@ -92,16 +91,15 @@ class ProfessorController extends BaseController
                     Yii::$app->session->setFlash('error', $e->getMessage());
                     return $this->redirect('listar');
                 }
-			}
-		} else {
-			$professor = new Professor();
-			return $this->render('editar', ['professor' => $professor]);
-		}
-	}
-	
-	public function actionLogin()
-	{
-		if (Yii::$app->user->isGuest) {
+            }
+        } else {
+            $professor = new Professor();
+            return $this->render('editar', ['professor' => $professor]);
+        }
+    }
+
+    public function actionLogin() {
+        if (Yii::$app->user->isGuest) {
             if (isset($_POST['Professor'])) {
                 $identity = Professor::findOne(['Email' => $_POST['Professor']['Email']]);
 
@@ -162,24 +160,23 @@ class ProfessorController extends BaseController
                 return $this->render('login', ['professor' => $professor]);
             }
         } else {
-			return $this->redirect(['site/index']);
-		}
-	}
-	
-	public function actionMeusAlunos() {
-		$treinos = Treino::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->joinWith(['aluno'])->where(['aluno.IndicadorAtivo' => '1', 'IdProfessor' => Yii::$app->user->id])->orderBy('aluno.Nome');
-		$provider = new ActiveDataProvider([
-			'query' => $treinos,
-			'pagination' => [
-				'pageSize' => 10,
-			],
-		]);
-		
-		return $this->render('meusAlunos', ['dataProvider' => $provider]);
-	}
+            return $this->redirect(['site/index']);
+        }
+    }
 
-    public function actionLogout()
-    {
+    public function actionMeusAlunos() {
+        $treinos = Treino::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->joinWith(['aluno'])->where(['aluno.IndicadorAtivo' => '1', 'IdProfessor' => Yii::$app->user->id])->orderBy('aluno.Nome');
+        $provider = new ActiveDataProvider([
+            'query' => $treinos,
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+
+        return $this->render('meusAlunos', ['dataProvider' => $provider]);
+    }
+
+    public function actionLogout() {
         Yii::$app->user->logout();
         return $this->goHome();
     }
@@ -191,7 +188,7 @@ class ProfessorController extends BaseController
 
                 if (!empty($professor)) {
                     $resetPassword = new ResetPassword();
-                    $resetPassword->DataExpiracao = (new DateTime('now'))->add(new DateInterval('PT8H'))->format('Y-m-d H:i:s');//;
+                    $resetPassword->DataExpiracao = (new DateTime('now'))->add(new DateInterval('PT8H'))->format('Y-m-d H:i:s'); //;
                     $resetPassword->Hash = Utils::getToken();
                     $resetPassword->Email = $professor->Email;
 
@@ -292,10 +289,11 @@ class ProfessorController extends BaseController
      */
     private function isDadosValidosFormAlteracaoSenha($POST) {
         if (isset($POST['token']) && isset($POST['Professor']['Email']) && isset($POST['Professor']['Senha']) && isset($POST['Professor']['SenhaRepetida']) &&
-        !empty($POST['token']) && !empty($POST['Professor']['Email']) && !empty($POST['Professor']['Senha']) && !empty($POST['Professor']['SenhaRepetida'])) {
+                !empty($POST['token']) && !empty($POST['Professor']['Email']) && !empty($POST['Professor']['Senha']) && !empty($POST['Professor']['SenhaRepetida'])) {
             return true;
         } else {
             return false;
         }
     }
+
 }

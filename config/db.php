@@ -2,10 +2,11 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=academia',
-    'username' => 'root',
-    'password' => '',
-    'charset' => 'utf8',
+    'dsn' => 'sqlite:/db/academia.db',
+//    'dsn' => 'mysql:host=localhost;dbname=academia',
+//    'username' => 'root',
+//    'password' => '',
+//    'charset' => 'utf8',
 
     // Schema cache options (for production environment)
     //'enableSchemaCache' => true,
