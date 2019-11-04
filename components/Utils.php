@@ -18,7 +18,7 @@ class Utils
         $codeAlphabet.= "0123456789";
         $max = strlen($codeAlphabet);
 
-        for ($i = 0; $i < 256; $i++) {
+        for ($i = 0; $i < 16; $i++) {
             $token .= $codeAlphabet[random_int(0, $max-1)];
         }
 

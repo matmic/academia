@@ -25,13 +25,16 @@ echo Html::a('Novo', ['professor/editar'], ['style'=>'margin-bottom: 10px', 'cla
             [
                 'header' => 'Operações',
                 'class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update}',
+                'template' => '{view} {update}{delete}',
                 'buttons' => [
                     'view' => function($url, $model, $key) {
                         return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',  Url::to(['professor/visualizar', 'IdProfessor' => $key], true));
                     },
                     'update' => function($url, $model, $key) {
                         return Html::a('<span class="glyphicon glyphicon-pencil"></span>',  Url::to(['professor/editar', 'IdProfessor' => $key], true));
+                    },
+                    'delete' => function($url, $model, $key) {
+                        return Html::a('<span class="glyphicon glyphicon-remove"></span>',  Url::to(['professor/remover', 'IdProfessor' => $key], true));
                     },
                 ],
             ],

@@ -96,7 +96,7 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
 			return false;
 		}
 		
-		$dataAtual = new Expression('DATE()');
+		$dataAtual = new Expression('NOW()');
 		
 		if ($this->isNewRecord) {
 			$connection = Yii::$app->getDb();
