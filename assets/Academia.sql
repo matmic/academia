@@ -43,7 +43,7 @@ UNIQUE KEY Ind_131 (Email)
 CREATE TABLE Aluno
 (
  IdAluno                            int NOT NULL ,
- IdUsuarioInclusao                  int NOT NULL ,
+ IdProfessor                 		int NOT NULL ,
  Nome                               varchar(100) NOT NULL ,
  DataNascimento                     date NOT NULL ,
  IndicadorDorPeitoAtividadesFisicas varchar(1) NOT NULL ,
@@ -61,8 +61,8 @@ CREATE TABLE Aluno
  IndicadorAtivo                     varchar(1) NOT NULL ,
 
 PRIMARY KEY (IdAluno),
-KEY fkIdx_119 (IdUsuarioInclusao),
-CONSTRAINT FK_119 FOREIGN KEY fkIdx_119 (IdUsuarioInclusao) REFERENCES Professor (IdProfessor)
+KEY fkIdx_119 (IdProfessor),
+CONSTRAINT FK_119 FOREIGN KEY fkIdx_119 (IdProfessor) REFERENCES Professor (IdProfessor)
 );
 
 -- ************************************** Disponibilidade
