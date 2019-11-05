@@ -1,21 +1,23 @@
 <?php
+
 namespace app\modules\api\controllers;
 
+use Yii;
 use app\modules\api\BaseRestController;
-use app\models\Grupo;
+use app\models\Treino;
 use yii\data\ArrayDataProvider;
 
-
 /**
- * Description of Grupos
+ * Description of TreinoController
  *
- * @author abel
+ * @author hermes
  */
-class GrupoController extends BaseRestController {
-    
-    public $modelClass = Grupo::class;
+class AparelhoController extends BaseRestController {
 
-    // acessar como POST api/grupo/create
+    public $modelClass = Treino::class;
+
+    
+    // acessar como POST api/treino/create
     public function actionCreate(){
         
         $model = new $this->modelClass();
@@ -38,17 +40,17 @@ class GrupoController extends BaseRestController {
         ];
     }
     
-    // acessar como GET api/grupo
+    // acessar como GET api/treino
     public function actionIndex()
     {
         return new ArrayDataProvider([
-            'allModels' => Grupo::find()->asArray()->all()
+            'allModels' => Treino::find()->asArray()->all()
         ]);
     }
     
-    // acessar como PUT api/grupo/update?id=60
+    // acessar como PUT api/treino/update?id=60
     public function actionUpdate($id){
-        $model = Grupo::findOne($id);
+        $model = Treino::findOne($id);
         if($model->load(Yii::$app->getRequest()->getBodyParams(),'') && $model->save()){
             return $model;
         }else{
@@ -57,15 +59,16 @@ class GrupoController extends BaseRestController {
         
     }
     
-    // acessar como GET api/grupo/view?id=60
+    // acessar como GET api/treino/view?id=60
     public function actionView($id){
-        return Grupo::findOne($id);
+        return Treino::findOne($id);
     }
     
-    // acessar como DELETE api/grupo/delete?id=60
+    // acessar como DELETE api/treino/delete?id=60
     public function actionDelete($id){
-        $model = Grupo::findOne($id);
+        $model = Treino::findOne($id);
         return $model->delete();
     }
     
+
 }

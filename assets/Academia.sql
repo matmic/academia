@@ -97,6 +97,7 @@ CREATE TABLE Treino
  IdTreino       		int NOT NULL ,
  IdProfessor    		int NOT NULL ,
  IdAluno        		int NOT NULL ,
+ Tipo					varchar(2) NULL ,
  Nome           		varchar(45) NULL ,
  Objetivos      		varchar(200) NULL ,
  DataInclusao   		date NOT NULL ,

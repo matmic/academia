@@ -1,21 +1,23 @@
 <?php
+
 namespace app\modules\api\controllers;
 
+use Yii;
 use app\modules\api\BaseRestController;
-use app\models\Grupo;
+use app\models\Aluno;
 use yii\data\ArrayDataProvider;
 
-
 /**
- * Description of Grupos
+ * Description of AlunoController
  *
- * @author abel
+ * @author hermes
  */
-class GrupoController extends BaseRestController {
-    
-    public $modelClass = Grupo::class;
+class AlunoController extends BaseRestController {
 
-    // acessar como POST api/grupo/create
+    public $modelClass = Aluno::class;
+
+    
+    // acessar como POST api/aluno/create
     public function actionCreate(){
         
         $model = new $this->modelClass();
@@ -38,17 +40,17 @@ class GrupoController extends BaseRestController {
         ];
     }
     
-    // acessar como GET api/grupo
+    // acessar como GET api/aluno
     public function actionIndex()
     {
         return new ArrayDataProvider([
-            'allModels' => Grupo::find()->asArray()->all()
+            'allModels' => Aluno::find()->asArray()->all()
         ]);
     }
     
-    // acessar como PUT api/grupo/update?id=60
+    // acessar como PUT api/aluno/update?id=60
     public function actionUpdate($id){
-        $model = Grupo::findOne($id);
+        $model = Aluno::findOne($id);
         if($model->load(Yii::$app->getRequest()->getBodyParams(),'') && $model->save()){
             return $model;
         }else{
@@ -57,15 +59,16 @@ class GrupoController extends BaseRestController {
         
     }
     
-    // acessar como GET api/grupo/view?id=60
+    // acessar como GET api/aluno/view?id=60
     public function actionView($id){
-        return Grupo::findOne($id);
+        return Aluno::findOne($id);
     }
     
-    // acessar como DELETE api/grupo/delete?id=60
+    // acessar como DELETE api/aluno/delete?id=60
     public function actionDelete($id){
-        $model = Grupo::findOne($id);
+        $model = Aluno::findOne($id);
         return $model->delete();
     }
     
+
 }
