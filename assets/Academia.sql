@@ -226,6 +226,10 @@ INSERT INTO aparelho (IdAparelho, IdGrupo, Nome) VALUES
 INSERT INTO professor (IdProfessor, Nome, Email, Senha, DataInclusao, IndicadorAtivo) VALUES
 (1, 'Matheus', 'matmic08@gmail.com', '$2y$13$gExU/Exjr1emyT8Pq1ZriudLs.bsxLFrbut2gaikNQ6AOjlkSXDi6', '2019-07-12', '1');
 
+INSERT INTO professor (IdProfessor, Nome, Email, Senha, DataInclusao, IndicadorAtivo) VALUES
+(2, 'Hermes', 'hermes.tessaro@gmail.com', '$2y$13$sskLhr/WvcXylzIvfNw..e3Pm/h3zQBandqOwDTNX/xGjCHY/S8HG', '2019-11-06', '1');
+
+
 INSERT INTO disponibilidade (IdDisponibilidade, Nome) VALUES
 (1, 'Segunda'),
 (2, 'Terça'),
