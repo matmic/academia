@@ -14,7 +14,7 @@ echo Html::tag('h1', $this->title);
     echo GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            'aluno.Nome',
+            'Nome',
             [
                 'header' => 'Operações',
                 'class' => 'yii\grid\ActionColumn',

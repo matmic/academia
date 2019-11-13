@@ -86,7 +86,7 @@ class Aluno extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUsuarioInclusao()
+    public function getProfessor()
     {
         return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdUsuarioInclusao']);
     }

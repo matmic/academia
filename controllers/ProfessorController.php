@@ -7,6 +7,7 @@ use DateTime;
 use DateInterval;
 use yii\helpers\Url;
 use yii\db\Exception;
+use app\models\Aluno;
 use app\models\Treino;
 use app\components\Utils;
 use app\models\Professor;
@@ -178,9 +179,9 @@ class ProfessorController extends BaseController {
     }
 
     public function actionMeusAlunos() {
-        $treinos = Treino::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->joinWith(['aluno'])->where(['aluno.IndicadorAtivo' => '1', 'IdProfessor' => Yii::$app->user->id])->orderBy('aluno.Nome');
+        $alunos = Aluno::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->where(['aluno.IndicadorAtivo' => '1', 'IdUsuarioInclusao' => Yii::$app->user->id])->orderBy('aluno.Nome');
         $provider = new ActiveDataProvider([
-            'query' => $treinos,
+            'query' => $alunos,
             'pagination' => [
                 'pageSize' => 10,
             ],
