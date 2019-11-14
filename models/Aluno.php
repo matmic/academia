@@ -23,7 +23,7 @@ use yii\helpers\ArrayHelper;
  * @property string $Observacoes
  * @property string $TreinoEspecifico
  * @property string $IndicadorAtivo
- * @property int $IdUsuarioInclusao
+ * @property int $IdProf
  * @property string $DataInclusao
  * @property string $DataUltimaAtu
  *
@@ -46,14 +46,14 @@ class Aluno extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdAluno', 'Nome', 'DataNascimento', 'IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo', 'IdUsuarioInclusao', 'DataInclusao', 'DataHoraUltimaAtu'], 'required'],
-            [['IdAluno', 'IdUsuarioInclusao'], 'integer'],
+            [['IdAluno', 'Nome', 'DataNascimento', 'IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo', 'IdProf', 'DataInclusao', 'DataHoraUltimaAtu'], 'required'],
+            [['IdAluno', 'IdProf'], 'integer'],
             [['DataNascimento', 'DataInclusao', 'DataHoraUltimaAtu'], 'safe'],
             [['Nome'], 'string', 'max' => 100],
             [['IndicadorDorPeitoAtividadesFisicas', 'IndicadorDorPeitoUltimoMes', 'IndicadorPerdaConscienciaTontura', 'IndicadorProblemaArticular', 'IndicadorTabagista', 'IndicadorDiabetico', 'IndicadorFamiliarAtaqueCardiaco', 'IndicadorAtivo'], 'string', 'max' => 1],
             [['Lesoes', 'Observacoes', 'TreinoEspecifico'], 'string', 'max' => 200],
             [['IdAluno'], 'unique'],
-            [['IdUsuarioInclusao'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['IdUsuarioInclusao' => 'IdProfessor']],
+            [['IdProf'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['IdProf' => 'IdProfessor']],
         ];
     }
 
@@ -77,7 +77,7 @@ class Aluno extends \yii\db\ActiveRecord
             'Observacoes' => 'Observações',
             'TreinoEspecifico' => 'Treino Específico',
             'IndicadorAtivo' => 'Ativo?',
-            'IdUsuarioInclusao' => 'Usuário Inclusão',
+            'IdProf' => 'Usuário Inclusão',
             'DataInclusao' => 'Data de Inclusão',
 			'DataHoraUltimaAtu' => 'Data da Última Alteração',
         ];
@@ -88,7 +88,7 @@ class Aluno extends \yii\db\ActiveRecord
      */
     public function getProfessor()
     {
-        return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdUsuarioInclusao']);
+        return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdProf']);
     }
 
     /**
@@ -122,7 +122,7 @@ class Aluno extends \yii\db\ActiveRecord
 			$this->IdAluno = $result['IdAluno'];
 			$this->IndicadorAtivo = '1';
 			$this->DataInclusao = $dataAtual;
-			$this->IdUsuarioInclusao = Yii::$app->user->getId();
+			$this->IdProf = Yii::$app->user->getId();
 		}
 		
 		$this->DataHoraUltimaAtu = $dataAtual;

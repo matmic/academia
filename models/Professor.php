@@ -79,7 +79,7 @@ class Professor extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function getAlunos()
     {
-        return $this->hasMany(Aluno::className(), ['IdUsuarioInclusao' => 'IdProfessor']);
+        return $this->hasMany(Aluno::className(), ['IdProf' => 'IdProfessor']);
     }
 
     /**

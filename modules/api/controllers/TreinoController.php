@@ -12,7 +12,7 @@ use yii\data\ArrayDataProvider;
  *
  * @author hermes
  */
-class AparelhoController extends BaseRestController {
+class TreinoController extends BaseRestController {
 
     public $modelClass = Treino::class;
 
