@@ -179,7 +179,7 @@ class ProfessorController extends BaseController {
     }
 
     public function actionMeusAlunos() {
-        $alunos = Aluno::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->where(['aluno.IndicadorAtivo' => '1', 'IdUsuarioInclusao' => Yii::$app->user->id])->orderBy('aluno.Nome');
+        $alunos = Aluno::find()->select(['aluno.IdAluno', 'aluno.Nome'])->distinct()->where(['aluno.IndicadorAtivo' => '1', 'IdProf' => Yii::$app->user->id])->orderBy('aluno.Nome');
         $provider = new ActiveDataProvider([
             'query' => $alunos,
             'pagination' => [

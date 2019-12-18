@@ -9,7 +9,7 @@ use yii\db\Expression;
  * This is the model class for table "treino".
  *
  * @property int $IdTreino
- * @property int $IdProfessor
+ * @property int $IdProf
  * @property int $IdAluno
  * @property string $Nome
  * @property string $Objetivos
@@ -36,15 +36,15 @@ class Treino extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdTreino', 'IdProfessor', 'IdAluno', 'DataInclusao', 'IndicadorAtivo', 'DataHoraUltimaAtu'], 'required'],
-            [['IdTreino', 'IdProfessor', 'IdAluno'], 'integer'],
+            [['IdTreino', 'IdProf', 'IdAluno', 'DataInclusao', 'IndicadorAtivo', 'DataHoraUltimaAtu'], 'required'],
+            [['IdTreino', 'IdProf', 'IdAluno'], 'integer'],
             [['DataInclusao', 'DataHoraUltimaAtu'], 'safe'],
             [['Nome'], 'string', 'max' => 45],
             [['Objetivos'], 'string', 'max' => 200],
             [['IndicadorAtivo'], 'string', 'max' => 1],
             [['IdTreino'], 'unique'],
             [['IdAluno'], 'exist', 'skipOnError' => true, 'targetClass' => Aluno::className(), 'targetAttribute' => ['IdAluno' => 'IdAluno']],
-            [['IdProfessor'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['IdProfessor' => 'IdProfessor']],
+            [['IdProf'], 'exist', 'skipOnError' => true, 'targetClass' => Professor::className(), 'targetAttribute' => ['IdProf' => 'IdProfessor']],
         ];
     }
 
@@ -55,7 +55,7 @@ class Treino extends \yii\db\ActiveRecord
     {
         return [
             'IdTreino' => '#',
-            'IdProfessor' => 'Professor',
+            'IdProf' => 'Professor',
             'IdAluno' => 'Aluno',
             'Nome' => 'Treino',
             'Objetivos' => 'Objetivos',
@@ -86,7 +86,7 @@ class Treino extends \yii\db\ActiveRecord
      */
     public function getProfessor()
     {
-        return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdProfessor']);
+        return $this->hasOne(Professor::className(), ['IdProfessor' => 'IdProf']);
     }
 	
 	/** 

@@ -79,7 +79,7 @@ class TreinoController extends BaseController
 					try {
 						$treino->attributes = $_POST['Treino'];
 						
-						if ($treino->update(true, ['IdProfessor', 'IdAluno', 'Nome', 'Objetivos', 'DataHoraUltimaAtu']) !== false) {
+						if ($treino->update(true, ['IdProf', 'IdAluno', 'Nome', 'Objetivos', 'DataHoraUltimaAtu']) !== false) {
 							Exercicio::DeletarExerciciosDoTreino($treino->IdTreino);
 							
 							if (isset($_POST['selection'])) {

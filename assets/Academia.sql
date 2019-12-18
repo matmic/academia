@@ -43,7 +43,7 @@ UNIQUE KEY Ind_131 (Email)
 CREATE TABLE Aluno
 (
  IdAluno                            int NOT NULL ,
- IdProfessor                 		int NOT NULL ,
+ IdProf                 			int NOT NULL ,
  Nome                               varchar(100) NOT NULL ,
  DataNascimento                     date NOT NULL ,
  IndicadorDorPeitoAtividadesFisicas varchar(1) NOT NULL ,
@@ -61,8 +61,8 @@ CREATE TABLE Aluno
  IndicadorAtivo                     varchar(1) NOT NULL ,
 
 PRIMARY KEY (IdAluno),
-KEY fkIdx_119 (IdProfessor),
-CONSTRAINT FK_119 FOREIGN KEY fkIdx_119 (IdProfessor) REFERENCES Professor (IdProfessor)
+KEY fkIdx_119 (IdProf),
+CONSTRAINT FK_119 FOREIGN KEY fkIdx_119 (IdProf) REFERENCES Professor (IdProfessor)
 );
 
 -- ************************************** Disponibilidade
@@ -95,7 +95,7 @@ CONSTRAINT FK_147 FOREIGN KEY fkIdx_147 (IdDisponibilidade) REFERENCES Disponibi
 CREATE TABLE Treino
 (
  IdTreino       		int NOT NULL ,
- IdProfessor    		int NOT NULL ,
+ IdProf    				int NOT NULL ,
  IdAluno        		int NOT NULL ,
  Tipo					varchar(2) NULL ,
  Nome           		varchar(45) NULL ,
@@ -107,8 +107,8 @@ CREATE TABLE Treino
 PRIMARY KEY (IdTreino),
 KEY fkIdx_122 (IdAluno),
 CONSTRAINT FK_122 FOREIGN KEY fkIdx_122 (IdAluno) REFERENCES Aluno (IdAluno),
-KEY fkIdx_125 (IdProfessor),
-CONSTRAINT FK_125 FOREIGN KEY fkIdx_125 (IdProfessor) REFERENCES Professor (IdProfessor)
+KEY fkIdx_125 (IdProf),
+CONSTRAINT FK_125 FOREIGN KEY fkIdx_125 (IdProf) REFERENCES Professor (IdProfessor)
 );
 
 -- ************************************** Frequencia
